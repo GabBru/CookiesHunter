@@ -12,7 +12,7 @@ public class Ennemies extends Character
     /**
      * Constructeur d'objets de classe Ennemies
      */
-    public Ennemies()
+    public Ennemies(String name, int level, Room currentRoom)
     {
     }
     
