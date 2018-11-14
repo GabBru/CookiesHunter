@@ -13,16 +13,16 @@ public class MagicRoom extends Room
 
     //Constructor for object of class MagicRoom
 
-    public MagicRoom (String newPassWord)
+    public MagicRoom (String description)
     {
     }
 
-    public void setPassword()
+    public void setPassword(newPassWord)
     {
     }
 
     // Return to password
-    public String getPassword(passWord)
+    public String getPassword()
     {
     }
 
