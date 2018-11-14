@@ -21,7 +21,7 @@ public class MagicRoom extends Room
     {
     }
 
-    // Return to the password
+    // Return to password
     public String getPassword(passWord)
     {
     }
