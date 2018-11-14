@@ -3,7 +3,7 @@
  * Class Item allows to manipulate items in the game. 
  * An item can be in a room or owned by a character.
  *
- * @author (your name)
+ * @author (Marie Bogusz)
  * @version (1)
  */
 public class Item
