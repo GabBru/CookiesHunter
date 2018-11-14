@@ -49,6 +49,8 @@ public class LockRoomTest
     {
         // Initialisez ici vos engagements
         myDescription = "You are in the kitchen";
+        
+        //creation of a good locked room
         LockRoom goodRoom = new LockRoom(myDescription);
     }
 
