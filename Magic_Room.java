@@ -24,12 +24,10 @@ public class MagicRoom extends Room
     // Return to the password
     public String getPassword(passWord)
     {
-        return passWord;
     }
 
     public void LockRoom()
     {
-        return isLocked;
     }
 
 }
