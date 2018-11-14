@@ -1,5 +1,5 @@
 /**
- * It is a class who inherite from Room. This room needs a password to be opened.
+ * It is a class who inherites from Room. This room needs a password to be opened.
  *
  * @author GIL Thibaud
  * @version 11/14/2018
