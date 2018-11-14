@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -32,19 +30,17 @@ import org.junit.Test;
 public class RoomTest
 {
     private Room roomDescription ;
-    
+    private TrapRoom Goodsetter;
     
     /**
      * Constructor of the RoomTest class alllow to initializ correctly the
      */
     public RoomTest()
-    {
-        
+    {    
     }
 
     /**
      * Met en place les engagements.
-     *
      * Méthode appelée avant chaque appel de méthode de test.
      */
     @Before
@@ -62,6 +58,17 @@ public class RoomTest
         assertEquals(thing, roomDescription.getExit("north"));
     }
 
+    /**
+    *
+    * Method pour tester la viabilité du setter pour la sous-classe TrapRoom.
+    */
+    @Test
+    public void testsetterVisited() // throws java.lang.Exception
+    {
+       Goodsetter.setVisited(true);
+       assertEquals(true,Goodsetter.getIsVisited());
+    }
+    
     /**
      * Supprime les engagements
      *
