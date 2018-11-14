@@ -73,7 +73,7 @@ public class Character
      * Allows to the character to talk
      */
     
-    public talk()
+    public void talk()
     {
     }
 }
