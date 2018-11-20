@@ -15,11 +15,10 @@ public class Key extends Item
     /**
      * Constructor for objects of class Key
      */
-    public Key(LockRoom roomUnlocked)
+    public Key(String newName, String newDescription)
     {
+        super(newName,newDescription);
         this.roomUnlocked = roomUnlocked;
-        name = "key.";
-        description = "This object can open a closed room.";
     }
 
     /**
@@ -30,3 +29,4 @@ public class Key extends Item
         return roomUnlocked;
     }
 }
+ 
