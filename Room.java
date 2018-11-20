@@ -18,13 +18,13 @@ import java.util.*;
  */
 public class Room   
 {
-    private String description;
+    protected String description;
     private HashMap<String, Room> exits;
     private ArrayList<Item> roomItem;
-
+    protected boolean alreadyVisited;
     /**
-     * Create a room described "description". Initially, it has
-     * no exits. "description" is something like "a kitchen" or
+     * Create a room described "Description". Initially, it has
+     * no exits. "Description" is something like "a kitchen" or
      * "an open court yard".
      * @param description The room's description.
      */
@@ -34,8 +34,8 @@ public class Room
         this.description = description;
         exits = new HashMap<>();
         roomItem = new ArrayList<>();
+        alreadyVisited = false;
     }
-
 
     /**
      * Method getExit: returns the room that we reach in the given direction
@@ -43,9 +43,8 @@ public class Room
      *
      * @param direction The exit's direction
      * @return The roomin the given direction
-     * 
      */
-     
+    
     public Room getExit(String direction){
             return exits.get(direction);
     }
@@ -56,7 +55,7 @@ public class Room
      *
      * @param direction the direction of the exit
      * @param neighbor the room in the given direction
-       */
+     */
     public void setExit(String direction, Room neighbor){
             exits.put(direction, neighbor);
     }
