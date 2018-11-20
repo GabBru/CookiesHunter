@@ -51,7 +51,7 @@ public class CharacterTest
     @Before
     public void setUp() // throws java.lang.Exception
     {
-        testCharacter = new Character("Moi",0,Grenier,testInvent);
+        testCharacter = new Character("Moi",Grenier);
         Grenier = new Room("Vous êtes dans le grenier du gros bébé!");
         Cookie = new Item ("Cookie", "Gros cookie pour gros bébé");
     }
@@ -76,7 +76,7 @@ public class CharacterTest
     {
         boolean result=true;
         try {
-            ok = new Character("   ",0,Grenier,testInvent);
+            ok = new Character("   ",Grenier);
         } catch (IllegalArgumentException e) {
             result = false;
         }
@@ -91,7 +91,7 @@ public class CharacterTest
     {
         boolean result=true;
         try {
-            ok = new Character ("Amandine",-10,Grenier,testInvent);
+            ok = new Character ("Amandine",Grenier);
         } catch (IllegalArgumentException e) {
             result=false;
         }
@@ -117,18 +117,5 @@ public class CharacterTest
     {
         testCharacter.addInventory(Cookie);
         assertEquals(1,testInvent.size());
-    }
-    
-    /**
-     * Method testConstructorCharacter : method that checked if setting
-     * level is correctly done.
-     */
-    @Test
-    public void testSetLevel()
-    {
-        testCharacter.setLevel(23);
-        assertEquals(23,testCharacter.getLevel());
-    }
-    
-    
+    } 
 }
