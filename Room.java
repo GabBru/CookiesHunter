@@ -20,8 +20,8 @@ public class Room
 {
     protected String description;
     private HashMap<String, Room> exits;
-    private ArrayList<Item> roomItem;
-    protected boolean alreadyVisited;
+    protected boolean isVisited;
+    
     /**
      * Create a room described "Description". Initially, it has
      * no exits. "Description" is something like "a kitchen" or
@@ -33,8 +33,7 @@ public class Room
         if (description.length()<=1) throw new IllegalArgumentException("Description courte");
         this.description = description;
         exits = new HashMap<>();
-        roomItem = new ArrayList<>();
-        alreadyVisited = false;
+        isVisited = false;
     }
 
     /**
@@ -67,5 +66,19 @@ public class Room
     {
         return description;
     }
-
+    
+    /**
+     * Get the value of the boolean isVisited
+     */
+    public boolean getIsVisited()
+    {
+        return isVisited;
+    }
+    
+    /**
+     * Method that change the value of the boolean isVisited 
+     */
+    public void setIsVisited(boolean isVisited)
+    {
+    }
 }
