@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * It is a class who inherites from Room. This room needs a password to be opened.
  *
@@ -8,17 +9,19 @@
 public class MagicRoom extends Room
 {
     //Variables d'instance
-    private String passWord; //It is the password to unlock the door
     private boolean isLocked; //Boolean represe
-
+    private String magicPass, passWord;
     //Constructor for object of class MagicRoom
 
-    public MagicRoom (String description)
+    public MagicRoom (String newDescription, String passWord)
     {
+        super(newDescription);
+        this.magicPass = passWord;
     }
 
-    public void setPassword(newPassWord)
+    public void setPassword (String newPassWord)
     {
+        this.passWord = newPassWord;
     }
 
     // Return to password
