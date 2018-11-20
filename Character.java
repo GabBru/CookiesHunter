@@ -9,17 +9,20 @@ import java.util.ArrayList;
 public class Character
 {
     // variables d'instance
-    private String name; // the name of the character
-    private int level; // the level of the character 
-    private Room currentRoom; //the current room where the character is in.
-    private ArrayList<Item> inventory; //represents a list with all items (Item class) detained by the character
+    protected String name; // the name of the character
+    protected Room currentRoom; //the current room where the character is in.
+    protected ArrayList<Item> inventory; //represents a list with all items (Item class) detained by the character
        
     /**
      * Constructor
      * Create a new character.
      */
-    public Character(String name, int level, Room newRoom, ArrayList<Item> CharInvent)
+    public Character(String name, Room newRoom)
     { 
+        this.name=name;
+        currentRoom=newRoom;
+        inventory= new ArrayList<Item>();
+        
     }
     
     /**
@@ -28,21 +31,6 @@ public class Character
     public String getRoom()
     {
         return currentRoom.getDescription();
-    }
-    
-    /**
-     * Return the level of the character.
-     */
-    public int getLevel()
-    {
-        return level;
-    }
-    
-    /**
-     * Change the level of the character.
-     */
-    public void setLevel(int level)
-    {
     }
     
     /**
@@ -81,4 +69,5 @@ public class Character
     public void talk()
     {
     }
+    
 }
