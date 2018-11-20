@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.ArrayList;
 
 /**
  * Classe-test CharacterTest.
@@ -31,7 +32,9 @@ public class CharacterTest
 {
     
     private Character ok, testCharacter;
-    private ArrayList<String> testInvent;
+    private ArrayList<Item> testInvent;
+    private Item Cookie;
+    private Room Grenier;
     
     /**
      * Constructeur de la classe-test CharacterTest
@@ -48,7 +51,9 @@ public class CharacterTest
     @Before
     public void setUp() // throws java.lang.Exception
     {
-        testCharacter = new Character("Moi",0,setCurrentRoom(Grenier),addInventory(Cookie));
+        testCharacter = new Character("Moi",0,Grenier,testInvent);
+        Grenier = new Room("Vous êtes dans le grenier du gros bébé!");
+        Cookie = new Item ("Cookie", "Gros cookie pour gros bébé");
     }
 
     /**
@@ -71,7 +76,7 @@ public class CharacterTest
     {
         boolean result=true;
         try {
-            ok = new Character("   ",0,setCurrentRoom(Grenier),addInventory(Cookie));
+            ok = new Character("   ",0,Grenier,testInvent);
         } catch (IllegalArgumentException e) {
             result = false;
         }
@@ -86,7 +91,7 @@ public class CharacterTest
     {
         boolean result=true;
         try {
-            ok = new Character ("Amandine",-10,setCurrentRoom(Grenier),addInventory(Cookie));
+            ok = new Character ("Amandine",-10,Grenier,testInvent);
         } catch (IllegalArgumentException e) {
             result=false;
         }
@@ -97,18 +102,21 @@ public class CharacterTest
      * Method testConstructorCharacter : method that checked the good process of removing items from the list.
      */
     @Test
-    public testRemoveItem()
+    public void testRemoveItem()
     {
-        assertEquals(false,testCharacter.addInventory(Cookie));
+        testCharacter.addInventory(Cookie);
+        testCharacter.removeInventory(Cookie);
+        assertEquals(false,testInvent.isEmpty());
     }
     
     /**
      * Method that checks if an item is correctly add to the inventory
      */
     @Test
-    public testAddItem()
+    public void testAddItem()
     {
-        assertEquals(false,test
+        testCharacter.addInventory(Cookie);
+        assertEquals(1,testInvent.size());
     }
     
     /**
@@ -118,7 +126,8 @@ public class CharacterTest
     @Test
     public void testSetLevel()
     {
-        assertEquals(23,testCharacter.setLevel(23));
+        testCharacter.setLevel(23);
+        assertEquals(23,testCharacter.getLevel());
     }
     
     
