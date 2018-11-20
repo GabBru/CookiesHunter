@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * This class represents the different characters of the game.
  * @author Amandine POULLOT & Gabriel BRUNET
@@ -16,15 +18,16 @@ public class Character
      * Constructor
      * Create a new character.
      */
-    public Character(String name)
+    public Character(String name, int level, Room newRoom, ArrayList<Item> CharInvent)
     { 
     }
     
     /**
      * Return the current Room where the character is in.
      */
-    public Room getRoom()
+    public String getRoom()
     {
+        return currentRoom.getDescription();
     }
     
     /**
@@ -32,6 +35,7 @@ public class Character
      */
     public int getLevel()
     {
+        return level;
     }
     
     /**
@@ -67,6 +71,7 @@ public class Character
      */
     public String getName()
     {
+        return name;
     }
         
     /**
