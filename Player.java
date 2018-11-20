@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Class Player = Subclass of Character.
  * This class represents the players in the different rooms. 
@@ -9,11 +11,31 @@
  */
 public class Player extends Character
 {  
+    protected int level; // the level of the character 
+    protected Character Player1;
+    //protected ArrayList<Item> CharInvent;
     /**
      * Player class constructors.
      * 
      */
-    public Player(String name)
+    public Player(String newName, Room newRoom, ArrayList<Item> CharInvent)
+    {
+        super(newName, newRoom);
+        this.level=0;
+    }
+    
+    /**
+     * Return the level of the character.
+     */
+    public int getLevel()
+    {
+        return level;
+    }
+    
+    /**
+     * Change the level of the character.
+     */
+    public void setLevel(int level)
     {
     }
 }
