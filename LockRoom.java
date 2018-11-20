@@ -17,7 +17,7 @@ public class LockRoom extends Room
      */
     public LockRoom(String description)
     {
-        this.description = description;
+        super(description);
         // initialisation of isLocked
         isLocked = false;
     }
