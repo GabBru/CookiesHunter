@@ -36,8 +36,9 @@ public class Character
     /**
      * Change the room (Room class) where the character is in.
     */
-    public void  setCurrentRoom(Room currentRoom)
+    public void  setCurrentRoom(Room newCurrentRoom)
     {
+        currentRoom = newCurrentRoom;
     }
     
     /**
@@ -45,6 +46,7 @@ public class Character
      */
     public void addInventory(Item newItem)
     {
+        inventory.add(newItem);
     }
     
     /**
@@ -52,6 +54,7 @@ public class Character
      */
     public void removeInventory(Item theItem)
     {
+        inventory.remove(theItem);
     }
     
     /**
@@ -61,13 +64,4 @@ public class Character
     {
         return name;
     }
-        
-    /**
-     * Allows to the character to talk
-     */
-    
-    public void talk()
-    {
-    }
-    
 }
