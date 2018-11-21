@@ -23,7 +23,7 @@ public class Character
     public Character(String newName, Room newRoom)
     { 
         if (newName.length()<=2) throw new IllegalArgumentException();
-        if ((newName.substring(0,1) == " ") || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException();
+        if ((newName.substring(0,1).equals(" ")) || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException();
         name = newName;
         currentRoom = newRoom;
         inventory = new ArrayList<Item>();
