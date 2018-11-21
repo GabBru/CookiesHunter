@@ -1,8 +1,9 @@
-import java.util.*;
+// import java.util.*;
 /**
- * Npc is a class of non-player character, not agressive, with a different constructor.
+ * Npc is a class of non-player character, not agressive and extremely boring.
+ * Why does this class exist ?
  * @Amandine POULLOT & Gabriel BRUNET
- * @version 1.0 14/11/2018
+ * @version v0.1 2018nov
  */
 
 public class Npc extends Character
@@ -10,9 +11,8 @@ public class Npc extends Character
     /**
      * Constructeur d'objets de classe Npc.
      */
-    public Npc(String newName, Room newRoom, ArrayList<Item> CharInvent)
+    public Npc(String newName, Room newRoom)
     {
         super(newName, newRoom);
     }
-
 }
