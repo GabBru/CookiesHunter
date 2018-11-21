@@ -13,11 +13,6 @@ import java.util.*;
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
  * et sont basées sur le document Š 2002 Robert A. Ballance intitulé
  * "JUnit: Unit Testing Framework".
- * 
- * @param okCharacter Used to do the tests in general.
- * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods(setters).
- * 
- * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
  */
 public class CharacterTest
 {
@@ -26,7 +21,11 @@ public class CharacterTest
     private Item cookie;
     private Room grenier;
     /**
-     * Constructeur de la classe-test CharacterTest
+    * Classe-test CharacterTest constructor.
+    * 
+    * @param okCharacter Used to do the tests in general.
+    * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods. 
+    * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
      */
     public CharacterTest()
     {
