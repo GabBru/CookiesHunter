@@ -17,9 +17,9 @@ public class Character
      * Constructor
      * Create a new character.
      */
-    public Character(String name, Room newRoom)
+    public Character(String newName, Room newRoom)
     { 
-        this.name=name;
+        name=newName;
         currentRoom=newRoom;
         inventory= new ArrayList<Item>();
         
