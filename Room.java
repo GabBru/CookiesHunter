@@ -26,6 +26,7 @@ public class Room
      * Create a room described "Description". Initially, it has
      * no exits. "Description" is something like "a kitchen" or
      * "an open court yard".
+     * The description of the rooms must have more than 1 character.
      * @param description The room's description.
      */
     public Room(String description) 
