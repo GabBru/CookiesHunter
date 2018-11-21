@@ -2,22 +2,15 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 /**
- * The test class ItemTest.
+ * The class-test ItemTest - for the Item class.
  *
- * @author  (Marie B)
- * @version (1.0)
- * 
- * name : string indicating the name of item, must be at least 1 character, 
- * or the constructor throws an error.
- * 
- * description : string indicating the description of item, must be at least 1 character, 
- * or the constructor throws an error.
+ * @author  Marie Bogusz
+ * @version v0.1 2018nov
  */
 public class ItemTest
 {
-    private Item ok;
+    private Item okItem;
     /**
      * Default constructor for test class ItemTest
      */
@@ -36,36 +29,34 @@ public class ItemTest
     }
 
     /**
-     * Method testConstructorItemOk: Test creating an item which fit all criteria
-     *  -> name at least 1 char
-     *  -> description at least 1 char
+     * Method testConstructorItemOk: Test creating an item which fit all criterias.
+     * Name must contain at least 1 character.
+     * Description must contain at least 10 characters.
      */
     @Test
     public void testConstructorItemOk()
     {
-        //Item ok;
         boolean result=true;
         try {
-            ok = new Item("Candy","Emma's candy found in the kitchen");
+            okItem = new Item("Candy","Emma's candy found in the kitchen");
         } catch (IllegalArgumentException e) {
             result=false;
         }
         assertEquals(true, result);
-        assertEquals("Candy", ok.getName());
-        assertEquals("Emma's candy found in the kitchen", ok.getDescription());                 
+        assertEquals("Candy", okItem.getName());
+        assertEquals("Emma's candy found in the kitchen", okItem.getDescription());                 
     }
     
      /**
-     * Method testConstructorNullName(): Test creating an item with a name consisting of a space.
-     * Should not be possible, the constructor sends back an exception that can be catched.
+     * Method testConstructorNullName(): Test creating an item with an empty name.
+     * Should not be possible, the constructor is supposed to send back an exception that can be catched.
      */
     @Test
     public void testConstructorNullName()
     {
-        //SalesItem ok;
         boolean result=true;
         try {
-            ok = new Item("","Emma's candy found in the kitchen");
+            okItem = new Item("","Emma's candy found in the kitchen");
         } catch (IllegalArgumentException e) {
             result=false;
         }
@@ -73,16 +64,15 @@ public class ItemTest
     }   
     
      /**
-     * Method testConstructorNullDescription(): Test creating an item with a description consisting of a space.
-     * Should not be possible, the constructor sends back an exception that can be catched.
+     * Method testConstructorNullDescription(): Test creating an item with an empty description.
+     * Should not be possible, the constructor is supposed to send back an exception that can be catched.
      */
     @Test
     public void testConstructorNullDescription()
     {
-        //SalesItem ok;
         boolean result=true;
         try {
-            ok = new Item("Candy","");
+            okItem = new Item("Candy","");
         } catch (IllegalArgumentException e) {
             result=false;
         }
@@ -90,16 +80,15 @@ public class ItemTest
     }  
     
      /**
-     * Method testConstructorBlankName: Test creating an item with a name only composed of blank spaces
-     * Should not be possible, the constructor sends back an exception that can be catched
+     * Method testConstructorBlankName: Test creating an item with a name only composed of blank spaces.
+     * Should not be possible, the constructor is supposed to send back an exception that can be catched.
      */
     @Test
     public void testConstructorBlankName()
     {
-        //SalesItem ok;
         boolean result=true;
         try {
-            ok = new Item("    ","Emma's candy found in the kitchen");
+            okItem = new Item("   ","Emma's candy found in the kitchen");
         } catch (IllegalArgumentException e) {
             result=false;
         }
@@ -107,16 +96,15 @@ public class ItemTest
     }
     
      /**
-     * Method testConstructorBlankDescription: Test creating an item with a description only composed of blank spaces
-     * Should not be possible, the constructor sends back an exception that can be catched
+     * Method testConstructorBlankDescription: Test creating an item with a description only composed of blank spaces.
+     * Should not be possible, the constructor is supposed to send back an exception that can be catched.
      */
     @Test
     public void testConstructorBlankDescription()
     {
-        //SalesItem ok;
         boolean result=true;
         try {
-            ok = new Item("Candy","    ");
+            okItem = new Item("Candy","    ");
         } catch (IllegalArgumentException e) {
             result=false;
         }
