@@ -21,7 +21,7 @@ public class CharacterTest
     private Item cookie;
     private Room grenier;
     /**
-    * Classe-test CharacterTest constructor.
+    * Default constructor for test class CharacterTest.
     * 
     * @param okCharacter Used to do the tests in general.
     * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods. 
