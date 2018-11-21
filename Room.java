@@ -78,7 +78,11 @@ public class Room
     /**
      * Method that change the value of the boolean isVisited 
      */
-    public void setIsVisited(boolean isVisited)
+    public void setIsVisited()
     {
+        if (isVisited == true)
+            isVisited = false;
+        else
+            isVisited = true; 
     }
 }
