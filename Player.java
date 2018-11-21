@@ -53,10 +53,4 @@ public class Player extends Character
         return(numberItem);
     }
     
-    /**
-     * Change the level of the character.
-     */
-    public void setLevel(int level)
-    {
-    }
 }
