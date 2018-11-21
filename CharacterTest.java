@@ -15,7 +15,7 @@ import java.util.*;
  * "JUnit: Unit Testing Framework".
  * 
  * @param okCharacter Used to do the tests in general.
- * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods.
+ * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods(setters).
  * 
  * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
  */
