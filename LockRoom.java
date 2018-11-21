@@ -1,11 +1,13 @@
 
+
 /**
  * The class LockRoom inherite of the class Room
- * This class is used for the Room Pandry and num 6.
+ * This class is used for the Room Pantry and num 6.
+ * this class links all classes that are blocked by a key or a password
  * 
  * @author Antoine PIERSON
- * @version 2.0
- * @date 21/11/2018
+ * @version 1.0
+ * @date 14/11/2018
  */
 public class LockRoom extends Room
 {
@@ -14,6 +16,16 @@ public class LockRoom extends Room
     private boolean isLocked;
     /**
      * Constructor of the object of the class LockRoom
+     * 
+     * @param "description"
+     * This class inherite the same criteria of the class Room for the description. 
+     * The description should not be short.One letter does not constitue a description. 
+     * If we try to do that, an exception will be returned to us. 
+     * And the room cannot be created.
+     * 
+     * @param "isLocked"
+     * The room have a specificity = it is locked.
+     * We cannot access it without unlocking it.
      */
     public LockRoom(String description)
     {
@@ -24,15 +36,25 @@ public class LockRoom extends Room
 
     /**
      * getLocked allow to return the boolean isLocked 
-     * @return isLocked
+     * @return isLocked.
+     * This method inform us of the blocked or unblocked status of the room.
      */
     public boolean getLocked()
     {
-        return isLocked;
+        if (isLocked == false)
+        {
+            return false;
+        }
+        else // isLocked == true
+        {
+            return true;
+        }
     }
     
     /**+
-     * setLocked allow to modify the boolean isLo
+     * setLocked allows to modify the boolean isLocked
+     * This method modifies the blocked or unblocked status of the room. 
+     * we can use this method when we have what it takes to unlock it.
      */
     public void setLocked()
     {
