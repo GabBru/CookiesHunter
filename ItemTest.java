@@ -13,6 +13,8 @@ public class ItemTest
     private Item okItem;
     /**
      * Default constructor for test class ItemTest
+     *
+     * @param okItem Used to do the tests in general.
      */
     public ItemTest()
     {
