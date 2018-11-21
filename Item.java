@@ -1,9 +1,9 @@
 
 /**
  * Class Item allows to manipulate items in the game. 
- * An item can be in a room or owned by a character.
+ * An item is owned by a character.
  *
- * @author (Marie Bogusz)
+ * @author : Marie Bogusz
  * @version (1)
  */
 public class Item
@@ -15,6 +15,9 @@ public class Item
     
     /**
      * Constructor for objects of class Item
+     * string name is the name of an Item
+     * string description is the description of an Item 
+     * (for exemple: the denture contains 18 teeth and is suitable for the grandmother)
      */
     public Item(String name, String description)
     {
@@ -23,11 +26,11 @@ public class Item
     }
 
     /**
-     * getName() allows to return the name of the item.
+     * getName() allows to return the name of the item. 
      */
     public String getName()
     {
-        return this.name;
+        return name;
     }
     
     /**
@@ -35,6 +38,6 @@ public class Item
      */
     public String getDescription()
     {
-        return this.description;
+        return description;
     }
 }
