@@ -1,32 +1,35 @@
-
+// import java.util.*;
 /**
- * Class Item allows to manipulate items in the game. 
- * An item is owned by a character.
- *
- * @author : Marie Bogusz
- * @version (1)
+ * Class Item is used to manipulate items in the game. 
+ * An item is owned by a character and composed of a proper name and description for each of them.
+ * 
+ * @author : Marie Bogusz & Gabriel Brunet
+ * @version v0.2 2018nov
  */
 public class Item
 {
-    // Name is the variable that contains the item name.
     protected String name;
-    // Description is the variable that contains the description of the item. 
     protected String description;
-    
     /**
-     * Constructor for objects of class Item
-     * string name is the name of an Item
-     * string description is the description of an Item 
-     * (for exemple: the denture contains 18 teeth and is suitable for the grandmother)
+     * Constructor 
+     * Create a new Item.
+     * Each item's name must contain at least 1 character and doesn't have to start with a space.
+     * Description must contain at least 10 characters and doesn't have to start with a space.
+     * If one of those restrictions are not respected, the object cannot be created and an exception statement is returned.
+     * 
+     * @param name Proper name for the item created.
+     * @param description Proper description for the item created. 
      */
     public Item(String name, String description)
     {
+        if (name.length()<1 || name.substring(0,1) == " ") throw new IllegalArgumentException("Incorrect name");
         this.name = name;
+        if (description.length()<10 || description.substring(0,1) == " ") throw new IllegalArgumentException("Incorrect description");
         this.description = description;
     }
-
+    
     /**
-     * getName() allows to return the name of the item. 
+     * @return Return the name of the item under a String form. 
      */
     public String getName()
     {
@@ -34,7 +37,7 @@ public class Item
     }
     
     /**
-     * getDescription() allows to return the description of the item.
+     * @return Return the full description of the item under a String form.
      */
     public String getDescription()
     {
