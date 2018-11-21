@@ -13,7 +13,7 @@ import java.util.*;
  * to the neighboring room, or null if there is no exit in that direction.
  * 
  * @author  Diama Fall & Kilian FELESMINO
- * @version 2.0
+ * @version 2018.11
  *
  */
 public class Room   
@@ -26,12 +26,23 @@ public class Room
      * Create a room described "Description". Initially, it has
      * no exits. "Description" is something like "a kitchen" or
      * "an open court yard".
-     * The description of the rooms must have more than 1 character.
-     * @param description The room's description.
+     * 
+     * @param description The room's description. 
+     * The description should not be short.One letter does not constitue a description. 
+     * If we try to do that, an exception will be returned to us. 
+     * And the room cannot be created.
+     * 
+     *@param "HashMap<>"
+     *It define the exits of the rooms created. 
+     *Every direction either leads to another room or is null (no exists there)
+     *
+     *@param "isVisited"
+     *when the room does not meet the description criteria. 
+     *it will not be created and therefore cannot be visited
      */
     public Room(String description) 
     {
-        if (description.length()<=1) throw new IllegalArgumentException("Description courte");
+        if (description.length()<=1) throw new IllegalArgumentException("Description courte"); 
         this.description = description;
         exits = new HashMap<>();
         isVisited = false;
@@ -41,8 +52,8 @@ public class Room
      * Method getExit: returns the room that we reach in the given direction
      * If there is no room in that direction, returns null
      *
-     * @param direction The exit's direction
-     * @return The roomin the given direction
+     * @param direction The exit's direction. It gives the direction where the exit is located.
+     * @So it returns The room in the given direction.
      */
     
     public Room getExit(String direction){
@@ -50,31 +61,20 @@ public class Room
     }
     
     /**
-     * Method setExit: defines an exit from this room
-     * Replaces the setExits method
+     * Method setExit: defines an exit from this room and replaces the setExits method.
+     *This method allows to change exit of this room. In order to find other exits if there are any,
+     *otherwise it returns null.
      *
-     * @param direction the direction of the exit
-     * @param neighbor the room in the given direction
+     * @param direction:gives the direction of the exit.
+     * @param neighbor:indicates the room in the given direction.
      */
     public void setExit(String direction, Room neighbor){
             exits.put(direction, neighbor);
     }
-    
-    /**
-     * Get a sting that describe the exits of rooms
-     *
-     */
-    public String getExitString(){
-        String returnString = "Exits:";
-        Set<String> keys = exits.keySet();
-        for(String exit : keys) {
-            returnString += " " + exit;
-        }
-        return returnString;
-    }
-    
+       
     /**
      * @return The description of the room.
+     * This method gives the details of the room with its exits.
      */
     public String getDescription()
     {
@@ -82,7 +82,8 @@ public class Room
     }
     
     /**
-     * Get the value of the boolean isVisited
+     * Get the value of the boolean isVisited. it informs us that the room has been visited by the player or not.
+     * But does not block the accessibility of the room. And avoids revisiting the room.
      */
     public boolean getIsVisited()
     {
@@ -90,13 +91,14 @@ public class Room
     }
     
     /**
-     * Method that change the value of the boolean isVisited 
+     * Method that change the value of the boolean isVisited.
+     * 
      */
-    public void setIsVisited()
+    public void setIsVisited(boolean isVisited)
     {
         if (isVisited == true)
             isVisited = false;
         else
-            isVisited = true; 
+            isVisited = true;
     }
 }
