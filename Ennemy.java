@@ -6,7 +6,7 @@ import java.util.*;
  * the baby who holds the magic cookie.
  *
  * @author Amandine Poullot & Gabriel Brunet & Diama FALL
- * @version v0.1 2018-nov
+ * @version v0.2 2018-nov
  */
 public class Ennemy extends Character
 {
@@ -23,11 +23,13 @@ public class Ennemy extends Character
      * 
      * @param isDead Inform on the living or non-living status of ennemy.
      * @param level Return the current level of the ennemy.
+     * @exception IllegalArgumentException Returned in case of level troubles (<0).
      */
     public Ennemy(String newName, Room newRoom, int level)
     {
         super(newName, newRoom);
         isDead=false;
+        if (level<0) throw new IllegalArgumentException("Level must be positive");
         this.level = level;
     }
     
