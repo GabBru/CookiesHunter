@@ -42,6 +42,7 @@ public class EnnemyTest
     @After
     public void tearDown()
     {
+        Bonjour
     }
     
     /**
