@@ -34,9 +34,9 @@ public class Player extends Character
     /**
      * increment the level of the character (level + 1).
      */
-    public void incrementLevel(int level)
+    public void levelUp(int level)
     {
-        level += level;
+        level++;
     }
     
     /**
