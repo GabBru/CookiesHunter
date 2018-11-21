@@ -13,7 +13,7 @@ import java.util.*;
  * to the neighboring room, or null if there is no exit in that direction.
  * 
  * @author  Diama Fall & Kilian FELESMINO
- * @version 2.0
+ * @version v0.1 2018nov
  *
  */
 public class Room   
@@ -26,8 +26,18 @@ public class Room
      * Create a room described "Description". Initially, it has
      * no exits. "Description" is something like "a kitchen" or
      * "an open court yard".
-     * The description of the rooms must have more than 1 character.
-     * @param description The room's description.
+     *  @param description The room's description. 
+     * The description should not be short.One letter does not constitue a description. 
+     * If we try to do that, an exception will be returned to us. 
+     * And the room cannot be created.
+     * 
+     *@param "HashMap<>"
+     *It define the exits of the rooms created. 
+     *Every direction either leads to another room or is null (no exists there)
+     *
+     *@param "isVisited"
+     *when the room does not meet the description criteria. 
+     *it will not be created and therefore cannot be visited
      */
     public Room(String description) 
     {
@@ -41,8 +51,8 @@ public class Room
      * Method getExit: returns the room that we reach in the given direction
      * If there is no room in that direction, returns null
      *
-     * @param direction The exit's direction
-     * @return The roomin the given direction
+     * @param direction The exit's direction. It gives the direction where the exit is located.
+     * @So it returns The room in the given direction.
      */
     
     public Room getExit(String direction){
@@ -53,8 +63,8 @@ public class Room
      * Method setExit: defines an exit from this room
      * Replaces the setExits method
      *
-     * @param direction the direction of the exit
-     * @param neighbor the room in the given direction
+     * @param direction the direction:gives of the exit.
+     * @param neighbor:indicates the room in the given direction.
      */
     public void setExit(String direction, Room neighbor){
             exits.put(direction, neighbor);
