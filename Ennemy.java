@@ -14,7 +14,7 @@ public class Ennemy extends Character
     protected Character Enemy1;
     
     /**
-     * Constructeur d'objets de classe Ennemies
+     * Constructeur d'objets de classe Ennemy
      */
     public Ennemy(String newName, Room newRoom, ArrayList<Item> CharInvent)
     {
