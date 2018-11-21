@@ -10,7 +10,7 @@ import java.util.*;
  * 
  * this class groups the different targets and levels to reach in order to obtain the "magic cookie" grale
  *
- * @author Amandine Poullot @ Gabriel Brunet
+ * @author Amandine Poullot & Gabriel Brunet & Diama FALL
  * @version v0.1 2018-nov
  */
 public class Ennemy extends Character
