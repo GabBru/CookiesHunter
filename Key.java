@@ -4,7 +4,7 @@
  * The Key class inherits the Item class.
  * A key can open a closed door.
  *
- * @author Marie Bogusz 
+ * @author Marie Bogusz & Kilian Felesmino
  * @version (1)
  */
 public class Key extends Item
