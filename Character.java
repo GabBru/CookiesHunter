@@ -17,7 +17,7 @@ public class Character
      * cannot start with a space or contain more than 1 space ("firstname family_name").
      * If one of those restrictions are not respected, the object cannot be created and an Exception statement will be return.
      * @param name This parameter represent the name of the Character. It will be automatically initialised depending on which Character created except for the Player class.
-     * @param newRoom This parameter represent the current room where the character is located. It will evolve according to the progress of the game.
+     * @param newRoom This parameter represent the current room where the character is located. It will evolve according to the progress of the game (Player case).
      * @param inventory Not given in the constructor method (always empty when characters are created).
      */
     public Character(String newName, Room newRoom)
