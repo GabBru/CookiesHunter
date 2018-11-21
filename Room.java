@@ -13,7 +13,7 @@ import java.util.*;
  * to the neighboring room, or null if there is no exit in that direction.
  * 
  * @author  Diama Fall & Kilian FELESMINO
- * @version 2018.11
+ * @version 2.0
  *
  */
 public class Room   
