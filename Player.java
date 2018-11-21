@@ -1,21 +1,20 @@
 import java.util.*;
-
 /**
- * Class Player = Subclass of Character.
- * This class represents the players in the different rooms. 
- * It also stored the list of objects picked up 
- * in the different maps = inventory.
+ * Subclass Player inheriting the superclass Character.
+ * This class represents the player in the game. 
  *
  * @author Gabriel Brunet @ Amandine Poullot
- * @version v0.1 2018-nov
+ * @version v0.1 2018nov
  */
 public class Player extends Character
 {  
-    protected int level; // the level of the character 
-    //protected ArrayList<Item> CharInvent;
+    protected int level;
     /**
      * Player class constructors.
+     * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
+     * The level of the player is always initialised to 0 once created and so cannot be under 0.
      * 
+     * @param level Proper attribute for Player class. Represent the level of the character (int).
      */
     public Player(String newName, Room newRoom)
     {
@@ -24,7 +23,7 @@ public class Player extends Character
     }
     
     /**
-     * Return the level of the character.
+     * @return Return the level of the character under a integer form.
      */
     public int getLevel()
     {
@@ -32,7 +31,7 @@ public class Player extends Character
     }
     
     /**
-     * increment the level of the character (level + 1).
+     * Increment the level of the character (level + 1).
      */
     public void levelUp()
     {
@@ -40,7 +39,8 @@ public class Player extends Character
     }
     
     /**
-     * count the number of item named "cookie" in the inventory of the player
+     * Count the number of item given as parameters in the inventory of the player.
+     * @return Return an integer which represent the occurence of an Item in an inventory.
      */
     
     public int getNumberItemGave(Item theItem)
@@ -52,5 +52,4 @@ public class Player extends Character
             }
         return(numberItem);
     }
-    
 }
