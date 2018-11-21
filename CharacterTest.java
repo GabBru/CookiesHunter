@@ -2,10 +2,9 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.ArrayList;
-
+import java.util.*;
 /**
- * Classe-test CharacterTest.
+ * Classe-test CharacterTest - for Character class.
  *
  * @author  Brunet Gabriel & Amandine Poullot
  * @version v0.1 2018nov
@@ -14,15 +13,18 @@ import java.util.ArrayList;
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
  * et sont basées sur le document Š 2002 Robert A. Ballance intitulé
  * "JUnit: Unit Testing Framework".
+ * 
+ * @param okCharacter Used to do the tests in general.
+ * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods.
+ * 
+ * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
  */
 public class CharacterTest
 {
-    
-    private Character ok, testCharacter;
+    private Character okCharacter, testCharacter;
     private ArrayList<Item> testInvent;
-    private Item Cookie;
-    private Room Grenier;
-    
+    private Item cookie;
+    private Room grenier;
     /**
      * Constructeur de la classe-test CharacterTest
      */
@@ -31,39 +33,38 @@ public class CharacterTest
     }
 
     /**
-     * Met en place les engagements.
+     * Sets up the test fixture.
      *
-     * Méthode appelée avant chaque appel de méthode de test.
+     * Called before every test case method.
      */
     @Before
-    public void setUp() // throws java.lang.Exception
+    public void setUp() 
     {
-        testCharacter = new Character("Moi",Grenier);
-        Grenier = new Room("Vous êtes dans le grenier du gros bébé!");
-        Cookie = new Item ("Cookie", "Gros cookie pour gros bébé");
+        okCharacter = new Character("Moi",grenier);
+        grenier = new Room("Vous êtes dans le grenier du gros bébé!");
+        cookie = new Item ("Cookie", "Gros cookie pour gros bébé");
     }
 
     /**
-     * Supprime les engagements
+     * Tears down the test fixture.
      *
-     * Méthode appelée après chaque appel de méthode de test.
+     * Called after every test case method.
      */
     @After
-    public void tearDown() // throws java.lang.Exception
+    public void tearDown() 
     {
         //Libérez ici les ressources engagées par setUp()
     }
     
     /**
-     * Method testConstructorCharacter : method that checked if there is no
-     * blank as name.
+     * Method testConstructorBlankName() : Check if there is no blank as name.
      */
     @Test
     public void testConstructorBlankName()
     {
         boolean result=true;
         try {
-            ok = new Character("   ",Grenier);
+            testCharacter = new Character("   ",grenier);
         } catch (IllegalArgumentException e) {
             result = false;
         }
@@ -71,23 +72,23 @@ public class CharacterTest
     }
     
     /**
-     * Method testConstructorCharacter : method that checked the good process of removing items from the list.
+     * Method testRemoveItem() : Check the good process of removing items from the list.
      */
     @Test
     public void testRemoveItem()
     {
-        testCharacter.addInventory(Cookie);
-        testCharacter.removeInventory(Cookie);
-        assertEquals(false,testInvent.isEmpty());
+        okCharacter.addInventory(cookie);
+        okCharacter.removeInventory(cookie);
+        assertEquals(true,testInvent.isEmpty());
     }
     
     /**
-     * Method that checks if an item is correctly add to the inventory
+     * Method testAddItem() : Check if an item is correctly add to the inventory
      */
     @Test
     public void testAddItem()
     {
-        testCharacter.addInventory(Cookie);
+        okCharacter.addInventory(cookie);
         assertEquals(1,testInvent.size());
     } 
 }
