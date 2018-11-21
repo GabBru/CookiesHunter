@@ -66,7 +66,7 @@ public class RoomTest
     @Test
     public void testsetterIsVisited() // throws java.lang.Exception
     {
-       roomTest.setIsVisited(true);
+       roomTest.setIsVisited();
        assertEquals(true,roomTest.getIsVisited());
     }
     
