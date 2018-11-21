@@ -12,7 +12,6 @@ import java.util.*;
 public class Player extends Character
 {  
     protected int level; // the level of the character 
-    protected Character Player1;
     //protected ArrayList<Item> CharInvent;
     /**
      * Player class constructors.
@@ -33,9 +32,25 @@ public class Player extends Character
     }
     
     /**
-     * Change the level of the character.
+     * increment the level of the character (level + 1).
      */
-    public void setLevel(int level)
+    public void incrementLevel(int level)
     {
+        level += level;
     }
+    
+    /**
+     * count the number of item named "cookie" in the inventory of the player
+     */
+    
+    public int getNumberItemGave(Item theItem)
+    {
+        int numberItem = 0;
+        for (Item i : inventory)
+            if (i.equals(theItem)){
+                numberItem += numberItem;
+            }
+        return(numberItem);
+    }
+    
 }
