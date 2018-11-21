@@ -8,7 +8,7 @@ import java.util.*;
 public class Npc extends Character
 {
     /**
-     * Constructeur d'objets de classe Ennemies
+     * Constructeur d'objets de classe Npc.
      */
     public Npc(String newName, Room newRoom, ArrayList<Item> CharInvent)
     {
