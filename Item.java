@@ -23,9 +23,9 @@ public class Item
      */
     public Item(String name, String description)
     {
-        if (name.length()<1 || name.substring(0,1) == " ") throw new IllegalArgumentException("Incorrect name");
+        if (name.length()<1 || name.substring(0,1).equals(" ")) throw new IllegalArgumentException("Incorrect name");
         this.name = name;
-        if (description.length()<10 || description.substring(0,1) == " ") throw new IllegalArgumentException("Incorrect description");
+        if (description.length()<10 || description.substring(0,1).equals(" ")) throw new IllegalArgumentException("Incorrect description");
         this.description = description;
     }
     
