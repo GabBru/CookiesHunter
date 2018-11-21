@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Subclass Ennemies from the superclass Character. This class represents the different members of the family : 
+ * Subclass Ennemy from the superclass Character. This class represents the different members of the family : 
  * the mother, the father, the sister, the grand-mother and the grand-father. 
  * 
  *
@@ -14,7 +14,7 @@ public class Ennemy extends Character
     protected Character Enemy1;
     
     /**
-     * Constructeur d'objets de classe Ennemy
+     * Constructor of the object of the class Ennemy
      */
     public Ennemy(String newName, Room newRoom, ArrayList<Item> CharInvent)
     {
@@ -25,8 +25,9 @@ public class Ennemy extends Character
     /**
      * Return the value of the boolean isDead.
      */
-    public void getDead()
+    public boolean getDead()
     {
+        return isDead;
     }
     
     /**
@@ -34,5 +35,11 @@ public class Ennemy extends Character
      */
     public void setDead()
     {
+        if (isDead = false) {
+            isDead = true;
+        }
+        else {
+            isDead = false;
+        }
     }
 }
