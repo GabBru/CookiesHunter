@@ -84,21 +84,6 @@ public class CharacterTest
     }
     
     /**
-     * Method testConstructorCharacter : method that checked if the level can be inferior than 0
-     */
-    @Test
-    public void testInferiorLimitLevel()
-    {
-        boolean result=true;
-        try {
-            ok = new Character ("Amandine",Grenier);
-        } catch (IllegalArgumentException e) {
-            result=false;
-        }
-        assertEquals(false, result);
-    }
-    
-    /**
      * Method testConstructorCharacter : method that checked the good process of removing items from the list.
      */
     @Test
