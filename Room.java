@@ -58,7 +58,20 @@ public class Room
     public void setExit(String direction, Room neighbor){
             exits.put(direction, neighbor);
     }
-       
+    
+    /**
+     * Get a sting that describe the exits of rooms
+     *
+     */
+    public String getExitString(){
+        String returnString = "Exits:";
+        Set<String> keys = exits.keySet();
+        for(String exit : keys) {
+            returnString += " " + exit;
+        }
+        return returnString;
+    }
+    
     /**
      * @return The description of the room.
      */
