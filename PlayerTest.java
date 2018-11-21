@@ -48,13 +48,13 @@ public class PlayerTest
     }
     
     /**
-     * Method testConstructorCharacter : method that checked if setting
-     * level is correctly done.
+     * Method testConstructorCharacter : method that checked if level up
+     * is correctly done.
      */
     @Test
     public void testSetLevel()
     {
-        testPlayerCharacter.setLevel(23);
-        assertEquals(23,testPlayerCharacter.getLevel());
+        testPlayerCharacter.levelUp();
+        assertEquals(1,testPlayerCharacter.levelUp());
     }
 }
