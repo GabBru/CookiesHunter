@@ -18,7 +18,7 @@ public class Player extends Character
      * Player class constructors.
      * 
      */
-    public Player(String newName, Room newRoom, ArrayList<Item> CharInvent)
+    public Player(String newName, Room newRoom)
     {
         super(newName, newRoom);
         this.level=0;
