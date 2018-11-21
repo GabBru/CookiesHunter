@@ -4,8 +4,8 @@
  * This class is used for the Room Pandry and num 6.
  * 
  * @author Antoine PIERSON
- * @version 1.0
- * @date 14/11/2018
+ * @version 2.0
+ * @date 21/11/2018
  */
 public class LockRoom extends Room
 {
@@ -28,14 +28,7 @@ public class LockRoom extends Room
      */
     public boolean getLocked()
     {
-        if (isLocked == false)
-        {
-            return false;
-        }
-        else // isLocked == true
-        {
-            return true;
-        }
+        return isLocked;
     }
     
     /**+
