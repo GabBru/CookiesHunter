@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * It is a class who inherites from Room. This room needs a password to be opened.
  *
- * @author GIL Thibaud
+ * @author GIL Thibaud & Kilian Felesmino
  * @version (2)
  */
  
