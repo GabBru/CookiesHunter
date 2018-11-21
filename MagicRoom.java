@@ -3,7 +3,7 @@ import java.util.*;
  * It is a class who inherites from Room. This room needs a password to be opened.
  *
  * @author GIL Thibaud & Kilian Felesmino
- * @version (2)
+ * @version v0.2 2018nov
  */
  
 public class MagicRoom extends Room
