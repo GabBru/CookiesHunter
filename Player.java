@@ -48,7 +48,7 @@ public class Player extends Character
         int numberItem = 0;
         for (Item i : inventory)
             if (i.equals(theItem)){
-                numberItem += numberItem;
+                numberItem++;
             }
         return(numberItem);
     }
