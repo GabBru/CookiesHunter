@@ -19,6 +19,7 @@ public class Item
      * 
      * @param name Proper name for the item created.
      * @param description Proper description for the item created. 
+     * @exception IllegalArgumentException Returned in case of name or description troubles. See restrictions above.
      */
     public Item(String name, String description)
     {
