@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * It is a class who inherites from Room. This room needs a password to be opened.
  *
- * @author GIL Thibaud
+ * @author: Thibaud GIL- Marie Bogusz
  * @version (2)
  */
  
@@ -12,7 +12,11 @@ public class MagicRoom extends Room
     private boolean isLocked; //The isLocked boolean define if the room is closed or open.
     private String passWord; //The passWord String 
     //Constructor for object of class MagicRoom
-
+    /**
+     * Constructor for objects of class MagicRoom
+     * super(newDescription) means that we use the mother class (here : Room)
+     * this.passWord is a local variable 
+    */
     public MagicRoom (String newDescription, String passWord)
     {
         super(newDescription);
@@ -20,7 +24,7 @@ public class MagicRoom extends Room
     }
 
     /** 
-    * Modify the passWord of rooms
+    * Modify the passWord of rooms using this.passWord which refers to the local variable.
     */
    public void setPassword (String newPassWord)
     {
