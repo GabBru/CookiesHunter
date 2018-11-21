@@ -13,7 +13,6 @@ public class Ennemy extends Character
     protected int level;
     private boolean isDead;
     protected Character Enemy1;
-    
     /**
      * Ennemy class object constructor.
      * 
