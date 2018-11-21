@@ -12,7 +12,7 @@ import java.util.*;
  * east, south, west,up and down.  For each direction, the room stores a reference
  * to the neighboring room, or null if there is no exit in that direction.
  * 
- * @author  Diama Fall & Kilian FELESMINO
+ * @author  Diama Fall & Kilian FELESMINO & Diama FALL
  * @version v0.1 2018nov
  *
  */
