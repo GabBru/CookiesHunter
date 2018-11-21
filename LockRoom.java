@@ -41,14 +41,7 @@ public class LockRoom extends Room
      */
     public boolean getLocked()
     {
-        if (isLocked == false)
-        {
-            return false;
-        }
-        else // isLocked == true
-        {
-            return true;
-        }
+        return isLocked;
     }
     
     /**+
