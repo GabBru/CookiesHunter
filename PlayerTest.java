@@ -13,13 +13,13 @@ import java.util.*;
 public class PlayerTest
 {
     private Player testPlayerCharacter;
-    private ArrayList<Item> testInvent;
-    private Item Cookie;
     private Room Grenier; 
     private String playerName;
     
     /**
      * Default constructor for test class PlayerTest
+     * 
+     * @param testPlayerCharacter Object used to do tests in general. See setUp() method.
      */
     public PlayerTest()
     {
@@ -33,10 +33,9 @@ public class PlayerTest
     @Before
     public void setUp()
     {
-        testPlayerCharacter= new Player(playerName,Grenier);
-        
+        testPlayerCharacter= new Player(playerName,Grenier);    
     }
-
+    
     /**
      * Tears down the test fixture.
      *
@@ -48,13 +47,14 @@ public class PlayerTest
     }
     
     /**
-     * Method testConstructorCharacter : method that checked if level up
-     * is correctly done.
+     * Method testLevelUp() : Check if level up is correctly done and increase of 1 level only.
      */
     @Test
-    public void testSetLevel()
+    public void testLevelUp()
     {
         testPlayerCharacter.levelUp();
-        assertEquals(1,testPlayerCharacter.levelUp());
+        assertEquals(1,testPlayerCharacter.getLevel());
+        testPlayerCharacter.levelUp();
+        assertEquals(2,testPlayerCharacter.getLevel());
     }
 }
