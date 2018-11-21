@@ -51,9 +51,6 @@ public class MagicRoom extends Room
     */
    public boolean getIsLocked()
     {
-        if (isLocked = true)
-            return true;
-        else
-            return false;
+        return isLocked;
     }
 }
