@@ -9,9 +9,9 @@ import java.util.*;
  * @author  Diama Fall & Amandine Poullot & Gabriel Brunet 
  * @version v0.1 2018nov
  * 
- * Les classes-test sont documentÃ©es ici :
+ * Les classes-test sont documentes ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basÃ©es sur le document Å  2002 Robert A. Ballance intitulÃ©
+ * et sont basees sur le document Å  2002 Robert A. Ballance intitule
  * "JUnit: Unit Testing Framework".
  */
 public class RoomTest
