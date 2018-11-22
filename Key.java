@@ -1,34 +1,30 @@
-
 /**
  * Class Key allows to manipulate the key items. 
  * The Key class inherits the Item class.
- * A key can open a closed door.
+ * A key can open a closed door represents by the LockRoom class.
  *
  * @author Marie Bogusz & Kilian Felesmino
- * @version (1)
+ * @version v0.1 2018nov
  */
 public class Key extends Item
 {
-    // The roomUnlocked variable is the closed room that the key can open.
-    private LockRoom roomUnlocked;
-
+    private LockRoom roomUnlocked; // ???
      /**
      * Constructor for objects of class Key
-     * super(newName,newDescription) means that we use the mother class (Item) this twice String must be more long than one character.
-     * this.roomUnlocked = roomUnlocked; means that we use a function that allows to open locked doors
+     * 
+     * As one of the subclass of the Item superclass, each attributes of this class has the same restrictions.
      */
     public Key(String newName, String newDescription)
     {
         super(newName,newDescription);
-        this.roomUnlocked = roomUnlocked;
+        this.roomUnlocked = roomUnlocked; // ???
     }
 
     /**
-     * getRoomUnlocked() allows to return the closed room that the key can open.
+     * @return getRoomUnlocked() allows to return the closed room that the key can open.
      */
     public LockRoom getRoomUnlocked()
     {
-        return roomUnlocked;
+        return roomUnlocked; // ???
     }
 }
- 
