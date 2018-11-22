@@ -63,6 +63,7 @@ public class LockRoomTest
     @Test
     public void testSetIsLocked()
     {
+        okLockRoom = new LockRoom(myDescription);
         okLockRoom.setLocked();
         assertEquals(true, okLockRoom.getLocked());
         okLockRoom.setLocked();
