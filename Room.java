@@ -93,9 +93,7 @@ public class Room
      */
     public void setIsVisited()
     {
-        if (isVisited == true)
-            isVisited = false;
-        else
-            isVisited = true; 
+        if (isVisited == true){isVisited = false;}
+        else {isVisited = true;} 
     }
 }
