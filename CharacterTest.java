@@ -21,11 +21,7 @@ public class CharacterTest
     private Item cookie;
     private Room grenier;
     /**
-    * Default constructor for test class CharacterTest.
-    * 
-    * @param okCharacter Used to do the tests in general.
-    * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods. 
-    * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
+    * Classe-test CharacterTest constructor.
      */
     public CharacterTest()
     {
@@ -35,6 +31,10 @@ public class CharacterTest
      * Sets up the test fixture.
      *
      * Called before every test case method.
+     * 
+     * @param okCharacter Used to do the tests in general.
+     * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods. 
+     * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
      */
     @Before
     public void setUp() 
