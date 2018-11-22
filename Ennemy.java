@@ -14,7 +14,8 @@ public class Ennemy extends Character
     private boolean isDead;
     protected Character Enemy1;
     /**
-     * Ennemy class object constructor.
+     * Constructor 
+     * Create a new Ennemy.
      * 
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
      * The ennemy have a status which determine if he is dead or not. It will allows the Player to picked up the ennemy inventory.
