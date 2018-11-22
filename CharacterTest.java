@@ -77,8 +77,9 @@ public class CharacterTest
     public void testRemoveItem()
     {
         okCharacter.addInventory(cookie);
+        assertEquals(1,okCharacter.getNumberItemGave(cookie));
         okCharacter.removeInventory(cookie);
-        assertEquals(true,testInvent.isEmpty());
+        assertEquals(true,okCharacter.inventory.isEmpty());
     }
     
     /**
@@ -88,6 +89,6 @@ public class CharacterTest
     public void testAddItem()
     {
         okCharacter.addInventory(cookie);
-        assertEquals(1,testInvent.size());
+        assertEquals(1,okCharacter.inventory.size());
     } 
 }
