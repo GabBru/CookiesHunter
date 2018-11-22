@@ -3,54 +3,42 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
-
 /**
- * Classe-test RoomTest.
- *
- * @author  Diama FALL
- * @version 2018/11
- *
+ * Classe-test RoomTest - for Room class.
+ * 
+ * @author  Diama Fall & Amandine Poullot & Gabriel Brunet 
+ * @version v0.1 2018nov
+ * 
  * Les classes-test sont documentÃ©es ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basÃ©es sur le document Å  2002 Robert A. Ballance intitulÃ©
+ * et sont basÃ©es sur le document Å  2002 Robert A. Ballance intitulÃ©
  * "JUnit: Unit Testing Framework".
- *
- * Les objets Test (et TestSuite) sont associÃ©s aux classes Ã  tester
- * par la simple relation yyyTest (e.g. qu'un Test de la classe Name.java
- * se nommera NameTest.java); les deux se retrouvent dans le mÄ™me paquetage.
- * Les "engagements" (anglais : "fixture") forment un ensemble de conditions
- * qui sont vraies pour chaque mÃ©thode Test Ã  exÃ©cuter.  Il peut y avoir
- * plus d'une mÃ©thode Test dans une classe Test; leur ensemble forme un
- * objet TestSuite.
- * BlueJ dÃ©couvrira automatiquement (par introspection) les mÃ©thodes
- * Test de votre classe Test et gÃ©nÃ©rera la TestSuite consÃ©quente.
- * Chaque appel d'une mÃ©thode Test sera prÃ©cÃ©dÃ© d'un appel de setUp(),
- * qui rÃ©alise les engagements, et suivi d'un appel Ã  tearDown(), qui les
- * dÃ©truit.
  */
 public class RoomTest
 {
     private Room roomTest;
-    
     /**
-     * Constructor of the RoomTest class alllow to initializ correctly the
+     * Classe-test RoomTest constructor. 
      */
     public RoomTest()
     {    
     }
 
     /**
-     * Met en place les engagements.
-     * MÃ©thode appelÃ©e avant chaque appel de mÃ©thode de test.
+     * Sets up the test fixture.
+     *
+     * Called before every test case method.
+     * 
+     * @param roomTest Object used to do tests in general.
      */
     @Before
-    public void setUp() // throws java.lang.Exception
+    public void setUp() 
     {
        roomTest = new Room ("azertyu est une salle random");
     }
     
     /**
-     * 
+     * Method testSetExit() : Check the good operation of the exit setter.
      */
     @Test
     public void testSetExit() {
@@ -61,31 +49,32 @@ public class RoomTest
 
     /**
     *
-    * Method pour tester la viabilitÃ© du setter pour la sous-classe TrapRoom.
+    * Method testsetterIsVisited() : Check the good operation for the isVisited setter.
     */
     @Test
-    public void testsetterIsVisited() // throws java.lang.Exception
+    public void testsetterIsVisited()
     {
        roomTest.setIsVisited();
        assertEquals(true,roomTest.getIsVisited());
     }
     
     /**
-     * Supprime les engagements
+     * Tears down the test fixture.
      *
-     * MÃ©thode appelÃ©e aprÃ¨s chaque appel de mÃ©thode de test.
+     * Called after every test case method.
      */
     @After
-    public void tearDown() // throws java.lang.Exception
+    public void tearDown()
     {
-        //LibÃ©rez ici les ressources engagÃ©es par setUp()
+        //Liberez ici les ressources engagees par setUp()
     }
     
     /**
-     * 
+     * Method testEmptyDescription() : Create an object with an empty description. The constructor is supposed to refuse the creation and returned an exception.
      */
     @Test
-    public void testDescription(){
+    public void testEmptyDescription()
+    {
         boolean result = true;
         try{
             Room test = new Room("");
@@ -94,5 +83,4 @@ public class RoomTest
         }
         assertEquals(false,result);
     }
-    
 }
