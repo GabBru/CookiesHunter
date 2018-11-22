@@ -1,11 +1,7 @@
 import java.util.HashMap;
 import java.util.*;
-
 /**
- * Class Room - a room in an adventure game.
- *
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
+ * Class Room - a room in an adventure game.  
  *
  * A "Room" represents one location in the scenery of the game.  It is 
  * connected to other rooms via exits.  The exits are labelled north, 
@@ -14,30 +10,24 @@ import java.util.*;
  * 
  * @author  Diama Fall & Kilian Felesmino & Amandine Poullot & Gabriel Brunet
  * @version v0.1 2018nov
- *
  */
 public class Room   
 {
     protected String description;
     private HashMap<String, Room> exits;
     protected boolean isVisited;
-    
     /**
-     * Create a room described "Description". Initially, it has
-     * no exits. "Description" is something like "a kitchen" or
-     * "an open court yard".
-     *  @param description The room's description. 
-     * The description should not be short.One letter does not constitue a description. 
-     * If we try to do that, an exception will be returned to us. 
-     * And the room cannot be created.
+     * Constructor 
+     * Create a new Room.
      * 
-     *@param "HashMap<>"
-     *It define the exits of the rooms created. 
-     *Every direction either leads to another room or is null (no exists there)
+     * Initially, it has no exits. 
+     * Description must contain at least 10 characters and have not to start with a space. 
+     * If we try to do that, an exception will be returned and the room cannot be created.
      *
-     *@param "isVisited"
-     *when the room does not meet the description criteria. 
-     *it will not be created and therefore cannot be visited
+     * @param description Proper description for the room created.
+     * @param exits It define the exits of the rooms created. Each direction either leads to another room or is null (no exists here)
+     * @param isVisited Used to inform if the Player has already visited the room. Useful to manage traps and mini map.
+     * @exception Returned in case of description's troubles. Incorrect size or format. See instructions above.
      */
     public Room(String description) 
     {
@@ -48,43 +38,42 @@ public class Room
     }
 
     /**
-     * Method getExit: returns the room that we reach in the given direction
-     * If there is no room in that direction, returns null
+     * Returns the room that we reach in the given direction.
+     * If there is no room in that direction, return null.
      *
      * @param direction The exit's direction. It gives the direction where the exit is located.
-     * @So it returns The room in the given direction.
+     * @return Directions of the current room.
      */
-    
     public Room getExit(String direction){
             return exits.get(direction);
     }
     
     /**
-     * Method setExit: defines an exit from this room
-     * Replaces the setExits method
+     * Defines an exit from this room. The direction have to be present in the enumerate type for directions.
      *
-     * @param direction the direction:gives of the exit.
-     * @param neighbor:indicates the room in the given direction.
+     * @param direction Cardinal direction (north,south,east,west,up,down). Represent keys in the HashMap<>.
+     * @param neighbor Indicates the room in the given direction.
      */
     public void setExit(String direction, Room neighbor){
             exits.put(direction, neighbor);
     }
     
     /**
-     * Get a sting that describe the exits of rooms
-     *
+     * This method displays a sentence containing exits of the current room.
+     * 
+     * @return displayExits String returned containing all exits of the current room. Use the HashMap<> tool.
      */
     public String getExitString(){
-        String returnString = "Exits:";
+        String displayExits = "Exits:";
         Set<String> keys = exits.keySet();
         for(String exit : keys) {
-            returnString += " " + exit;
+            displayExits += " " + exit;
         }
-        return returnString;
+        return displayExits;
     }
     
     /**
-     * @return The description of the room.
+     * @return Return a string describing the room (=description).
      */
     public String getDescription()
     {
@@ -92,7 +81,7 @@ public class Room
     }
     
     /**
-     * Get the value of the boolean isVisited
+     * @return The value of the boolean isVisited.
      */
     public boolean getIsVisited()
     {
@@ -100,7 +89,7 @@ public class Room
     }
     
     /**
-     * Method that change the value of the boolean isVisited 
+     * Method changing automatically the value of the boolean isVisited. Switch the state "true" or false" to it inverse. 
      */
     public void setIsVisited()
     {
