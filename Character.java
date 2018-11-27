@@ -4,7 +4,6 @@ import java.util.*;
  * @author Amandine POULLOT & Gabriel BRUNET
  * @version v0.1 2018nov
  */
-
 public class Character
 {
     protected String name;
@@ -85,40 +84,20 @@ public class Character
     }
     
     /**
-     * This is a method which return the contents of the inventory.
-     * @return Return a string to display the list of items containing in the character's inventory.
+     * This is a method which return the contents of the inventory
      */
     
     public String returnInventory()
     {
         String contents = "Votre inventaire contient : ";
         int count = 0;
-        count = getNumberItemGave("Cookie");
+        for (String nameItem : Item.validItems) {
+        count = getNumberItemGave(nameItem);
             if ( count >0){
-                contents = (contents + count + " Cookie ;");
+                contents = (contents + count + " " +nameItem+" ;");
                 count = 0;
             }
-        count = getNumberItemGave("Dentier");
-            if (count > 0){
-                contents = (contents + count + " Dentier ;");
-                count = 0;
-            }
-        count = getNumberItemGave("Clé");
-            if (count >0){
-                contents = (contents + count + " Clé ;");
-                count = 0;
-            }                
-        count = getNumberItemGave("Biberon");
-            if (count >0){
-                contents = (contents + count + " Biberon ;");
-                count = 0;
-            }
-        count = getNumberItemGave("Biberon de lait");
-            if (count >0){
-                contents = (contents + count + " Biberon de lait ;");
-                count = 0;
-            }
-            
+        } 
         return contents;
     } 
 }
