@@ -33,7 +33,7 @@ public class PlayerTest
     @Before
     public void setUp()
     {
-        testPlayerCharacter= new Player(playerName,Grenier);    
+        testPlayerCharacter= new Player("Chuck Norris",Grenier);    
     }
     
     /**
