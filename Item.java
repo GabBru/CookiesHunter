@@ -42,7 +42,6 @@ public class Item
             if(validItems[i].equals(name))
                 return true;
         }
-        // if we get here, the string was not found in the commands
         return false;
     }
     
