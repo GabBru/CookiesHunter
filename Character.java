@@ -84,7 +84,8 @@ public class Character
     }
     
     /**
-     * This is a method which return the contents of the inventory
+     * This is a method which return the contents of the inventory.
+     * @return Return a string listing items in the character's list. 
      */
     
     public String returnInventory()
