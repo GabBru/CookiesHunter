@@ -74,11 +74,11 @@ public class Character
      * @return Return an integer which represent the occurence of an Item in an inventory.
      */
     
-    public int getNumberItemGave(Item theItem)
+    public int getNumberItemGave(String nameItem)
     {
         int numberItem = 0;
         for (Item i : inventory)
-            if (i.equals(theItem)){
+            if (i.name.equals(nameItem)){
                 numberItem++;
             }
         return(numberItem);
