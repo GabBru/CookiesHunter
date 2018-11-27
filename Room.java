@@ -31,7 +31,7 @@ public class Room
      */
     public Room(String description) 
     {
-        if (description.length()<=1) throw new IllegalArgumentException("Description courte");
+        if (description.length()<10) throw new IllegalArgumentException("Incorrect description");
         this.description = description;
         exits = new HashMap<>();
         isVisited = false;
