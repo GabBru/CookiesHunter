@@ -10,7 +10,7 @@ public class Item
 {
     protected String name;
     protected String description;
-    private static final String[] validItems = {
+    public static final String[] validItems = {
       "Cookie", "Dentier", "Biberon", "Lait", "Clé", "Biberon de lait"
     };
     /**
