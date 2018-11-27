@@ -77,7 +77,7 @@ public class CharacterTest
     public void testRemoveItem()
     {
         okCharacter.addInventory(cookie);
-        assertEquals(1,okCharacter.getNumberItemGave(cookie));
+        assertEquals(1,okCharacter.getNumberItemGave("Cookie"));
         okCharacter.removeInventory(cookie);
         assertEquals(true,okCharacter.inventory.isEmpty());
     }
@@ -90,5 +90,16 @@ public class CharacterTest
     {
         okCharacter.addInventory(cookie);
         assertEquals(1,okCharacter.inventory.size());
-    } 
+    }
+    
+    /**
+     * Method testReturnInventory() : Check if the good string is returned when the character's inventory is non empty.
+     * Also check if nothing is returned in case of empty inventory.
+     */
+    @Test
+    public void testReturnInventory()
+    {
+        okCharacter.addInventory(cookie);
+        assertEquals("Votre inventaire contient : 1 Cookie ;",okCharacter.returnInventory());
+    }
 }
