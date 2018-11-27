@@ -83,4 +83,41 @@ public class Character
             }
         return(numberItem);
     }
+    
+    /**
+     * This is a method which return the contents of the inventory
+     */
+    
+    public String returnInventory()
+    {
+        String contents = "Votre inventaire contient : ";
+        int count = 0;
+        count = getNumberItemGave("Cookie");
+            if ( count >0){
+                contents = (contents + count + "Cookie ;");
+                count = 0;
+            }
+        count = getNumberItemGave("Dentier");
+            if (count > 0){
+                contents = (contents + count + "Dentier ;");
+                count = 0;
+            }
+        count = getNumberItemGave("Clé");
+            if (count >0){
+                contents = (contents + count + "Clé ;");
+                count = 0;
+            }                
+        count = getNumberItemGave("Biberon");
+            if (count >0){
+                contents = (contents + count + "Biberon ;");
+                count = 0;
+            }
+        count = getNumberItemGave("Biberon de lait");
+            if (count >0){
+                contents = (contents + count + "Biberon de lait ;");
+                count = 0;
+            }
+            
+        return contents;
+    } 
 }
