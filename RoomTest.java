@@ -9,9 +9,9 @@ import java.util.*;
  * @author  Diama Fall & Amandine Poullot & Gabriel Brunet 
  * @version v0.1 2018nov
  * 
- * Les classes-test sont documentes ici :
+ * Les classes-test sont documentees ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basees sur le document Å  2002 Robert A. Ballance intitule
+ * et sont basees sur le document Š 2002 Robert A. Ballance intitulee
  * "JUnit: Unit Testing Framework".
  */
 public class RoomTest
@@ -23,7 +23,7 @@ public class RoomTest
     public RoomTest()
     {    
     }
-
+    
     /**
      * Sets up the test fixture.
      *
@@ -42,11 +42,11 @@ public class RoomTest
      */
     @Test
     public void testSetExit() {
-        Room thing = new Room("sxcvghuk");
+        Room thing = new Room("sxcvgjgvfgjhgfhuk");
         roomTest.setExit("north",thing);
         assertEquals(thing, roomTest.getExit("north"));
     }
-
+    
     /**
     *
     * Method testsetterIsVisited() : Check the good operation for the isVisited setter.
