@@ -16,6 +16,7 @@ public class Room
     protected String description;
     private HashMap<String, Room> exits;
     protected boolean isVisited;
+    protected ArrayList<Item> inventoryRoom;
     /**
      * Constructor 
      * Create a new Room.
