@@ -14,7 +14,7 @@ public class MagicRoom extends Room
     * Constructor 
     * Create a new MagicRoom.
     * As one of the subclass of the LockRoom superclass, each attributes of this class has the same restrictions.
-    * The password not have restrictions about number of characters but must not contain any spaces.
+    * The password must contain at least 1 character and must not contain any spaces.
     * If there is a space in the password, the object cannot be created and an exception is returned.
     * 
     * @param newDescription See details in the superclass.
@@ -24,7 +24,7 @@ public class MagicRoom extends Room
    public MagicRoom (String newDescription, String passWord)
    {
        super(newDescription);
-       if ((passWord.length() - passWord.replace(" ","").length())>0) throw new IllegalArgumentException("Incorrect password");
+       if ((passWord.length()<1) || (passWord.length() - passWord.replace(" ","").length())>0) throw new IllegalArgumentException("Incorrect password");
        this.passWord = passWord;
    }
    
