@@ -20,7 +20,7 @@ public class MagicRoomTest
     public MagicRoomTest()
     {
     }
-
+    
     /**
      * Sets up the test fixture.
      *
@@ -37,7 +37,7 @@ public class MagicRoomTest
         okPassWord = ("mellon");
         okMagicRoom = new MagicRoom(okDescription, okPassWord);
     }
-
+    
     /**
      * Tears down the test fixture.
      *
