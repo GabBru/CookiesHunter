@@ -15,15 +15,15 @@ public class Character
      * Create a new character.
      * Each character's name have to contain at least 3 characters. It also 
      * cannot start with a space or contain more than 1 space ("firstname family_name").
-     * If one of those restrictions are not respected, the object cannot be created and an Exception statement will be return.
-     * @param name This parameter represent the name of the Character. It will be automatically initialised depending on which Character created except for the Player class.
+     * If one of those restrictions are not respected, the object cannot be created and an Exception statement will be returned.
+     * @param name This parameter represent the name of the Character. It will be automatically initialised depending on which Character is created except for the Player class.
      * @param newRoom This parameter represent the current room where the character is located. It will evolve according to the progress of the game (Player case).
      * @param inventory Not given in the constructor method (always empty when characters are created).
+     * @exception IllegalArgumentException Returned in case of name's troubles - Less than 3 characters, more than one space or start with a space.
      */
     public Character(String newName, Room newRoom)
     { 
-        if (newName.length()<=2) throw new IllegalArgumentException();
-        if ((newName.substring(0,1).equals(" ")) || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException();
+        if (newName.length()<=2 || (newName.substring(0,1).equals(" ")) || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException("Incorrect name");
         name = newName;
         currentRoom = newRoom;
         inventory = new ArrayList<Item>();
@@ -67,5 +67,20 @@ public class Character
     public String getName()
     {
         return name;
+    }
+    
+    /**
+     * Count the number of item given as parameters in the inventory of the player.
+     * @return Return an integer which represent the occurence of an Item in an inventory.
+     */
+    
+    public int getNumberItemGave(Item theItem)
+    {
+        int numberItem = 0;
+        for (Item i : inventory)
+            if (i.equals(theItem)){
+                numberItem++;
+            }
+        return(numberItem);
     }
 }
