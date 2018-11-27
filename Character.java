@@ -94,27 +94,27 @@ public class Character
         int count = 0;
         count = getNumberItemGave("Cookie");
             if ( count >0){
-                contents = (contents + count + "Cookie ;");
+                contents = (contents + count + " Cookie ;");
                 count = 0;
             }
         count = getNumberItemGave("Dentier");
             if (count > 0){
-                contents = (contents + count + "Dentier ;");
+                contents = (contents + count + " Dentier ;");
                 count = 0;
             }
         count = getNumberItemGave("Clé");
             if (count >0){
-                contents = (contents + count + "Clé ;");
+                contents = (contents + count + " Clé ;");
                 count = 0;
             }                
         count = getNumberItemGave("Biberon");
             if (count >0){
-                contents = (contents + count + "Biberon ;");
+                contents = (contents + count + " Biberon ;");
                 count = 0;
             }
         count = getNumberItemGave("Biberon de lait");
             if (count >0){
-                contents = (contents + count + "Biberon de lait ;");
+                contents = (contents + count + " Biberon de lait ;");
                 count = 0;
             }
             
