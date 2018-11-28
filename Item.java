@@ -11,7 +11,7 @@ public class Item
     protected String name;
     protected String description;
     public static final String[] validItems = {
-      "Cookie", "Dentier", "Biberon", "Lait", "Clé", "Biberon de lait"
+      "Cookie", "Denture", "Baby bottle", "Milk", "Key", "Bottle of milk"
     };
     /**
      * Constructor 
@@ -31,6 +31,7 @@ public class Item
         if (description.length()<10 || description.substring(0,1).equals(" ")) throw new IllegalArgumentException("Incorrect description");
         this.description = description;
     }
+    
     /**
      * This method check the presence of a given string in the list "validItems".
      * 
