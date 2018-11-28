@@ -3,7 +3,6 @@ import java.util.*;
  * This class is the super-class using by the different characters constructors.
  * @author Amandine POULLOT & Gabriel BRUNET
  * @version v0.1 2018nov
- * sdvhsdvsafinv sfn sfvnsfvnqdfvnsnbsfvbnsfbnbnsflvnfnv
  */
 public class Character
 {
