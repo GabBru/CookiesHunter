@@ -8,7 +8,7 @@ import java.util.*;
  * east, south, west,up and down.  For each direction, the room stores a reference
  * to the neighboring room, or null if there is no exit in that direction.
  * 
- * @author  Diama Fall & Kilian Felesmino & Amandine Poullot & Gabriel Brunet & Marie Bogusz
+ * @author  Diama Fall & Kilian Felesmino & Amandine Poullot & Gabriel Brunet
  * @version v0.1 2018nov
  */
 public class Room   
@@ -36,6 +36,7 @@ public class Room
         this.description = description;
         exits = new HashMap<>();
         isVisited = false;
+        inventoryRoom = new ArrayList<Item>();
     }
 
     /**
@@ -97,4 +98,54 @@ public class Room
         if (isVisited == true){isVisited = false;}
         else {isVisited = true;} 
     }
+    
+    /**
+     * Add an item (Item class) in the inventory of the character.
+     */
+    public void addInventoryRoom(Item theItem)
+    {
+        inventoryRoom.add(theItem);
+    }
+    
+    /**
+     * Remove an item (Item class) from the inventory of the character.
+     */
+    public void removeInventoryRoom(Item theItem)
+    {
+        inventoryRoom.remove(theItem);
+    }
+    
+    /**
+     * Count the number of item given as parameters in the room.
+     * @return Return an integer which represent the occurence of an Item in an inventory.
+     */
+    
+    public int getNumberItemGaveRoom(String nameItemRoom)
+    {
+        int numberItem = 0;
+        for (Item i : inventoryRoom)
+            if (i.name.equals(nameItemRoom)){
+                numberItem++;
+            }
+        return(numberItem);
+    }
+    
+    /**
+     * This is a method which return the contents of the inventory of the room.
+     * @return Return a string listing items in the room's inventory. 
+     */
+    
+    public String returnInventoryRoom()
+    {
+        String contents = "";
+        int count = 0;
+        for (String nameItem : Item.validItems) {
+        count = getNumberItemGaveRoom(nameItem);
+            if ( count >0){
+                contents = (contents + count + " " +nameItem+" ;");
+                count = 0;
+            }
+        } 
+        return contents;
+    } 
 }
