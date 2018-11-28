@@ -9,7 +9,8 @@
 public class Npc extends Character
 {
     /**
-     * Constructeur d'objets de classe Npc.
+     * Constructor 
+     * Create a new Npc.
      */
     public Npc(String newName, Room newRoom)
     {
