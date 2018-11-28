@@ -106,7 +106,7 @@ public class ItemTest
     {
         boolean result=true;
         try {
-            okItem = new Item("Tronçonneuse","Emma's candy found in the kitchen");
+            okItem = new Item("Möttorzwage","Emma's candy found in the kitchen");
         } catch (IllegalArgumentException e) {
             result=false;
         }
