@@ -85,12 +85,12 @@ public class Character
     
     /**
      * This is a method which return the contents of the inventory.
-     * @return Return a string listing items in the character's list. 
+     * @return Return a string listing items in the character's inventory. 
      */
     
     public String returnInventory()
     {
-        String contents = "Votre inventaire contient : ";
+        String contents = "Your inventory contains : ";
         int count = 0;
         for (String nameItem : Item.validItems) {
         count = getNumberItemGave(nameItem);
