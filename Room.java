@@ -28,7 +28,7 @@ public class Room
      * @param description Proper description for the room created.
      * @param exits It define the exits of the rooms created. Each direction either leads to another room or is null (no exists here)
      * @param isVisited Used to inform if the Player has already visited the room. Useful to manage traps and mini map.
-     * @exception Returned in case of description's troubles. Incorrect size or format. See instructions above.
+     * @exception IllegalArgumentException Returned in case of description's troubles. Incorrect size or format. See instructions above.
      */
     public Room(String description) 
     {
