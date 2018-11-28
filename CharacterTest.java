@@ -9,9 +9,9 @@ import java.util.*;
  * @author  Brunet Gabriel & Amandine Poullot
  * @version v0.1 2018nov
  *
- * Les classes-test sont documentées ici :
+ * Les classes-test sont documentÃ©es ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basées sur le document Š 2002 Robert A. Ballance intitulé
+ * et sont basÃ©es sur le document Å  2002 Robert A. Ballance intitulÃ©
  * "JUnit: Unit Testing Framework".
  */
 public class CharacterTest
@@ -39,9 +39,9 @@ public class CharacterTest
     @Before
     public void setUp() 
     {
-        okCharacter = new Character("Moi",grenier);
-        grenier = new Room("Vous êtes dans le grenier du gros bébé!");
-        cookie = new Item ("Cookie", "Gros cookie pour gros bébé");
+        okCharacter = new Character("You",grenier);
+        grenier = new Room("Vous Ãªtes dans le grenier du gros bÃ©bÃ©!");
+        cookie = new Item ("Cookie", "Gros cookie pour gros bÃ©bÃ©");
     }
 
     /**
@@ -52,7 +52,7 @@ public class CharacterTest
     @After
     public void tearDown() 
     {
-        //Libérez ici les ressources engagées par setUp()
+        //LibÃ©rez ici les ressources engagÃ©es par setUp()
     }
     
     /**
@@ -100,6 +100,6 @@ public class CharacterTest
     public void testReturnInventory()
     {
         okCharacter.addInventory(cookie);
-        assertEquals("Votre inventaire contient : 1 Cookie ;",okCharacter.returnInventory());
+        assertEquals("Your inventory contains : 1 Cookie ;",okCharacter.returnInventory());
     }
 }
