@@ -33,7 +33,7 @@ public class MagicRoomTest
     @Before
     public void setUp()
     {
-        okDescription = ("Les Portes de Durin, seigneur de la moria, dites \"amis\" et entrez");
+        okDescription = ("Doors of Durin, lord of the Moria, say \"friends\" and come in");
         okPassWord = ("mellon");
         okMagicRoom = new MagicRoom(okDescription, okPassWord);
     }
