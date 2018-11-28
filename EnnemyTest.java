@@ -14,7 +14,7 @@ public class EnnemyTest
     protected int level;
     private boolean isDead;
     protected Ennemy testEnnemyCharacter;
-    private Room Grenier;
+    private Room attic;
     
     /**
      * Default constructor for test class EnnemyTest
@@ -31,7 +31,7 @@ public class EnnemyTest
     @Before
     public void setUp()
     {
-        testEnnemyCharacter = new Ennemy("Bebe",Grenier,10);
+        testEnnemyCharacter = new Ennemy("Baby",attic,10);
     }
 
     /**
