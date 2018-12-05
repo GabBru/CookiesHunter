@@ -52,4 +52,12 @@ public class ImageRoom
     {
         return gif;
     }
+    
+    /**
+     * Delete gif
+     */
+    public String deleteGif()
+    {
+        this.gif = "null";
+    }
 }
