@@ -56,7 +56,7 @@ public class ImageRoom
     /**
      * Delete gif
      */
-    public String deleteGif()
+    public void deleteGif()
     {
         this.gif = "null";
     }
