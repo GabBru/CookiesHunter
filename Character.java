@@ -53,11 +53,14 @@ public class Character
     }
     
     /**
-     * Remove an item (Item class) from the inventory of the character.
+     * Remove one type of item (Item class) from the inventory of the character.
      */
-    public void removeInventory(Item theItem)
+    public void removeInventory(String nameItem)
     {
-        inventory.remove(theItem);
+        for (Item i : inventory)
+            if (i.name.equals(nameItem)){
+                inventory.remove(i);
+            } 
     }
     
     /**
