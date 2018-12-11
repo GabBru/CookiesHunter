@@ -8,10 +8,9 @@
  */
 public class Key extends Item
 {
-    private LockRoom roomUnlocked; // ???
+    private LockRoom roomUnlocked; // The roomUnlocked includes the room that can be opened by the key.
      /**
-     * Constructor 
-     * Create a new Key
+     * Constructor that allow to create a new Key
      * 
      * As one of the subclass of the Item superclass, each attributes of this class has the same restrictions.
      */
