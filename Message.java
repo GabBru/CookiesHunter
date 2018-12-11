@@ -33,7 +33,7 @@ public class Message extends JPanel
         textField.setColumns(10);
         
         // add in the panel
-       JPanelTxt.add(yLabel);
+       JPanelTxt.add(myLabel);
        JPanelGet.add(textField);
        
         //Add object to the Frame
