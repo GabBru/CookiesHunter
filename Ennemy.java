@@ -10,12 +10,11 @@ import java.util.*;
  */
 public class Ennemy extends Character
 {
-    protected int level;
-    private boolean isDead;
+    protected int level; // Thz level variable includes the level of the ennemy.
+    private boolean isDead; // The isDead variable say if the ennemy is alive or not.
     protected Character Enemy1;
     /**
-     * Constructor 
-     * Create a new Ennemy.
+     * Constructor that allows to ceate a new Ennemy.
      * 
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
      * The ennemy have a status which determine if he is dead or not. It will allows the Player to picked up the ennemy inventory.
