@@ -13,10 +13,10 @@ import java.util.*;
  */
 public class Room   
 {
-    protected String description;
-    private HashMap<String, Room> exits;
-    protected boolean isVisited;
-    protected ArrayList<Item> inventoryRoom;
+    protected String description; // The description variable includes the description of the room.
+    private HashMap<String, Room> exits; // The exits variable is a HashMap that includes the rooms associated with the exits.
+    protected boolean isVisited; // The isVisited variable indicates if the player has visited the room or not.
+    protected ArrayList<Item> inventoryRoom; // The inventoryRoom variable is a ArrayList that includes the items was in the room.
     /**
      * Constructor 
      * Create a new Room.
