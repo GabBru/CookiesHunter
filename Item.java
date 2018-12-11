@@ -15,8 +15,7 @@ public class Item
       "Cookie", "Denture", "Baby bottle", "Milk", "Key", "Bottle of milk"
     }; // ValisItems is a String array with the valid names of the items.
     /**
-     * Constructor 
-     * Create a new Item.
+     * Constructor of Item class allows you to create a new Item.
      * Each item's name must contain at least 1 character and doesn't have to start with a space.
      * Description must contain at least 10 characters and have not to start with a space.
      * If one of those restrictions are not respected, the object cannot be created and an exception statement is returned.
