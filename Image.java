@@ -1,10 +1,12 @@
 import java.awt.*;
 import javax.swing.*;
 /**
- * The Image class allows you to manage the images that will be displayed during the game.
+ * The Image class allows you to manage images and Gifs that will be displayed during the game.
+ * There is always one image of a room to display during the game. 
+ * There is not always a Gif to display during the game.
  *
  * @author kilian felesmino
- * @version 05/12/2018
+ * @version 11/12/2018
  */
 
 public class Image extends JPanel
@@ -23,29 +25,19 @@ public class Image extends JPanel
         {
            //setLayout(new BoxLayout(getContentPane(),BoxLayout.X_AXIS));
             
-            Icon room = new ImageIcon(roomImage.getImage());
-            
-            
-            
+           Icon room = new ImageIcon(roomImage.getImage());
+
            add(new JButton(room));
-            
-           
-        }
-        
+        }        
         else
         {
-    
             //setLayout(new BoxLayout(getContentPane(),BoxLayout.X_AXIS));
             
             Icon room = new ImageIcon(roomImage.getImage());
             Icon gif = new ImageIcon(roomImage.getGif());
             
             add(new JButton(gif));
-            add(new JButton(room));
-            
-            
-        }
-
-        
+            add(new JButton(room));                      
+        }       
     }
 }
