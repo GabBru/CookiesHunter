@@ -8,9 +8,9 @@
  */
 public class LockRoom extends Room
 {
-    private boolean isLocked;
+    private boolean isLocked; // isLocked variable say if the room is locked or not.
     /**
-     * Constructor of the object of the class LockRoom
+     * Constructor that allows to create LockRoom
      * 
      * This class inherite the same criteria of the class Room for the description. 
      * The description should not be short.One letter does not constitue a description. 
