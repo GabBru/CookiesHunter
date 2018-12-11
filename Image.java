@@ -9,8 +9,7 @@ import javax.swing.*;
 
 public class Image extends JPanel
 {   
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
-    private ImageRoom roomImage;
+    private ImageRoom roomImage; // The roomImage variable includes the name of the image corresponding to the room.
 
     /**
      * Image class constructor.
