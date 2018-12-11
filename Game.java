@@ -2,12 +2,11 @@ import java.util.*;
 /**
  * Décrivez votre classe Game ici.
  *
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * @author Martin Pettinotti
+ * @version v0.1 dec2018
  */
 public class Game
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     
