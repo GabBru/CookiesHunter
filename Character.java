@@ -6,9 +6,9 @@ import java.util.*;
  */
 public class Character
 {
-    protected String name;
-    protected Room currentRoom;
-    protected ArrayList<Item> inventory;
+    protected String name; // The name variable includes the name of the character.
+    protected Room currentRoom; // The currentRoom variable includes the current room.
+    protected ArrayList<Item> inventory; // The inventory variable includes the character's item list.
     /**
      * Constructor that allows you to create a new character.
      * Each character's name have to contain at least 3 characters. It also 
