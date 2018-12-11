@@ -78,7 +78,7 @@ public class CharacterTest
     {
         okCharacter.addInventory(cookie);
         assertEquals(1,okCharacter.getNumberItemGave("Cookie"));
-        okCharacter.removeInventory(cookie);
+        okCharacter.removeInventory("Cookie");
         assertEquals(true,okCharacter.inventory.isEmpty());
     }
     
