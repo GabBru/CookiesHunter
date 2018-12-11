@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 /**
- * Décrivez votre classe Image ici.
+ * The Image class allows you to manage the images that will be displayed during the game.
  *
  * @author kilian felesmino
  * @version 05/12/2018
