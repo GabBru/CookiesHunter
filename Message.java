@@ -11,7 +11,7 @@ import java.awt.event.*;
  */
 public class Message extends JPanel
 {
-    // déclarations variables
+    // variable declaration
     JPanel JPanelTxt, JPanelGet;
     JLabel myLabel;
     Player thisPlayer;
