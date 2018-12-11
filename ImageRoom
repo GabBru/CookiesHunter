@@ -1,6 +1,6 @@
 
 /**
- * Class imageRoom associates an image with a room.
+ * Class imageRoom associates an image and a Gif with a room.
  *
  * @author : Marie Bogusz
  * @version (1)
