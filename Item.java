@@ -1,18 +1,19 @@
 // import java.util.*;
 /**
  * Class Item is used to manipulate items in the game. 
- * An item is owned by a character and composed of a proper name and description for each of them.
+ * An item is owned by a character and composed of a proper name, description for each of themand and 
+ * a String array with the valid names of the items.
  * 
  * @author : Marie Bogusz & Gabriel Brunet
  * @version v0.2 2018nov
  */
 public class Item
 {
-    protected String name;
-    protected String description;
+    protected String name; // the name variable is the name of the item that is limited to a specific list
+    protected String description; // the description variable is the description of the item
     public static final String[] validItems = {
       "Cookie", "Denture", "Baby bottle", "Milk", "Key", "Bottle of milk"
-    };
+    }; // ValisItems is a String array with the valid names of the items.
     /**
      * Constructor 
      * Create a new Item.
