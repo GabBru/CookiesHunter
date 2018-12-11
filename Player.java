@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Player extends Character
 {  
-    protected int level;
+    protected int level; // The level variable includes the level of character.
     /**
      * Player class constructors.
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
