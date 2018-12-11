@@ -10,8 +10,7 @@ public class Character
     protected Room currentRoom;
     protected ArrayList<Item> inventory;
     /**
-     * Constructor
-     * Create a new character.
+     * Constructor that allows you to create a new character.
      * Each character's name have to contain at least 3 characters. It also 
      * cannot start with a space or contain more than 1 space (ex : "firstname family_name").
      * If one of those restrictions are not respected, the object cannot be created and an Exception statement will be returned.
