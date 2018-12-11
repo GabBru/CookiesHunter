@@ -13,7 +13,7 @@ public class Message extends JPanel
 {
     // variable declaration
     JPanel JPanelTxt, JPanelGet;
-    JLabel myLabel;
+    JTextArea myTextArea;
     Player thisPlayer;
     Message message;
 
@@ -27,13 +27,13 @@ public class Message extends JPanel
         JPanelTxt.setLayout(new GridLayout(1,1));
         JPanelGet.setLayout(new FlowLayout());
         //monLabel = new JLabel("ah que coucou", JLabel.CENTER);
-        myLabel = new JLabel(thisPlayer.getRoom(), JLabel.CENTER);
+        myTextArea = new JTextArea(thisPlayer.getRoom());
         
         JTextField textField = new JTextField();
-        textField.setColumns(10);
+        //textField.setColumns(10);
         
         // add in the panel
-       JPanelTxt.add(myLabel);
+       JPanelTxt.add(myTextArea);
        JPanelGet.add(textField);
        
         //Add object to the Frame
