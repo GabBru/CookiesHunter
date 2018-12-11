@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 /**
- * Décrivez votre classe Image ici.
+ * DÃ©crivez votre classe Image ici.
  *
  * @author kilian felesmino
  * @version 05/12/2018
@@ -9,11 +9,13 @@ import javax.swing.*;
 
 public class Image extends JPanel
 {   
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
+    // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
     private ImageRoom roomImage;
 
     /**
-     * Constructeur d'objets de classe Image
+     * Image class constructor.
+     * If there is no GIF, we simply want to display the image of the room.
+     * If there is Gif, we want to display the Gif next to the image of the room.
      */
     public Image (ImageRoom tata)
     {
