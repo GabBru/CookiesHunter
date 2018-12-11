@@ -8,11 +8,10 @@ import java.util.*;
  */
 public class MagicRoom extends Room
 {
-    private boolean isLocked;
-    private String passWord;
+    private boolean isLocked; // The isLocked variable say if the room is locked or not.
+    private String passWord; // The passWord variable includes the password that allows to unlock the room.
    /**
-    * Constructor 
-    * Create a new MagicRoom.
+    * Constructor that allows to create a new MagicRoom.
     * As one of the subclass of the LockRoom superclass, each attributes of this class has the same restrictions.
     * The password must contain at least 1 character and must not contain any spaces.
     * If there is a space in the password, the object cannot be created and an exception is returned.
