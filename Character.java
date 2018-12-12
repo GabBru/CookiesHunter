@@ -30,9 +30,9 @@ public class Character
     /**
      * Return the current room (Room class) where the character is.
      */
-    public String getRoom()
+    public Room getRoom()
     {
-        return currentRoom.getDescription();
+        return this.currentRoom;
     }
     
     /**
