@@ -13,11 +13,11 @@ public class ActionPanel extends JPanel
     // variables
     
     // ----- ATTRIBUTS OF THE INTERFACE -----
-    // Creation of the  button to move in front of(up), at right, at left,
-    // behide(down),to up stairs (northEast) or to down stairs (southWest)
-    private JButton up, down, right, left, southWest, northEast, search, attack;
+    // Creation of the  button to move in front of(north), at east, at west,
+    // behide(south),to north stairs (up) or to south stairs (down)
+    private JButton north, south, east, west, down, up, search, attack;
     // creation of icons variables
-    private Icon upIcon, downIcon, rightIcon, leftIcon, southWestIcon, northEastIcon;
+    private Icon northIcon, southIcon, eastIcon, westIcon, downIcon, upIcon;
     //Variable of labels
     private JLabel myLabel1, myLabel2;
     private JPanel myPanel;
@@ -36,19 +36,19 @@ public class ActionPanel extends JPanel
         setLayout(new GridLayout(3,3));
         
         // add of the pictures
-        Icon upIcon = new ImageIcon("arrows/up-arrow.png");
+        Icon northIcon = new ImageIcon("arrows/north-arrow.png");
+        Icon southIcon = new ImageIcon("arrows/south-arrow.png");
+        Icon eastIcon = new ImageIcon("arrows/east-arrow.png");
+        Icon westIcon = new ImageIcon("arrows/west-arrow.png");
         Icon downIcon = new ImageIcon("arrows/down-arrow.png");
-        Icon rightIcon = new ImageIcon("arrows/right-arrow.png");
-        Icon leftIcon = new ImageIcon("arrows/left-arrow.png");
-        Icon southWestIcon = new ImageIcon("arrows/southWest-arrow.png");
-        Icon northEastIcon = new ImageIcon("arrows/northEast-arrow.png");
+        Icon upIcon = new ImageIcon("arrows/up-arrow.png");
         // Button creation
-        up = new JButton(upIcon);
+        north = new JButton(northIcon);
+        south = new JButton(southIcon);
+        east = new JButton(eastIcon);
+        west = new JButton(westIcon);
         down = new JButton(downIcon);
-        right = new JButton(rightIcon);
-        left = new JButton(leftIcon);
-        southWest = new JButton(southWestIcon);
-        northEast = new JButton(northEastIcon);
+        up = new JButton(upIcon);
         
         search = new JButton("Search");
         attack = new JButton("Attack");
@@ -58,15 +58,15 @@ public class ActionPanel extends JPanel
         myLabel2 = new JLabel("");
         // Add the object in the panel
         add(myLabel1);
+        add(north);
         add(up);
-        add(northEast);
         
-        add(left);
+        add(west);
         add(search);
-        add(right);
+        add(east);
         
-        add(southWest);
         add(down);
+        add(south);
         add(myLabel2);
         
         setVisible(true);
