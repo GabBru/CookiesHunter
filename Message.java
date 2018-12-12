@@ -14,6 +14,7 @@ public class Message extends JPanel
     // variable declaration
     JPanel JPanelTxt, JPanelGet;
     JTextArea myTextArea;
+    JTextField textField;
     Player thisPlayer;
     Message message;
 
@@ -30,7 +31,7 @@ public class Message extends JPanel
         myTextArea = new JTextArea(thisPlayer.getRoom().getDescription());
         
         JTextField textField = new JTextField();
-        //textField.setColumns(10);
+        textField.setColumns(30);
         
         // add in the panel
        JPanelTxt.add(myTextArea);
@@ -45,6 +46,14 @@ public class Message extends JPanel
         JPanelTxt.setVisible(true);
         JPanelGet.setVisible(true);
         setVisible(true); 
+    }
+    
+        /**
+     * method for a performed action
+     */
+    public String actionPerformed(ActionEvent evt) {
+        String text = textField.getText();
+        return text;
     }
 }
 
