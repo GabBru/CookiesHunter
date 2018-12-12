@@ -5,9 +5,9 @@ import java.awt.LayoutManager.*;
 import javax.swing.JPanel.*;
 
 /**
- * Décrivez votre classe Infos ici.
+ * this class will allow a display of information such as the name of the player, the current room ...
  *
- * @author (Diama FALL
+ * @author Diama FALL
  * @version 11/12/18
  */
 public class Info extends JPanel
@@ -47,14 +47,6 @@ public class Info extends JPanel
     myFrame.add(myPanel,BorderLayout.WEST);
     
     
-    
-    
-    // JLabel myLabel1 = new JLabel("Name"+dCharacter.getName());
-    // JLabel myLabel2 = new JLabel("Level"+dCharacter.getLevel());
-    // JLabel myLabel3 = new JLabel("CurrentRoom"+dCharacter.getRoom());
-    
-    //myFrame.add(pName,BorderLayout.CENTER);
-    //myFrame.add(pRoom,BorderLayout.EAST);
     
     }
 
