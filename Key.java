@@ -8,16 +8,16 @@
  */
 public class Key extends Item
 {
-    private LockRoom roomUnlocked; // The roomUnlocked includes the room that can be opened by the key.
+    private LockRoom roomUnlocked; // ???
      /**
-     * Constructor that allow to create a new Key
+     * Constructor for objects of class Key
      * 
      * As one of the subclass of the Item superclass, each attributes of this class has the same restrictions.
      */
-    public Key(String newName, String newDescription)
+    public Key(String newName, String newDescription, LockRoom newLock)
     {
         super(newName,newDescription);
-        this.roomUnlocked = roomUnlocked; // ???
+        this.roomUnlocked = newLock; // ???
     }
 
     /**
@@ -26,5 +26,9 @@ public class Key extends Item
     public LockRoom getRoomUnlocked()
     {
         return roomUnlocked; // ???
+    }
+    
+    public LockRoom getLockRoom(){
+        return roomUnlocked;
     }
 }

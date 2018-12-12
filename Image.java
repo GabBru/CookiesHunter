@@ -21,13 +21,14 @@ public class Image extends JPanel
     public Image (ImageRoom tata)
     {
         roomImage = tata;
+        setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
         if (roomImage.getGif() == "null")
         {
            //setLayout(new BoxLayout(getContentPane(),BoxLayout.X_AXIS));
             
            Icon room = new ImageIcon(roomImage.getImage());
 
-           add(new JButton(room));
+           add(new JLabel(room));
         }        
         else
         {
@@ -36,8 +37,8 @@ public class Image extends JPanel
             Icon room = new ImageIcon(roomImage.getImage());
             Icon gif = new ImageIcon(roomImage.getGif());
             
-            add(new JButton(gif));
-            add(new JButton(room));                      
+            add(new JLabel(gif));
+            add(new JLabel(room));                      
         }       
     }
 }

@@ -1,75 +1,40 @@
-import java.awt.*;
+import java.util.*;
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.*;
 
 /**
- * The class Action 
+ * Décrivez votre classe ActionPanel ici.
  *
- * @author Antoine P & Martin P
- * @version 1
+ * @author (votre nom)
+ * @version (un numéro de version ou une date)
  */
-public class ActionPanel extends JPanel 
+public class ActionPanel extends JPanel
 {
-    // variables
-    
-    // ----- ATTRIBUTS OF THE INTERFACE -----
-    // Creation of the  button to move in front of(north), at east, at west,
-    // behide(south),to north stairs (up) or to south stairs (down)
-    private JButton north, south, east, west, down, up, search, attack;
-    // creation of icons variables
-    private Icon northIcon, southIcon, eastIcon, westIcon, downIcon, upIcon;
-    //Variable of labels
-    private JLabel myLabel1, myLabel2;
-    private JPanel myPanel;
-    
-    // ----- ATTRIBUTS PLAYER -----
+    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private Player player1;
-    
+
     /**
-     * Action class object builder
+     * Constructeur d'objets de classe ActionPanel
      */
     public ActionPanel(Player currentPlayer)
     {
-        // initialisation variables
+        // initialisation des variables d'instance
         player1 = currentPlayer;
         
-        setLayout(new GridLayout(3,3));
-        
-        // add of the pictures
-        Icon northIcon = new ImageIcon("arrows/north-arrow.png");
-        Icon southIcon = new ImageIcon("arrows/south-arrow.png");
-        Icon eastIcon = new ImageIcon("arrows/east-arrow.png");
-        Icon westIcon = new ImageIcon("arrows/west-arrow.png");
-        Icon downIcon = new ImageIcon("arrows/down-arrow.png");
-        Icon upIcon = new ImageIcon("arrows/up-arrow.png");
-        // Button creation
-        north = new JButton(northIcon);
-        south = new JButton(southIcon);
-        east = new JButton(eastIcon);
-        west = new JButton(westIcon);
-        down = new JButton(downIcon);
-        up = new JButton(upIcon);
-        
-        search = new JButton("Search");
-        attack = new JButton("Attack");
-        
-        // Label creation for the gridLayout
-        myLabel1 = new JLabel("");
-        myLabel2 = new JLabel("");
-        // Add the object in the panel
-        add(myLabel1);
-        add(north);
-        add(up);
-        
-        add(west);
-        add(search);
-        add(east);
-        
-        add(down);
-        add(south);
-        add(myLabel2);
-        
+        JPanel myPanel = new JPanel();
+        myPanel.setLayout(new GridLayout(3,3));
+        myPanel.add(new JLabel(""));
+        myPanel.add(new JButton("NORTH"));
+        myPanel.add(new JButton("UP"));
+        myPanel.add(new JButton("WEST"));
+        myPanel.add(new JLabel(""));
+        myPanel.add(new JButton("EAST"));
+        myPanel.add(new JButton("DOWN"));
+        myPanel.add(new JButton("SOUTH"));
+        myPanel.add(new JLabel(""));
+        myPanel.setVisible(true);
+        add(myPanel);
+   
         setVisible(true);
     }
-
 }

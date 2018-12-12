@@ -14,6 +14,6 @@ public class Npc extends Character
      */
     public Npc(String newName, Room newRoom)
     {
-        super(newName, newRoom);
+        super(newName);
     }
 }

@@ -10,11 +10,12 @@ import java.util.*;
  */
 public class Ennemy extends Character
 {
-    protected int level; // The level variable includes the level of the ennemy.
-    private boolean isDead; // The isDead variable say if the ennemy is alive or not.
+    protected int level;
+    private boolean isDead;
     protected Character Enemy1;
     /**
-     * Constructor that allows to ceate a new Ennemy.
+     * Constructor 
+     * Create a new Ennemy.
      * 
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
      * The ennemy have a status which determine if he is dead or not. It will allows the Player to picked up the ennemy inventory.
@@ -24,9 +25,9 @@ public class Ennemy extends Character
      * @param level Return the current level of the ennemy.
      * @exception IllegalArgumentException Returned in case of level troubles (<0).
      */
-    public Ennemy(String newName, Room newRoom, int level)
+    public Ennemy(String newName, int level)
     {
-        super(newName, newRoom);
+        super(newName);
         isDead=false;
         if (level<0) throw new IllegalArgumentException("Level must be positive");
         this.level = level;

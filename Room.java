@@ -13,10 +13,11 @@ import java.util.*;
  */
 public class Room   
 {
-    protected String description; // The description variable includes the description of the room.
-    private HashMap<String, Room> exits; // The exits variable is a HashMap that includes the rooms associated with the exits.
-    protected boolean isVisited; // The isVisited variable indicates if the player has visited the room or not.
-    protected ArrayList<Item> inventoryRoom; // The inventoryRoom variable is a ArrayList that includes the items was in the room.
+    protected String description;
+    private HashMap<String, Room> exits;
+    protected boolean isVisited;
+    protected ArrayList<Item> inventoryRoom;
+    protected ArrayList<Ennemy> ennemyRoom;
     /**
      * Constructor 
      * Create a new Room.
@@ -32,11 +33,12 @@ public class Room
      */
     public Room(String description) 
     {
-        if (description.length()<10) throw new IllegalArgumentException("Incorrect description");
+        if (description.length()<3) throw new IllegalArgumentException("Incorrect description");
         this.description = description;
         exits = new HashMap<>();
         isVisited = false;
         inventoryRoom = new ArrayList<Item>();
+        ennemyRoom = new ArrayList<Ennemy>();
     }
 
     /**
@@ -147,5 +149,15 @@ public class Room
             }
         } 
         return contents;
-    } 
+    }
+    
+    public void addEnnemy(Ennemy e){
+        ennemyRoom.add(e);
+    }
+    public void removeEnnemy(Ennemy e){
+        ennemyRoom.remove(e);
+    }
+    public List getEnnemyList(){
+        return (ArrayList)ennemyRoom.clone();
+    }
 }

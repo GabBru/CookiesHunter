@@ -1,4 +1,3 @@
-
 /**
  * Class imageRoom associates an image with a room.
  *
@@ -29,20 +28,16 @@ public class ImageRoom
         this.image = image;
     }
     
+    public Room getRoom(){
+        return aRoom;
+    }
+    
      /**
      * changes the gif associated at the room.
      */
     public void setGif(String gif)
     {
         this.gif = gif;
-    }
-    
-     /**
-     * changes the gif associated at the room.
-     */
-    public Room getImgRoom()
-    {
-        return aRoom;
     }
     
     /**
@@ -69,4 +64,3 @@ public class ImageRoom
         this.gif = "null";
     }
 }
-

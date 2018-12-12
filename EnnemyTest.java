@@ -31,7 +31,7 @@ public class EnnemyTest
     @Before
     public void setUp()
     {
-        testEnnemyCharacter = new Ennemy("Baby",attic,10);
+        testEnnemyCharacter = new Ennemy("Baby",10);
     }
 
     /**

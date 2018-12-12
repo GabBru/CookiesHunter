@@ -8,7 +8,8 @@ import java.util.*;
  */
 public class Player extends Character
 {  
-    protected int level; // The level variable includes the level of character.
+    protected int level;
+    protected Room currentRoom;
     /**
      * Player class constructors.
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
@@ -18,7 +19,8 @@ public class Player extends Character
      */
     public Player(String newName, Room newRoom)
     {
-        super(newName, newRoom);
+        super(newName);
+        currentRoom = newRoom;
         this.level=0;
     }
     
@@ -29,7 +31,25 @@ public class Player extends Character
     {
         return level;
     }
+    /**
+     * Return the current room (Room class) where the character is.
+     */
+    public String getRoomDesc()
+    {
+        return currentRoom.getDescription();
+    }
     
+    public Room getRoom(){
+        return currentRoom;
+    }
+    
+    /**
+     * Change the room (Room class) where the character is.
+    */
+    public void  setCurrentRoom(Room newCurrentRoom)
+    {
+        currentRoom = newCurrentRoom;
+    }
     /**
      * Increment the level of the character (level + 1).
      */
@@ -52,4 +72,40 @@ public class Player extends Character
             }
         return(numberItem);
     }
+    
+    public boolean move(String direction){       
+        Room nextRoom = currentRoom.getExit(direction);
+        if (nextRoom == null) return false;
+        else {
+            if (nextRoom instanceof LockRoom ){
+                LockRoom lr = (LockRoom)nextRoom;
+                if(hasKey(lr)){
+                    lr.setLocked();
+                    currentRoom=lr;
+                    return true;
+                }else{return false;}
+            } else if (nextRoom instanceof MagicRoom) {
+                //check password
+                MagicRoom mr = (MagicRoom)nextRoom;
+                Scanner reader = new Scanner(System.in);
+                String attempt = reader.nextLine();
+                if(mr.checkPass(attempt)){
+                    mr.setIsLocked();
+                    currentRoom=mr;
+                    return true;
+                }else {return false;}
+            } else { currentRoom=nextRoom; }
+        }
+        return true;
+    }
+    
+    public boolean hasKey(LockRoom thisRoom){
+        for(Item i : inventory){
+            if(i instanceof Key){
+                Key k = (Key)i;
+                if(thisRoom == k.getLockRoom()) return true;
+            }
+        }
+        return false;
+    }    
 }

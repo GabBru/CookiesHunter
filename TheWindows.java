@@ -2,14 +2,14 @@ import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 /**
- * DÃ©crivez votre classe TheWindows ici.
+ * Décrivez votre classe TheWindows ici.
  *
  * @author (votre nom)
- * @version (un numÃ©ro de version ou une date)
+ * @version (un numéro de version ou une date)
  */
 public class TheWindows extends JFrame
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
+    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private Game jeu;
     /**
      * Constructeur d'objets de classe TheWindows
