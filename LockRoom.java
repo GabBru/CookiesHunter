@@ -3,7 +3,7 @@
  * The class LockRoom inherites the super class Room.
  * This class links all rooms that are blocked by a key or a password.
  * 
- * @author Antoine PIERSON & Marie Bogusz
+ * @author Antoine PIERSON & Marie BOGUSZ & Martin PETTINOTTI
  * @version v0.2 2018nov
  */
 public class LockRoom extends Room
