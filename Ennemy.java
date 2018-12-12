@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Ennemy extends Character
 {
-    protected int level; // Thz level variable includes the level of the ennemy.
+    protected int level; // The level variable includes the level of the ennemy.
     private boolean isDead; // The isDead variable say if the ennemy is alive or not.
     protected Character Enemy1;
     /**
