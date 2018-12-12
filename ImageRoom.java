@@ -37,6 +37,14 @@ public class ImageRoom
         this.gif = gif;
     }
     
+     /**
+     * changes the gif associated at the room.
+     */
+    public Room getImgRoom()
+    {
+        return aRoom;
+    }
+    
     /**
      * @return Return the image associated at the room.
      */
