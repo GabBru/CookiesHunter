@@ -3,7 +3,7 @@ import java.util.*;
  * Subclass Ennemies inherites the superclass Character. 
  * Like the LockRoom, this one needs an entity (here a String passWord) to be unlocked.
  *
- * @author GIL Thibaud & Kilian Felesmino & Marie Bogusz
+ * @author GIL Thibaud & Kilian Felesmino & Marie Bogusz & Martin PETTINOTTI
  * @version v0.2 2018nov
  */
 public class MagicRoom extends Room
