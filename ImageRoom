@@ -3,7 +3,7 @@
  * Class imageRoom associates an image and a Gif with a room.
  * A room necessarily has a room image but does not necessarily have a Gif.
  *
- * @author : Marie Bogusz
+ * @author : Marie Bogusz, kilian Felesmino
  * @version (11/12/2018)
  */
 public class ImageRoom
