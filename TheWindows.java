@@ -1,7 +1,8 @@
-import java.awt.*;
+import java.util.*;
 import javax.swing.*;
+import java.awt.*;
 /**
- * Décrivez votre classe TheWindows ici.
+ * Décrivez votre classe Image ici.
  * 
  *
  * @author kilian felesmino
@@ -10,28 +11,33 @@ import javax.swing.*;
 
 public class TheWindows extends JFrame
 {
+    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private ImageRoom test;
-    Player pl;
+    private Game monGame;
+    // creation of a pTop panel that contains the Image and Inventory panels
+    //that will be organized in BorderLayout.
+    private JPanel pTop, pBottom;
     
     /**
      * Constructeur d'objets de classe Image
      */
-    public TheWindows (ImageRoom imgR, Player play)
+    public TheWindows (Game theGame) //
     {
-            test = imgR;
-            pl = play;
-            JFrame myFrame = new JFrame("plan");
-            myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            
-                       
-            myFrame.add(new Image(test));
-            myFrame.add(new Message(pl));
-            
-            
-            myFrame.pack();
-            myFrame.setVisible(true);
+        monGame = theGame;
         
-
+        JFrame myFrame = new JFrame("Hunter Cookies");
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //myFrame.setSize(1600,900);
+        myFrame.setResizable(true);
+        myFrame.setLayout(new GridLayout(2,1));
         
+        
+        myFrame.add(new Image(monGame.getImgCurrentRoom()));
+        myFrame.add(new JLabel(""));
+        myFrame.add(new ActionPanel(monGame.getPlayer()));
+        myFrame.add(new Info(monGame));
+        
+        myFrame.pack();
+        myFrame.setVisible(true);
     }
 }
