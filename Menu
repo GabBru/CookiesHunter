@@ -1,0 +1,57 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.LayoutManager.*;
+import javax.swing.JPanel.*;
+
+/**
+ * Décrivez votre classe Menu ici.
+ *
+ * @author FALL Diama
+ * @version 12/12/18
+ */
+public class Menu extends JMenuBar
+{
+    JFrame myFrame;     
+    
+    JMenuItem mHelpItem,mNewGameItem,mExitItem;
+    JMenuBar menuBar;
+    /**
+     * Constructeur d'objets de classe Menu
+     */
+    public Menu()
+    {
+        // Create MenuBar
+        JMenu OptionMenu = new JMenu();
+        menuBar = new JMenuBar();  
+        OptionMenu = new JMenu("Options");
+        
+        // Create MenuItem
+        mHelpItem =  new JMenuItem("help");
+        mNewGameItem = new JMenuItem("NewGame");
+        mExitItem = new JMenuItem("Exit");
+        
+        //Add the menuItem elements to the MenuBar(Options)
+        menuBar.add(OptionMenu);
+        OptionMenu.add(mHelpItem);
+        OptionMenu.add(mNewGameItem);  
+        OptionMenu.add(mExitItem); 
+        
+        //Create Panel
+        // myPanel = new JPanel();
+        // myPanel.setLayout(new GridLayout(1,1));
+        //Add in Panel
+        add(menuBar);
+        
+      
+         // Add panels in Frame
+    // JFrame myFrame = new JFrame("The Second Window");
+    // myFrame.add(myPanel,BorderLayout.WEST);
+    
+    // myFrame.setSize(150, 150);
+    // myFrame.setVisible(true);
+    setVisible(true);
+    }
+
+    
+}
