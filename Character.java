@@ -1,7 +1,7 @@
 import java.util.*;
 /**
  * This class is the super-class using by the different characters constructors.
- * @author Amandine POULLOT & Gabriel BRUNET
+ * @author Amandine POULLOT & Gabriel BRUNET & Martin PETTINOTTI
  * @version v0.1 2018nov
  */
 public class Character
