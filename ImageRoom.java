@@ -1,19 +1,20 @@
 
 /**
- * Class imageRoom associates an image with a room.
+ * Class imageRoom associates an image and a Gif with a room.
+ * A room necessarily has a room image but does not necessarily have a Gif.
  *
  * @author : Marie Bogusz
  * @version (1)
  */
 public class ImageRoom
 {
-    // instance variables - replace the example below with your own
-    private String image;
-    private Room aRoom;
-    private String gif = "null";
-
+    private String image; // The image variable is the name of the room image
+    private Room aRoom; // The aRoom variable is the room
+    private String gif = "null"; // The gif variable is the name of the room gif 
+    
     /**
-     * Constructor for objects of class yilhdtyfy
+     * Constructor of ImageRoom class.
+     * A room necessarily has a room image but does not necessarily have a Gif.
      */
     public ImageRoom(String image, Room aRoom)
     {
@@ -22,23 +23,23 @@ public class ImageRoom
     }
 
     /**
-     * changes the image associated at the room.
+     * SetImage allows to changes the room image associated at the room.
      */
-    public void setImage(String image)
+    public void setImage(String ima)
     {
-        this.image = image;
+        this.image = ima;
     }
     
      /**
-     * changes the gif associated at the room.
+     * setGif allows you changes the gif associated at the room.
      */
-    public void setGif(String gif)
+    public void setGif(String gi)
     {
-        this.gif = gif;
+        this.gif = gi;
     }
     
      /**
-     * changes the gif associated at the room.
+     * @return Return the room.
      */
     public Room getImgRoom()
     {
@@ -62,7 +63,7 @@ public class ImageRoom
     }
     
     /**
-     * Delete gif
+     * Allows to delete the gif associated at the room.
     */
     public void deleteGif()
     {
