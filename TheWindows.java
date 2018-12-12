@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 /**
- * Décrivez votre classe Image ici.
+ * Décrivez votre classe TheWindows ici.
  * 
  *
  * @author kilian felesmino
@@ -10,23 +10,22 @@ import javax.swing.*;
 
 public class TheWindows extends JFrame
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private ImageRoom test;
-    Player nn;
+    Player pl;
     
     /**
      * Constructeur d'objets de classe Image
      */
-    public TheWindows (ImageRoom tata)
+    public TheWindows (ImageRoom imgR, Player play)
     {
-            test=tata;
-            nn = oo;
+            test = imgR;
+            pl = play;
             JFrame myFrame = new JFrame("plan");
             myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             
                        
             myFrame.add(new Image(test));
-            myFrame.add(new Message(nn));
+            myFrame.add(new Message(pl));
             
             
             myFrame.pack();
