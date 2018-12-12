@@ -27,7 +27,7 @@ public class Message extends JPanel
         JPanelTxt.setLayout(new GridLayout(1,1));
         JPanelGet.setLayout(new FlowLayout());
         //monLabel = new JLabel("ah que coucou", JLabel.CENTER);
-        myTextArea = new JTextArea(thisPlayer.getRoom());
+        myTextArea = new JTextArea(thisPlayer.getRoom().getDescription());
         
         JTextField textField = new JTextField();
         //textField.setColumns(10);
