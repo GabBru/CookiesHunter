@@ -27,4 +27,8 @@ public class Key extends Item
     {
         return roomUnlocked; // ???
     }
+    
+    public LockRoom getLockRoom(){
+        return roomUnlocked;
+    }
 }
