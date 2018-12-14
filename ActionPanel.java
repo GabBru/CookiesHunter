@@ -120,9 +120,13 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().fight(myGame.getEnemy().getLevel(),myGame.getPlayer().getLevel());
-            }
+                for(Enemy i : theGame.getListEnemy()){
+                    if(i.getEnemyRoom() == theGame.getPlayer().getRoom()){
+                        theGame.getPlayer().fight(i.getLevel(),theGame.getPlayer().getLevel());
+                    }
+                }
         }
+       }
         );
         
         // Label creation for the gridLayout
