@@ -23,16 +23,16 @@ public class ActionPanel extends JPanel
     private JLabel myLabel1, myLabel2;
     private JPanel myPanel;
     
-    // ----- ATTRIBUTS PLAYER -----
-    private Player player1;
+    // ----- ATTRIBUTS GAME -----
+    private Game theGame;
     
     /**
      * Action class object builder
      */
-    public ActionPanel(Player currentPlayer)
+    public ActionPanel(Game myGame)
     {
         // initialisation variables
-        player1 = currentPlayer;
+        theGame = myGame;
         
         setLayout(new GridLayout(3,3));
         
@@ -47,11 +47,65 @@ public class ActionPanel extends JPanel
         Icon attackIcon = new ImageIcon("arrows/spoon.png");
         // Button creation
         north = new JButton(northIcon);
+        north.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().move("North");
+            }
+        }
+        );
+        
         south = new JButton(southIcon);
+        south.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().move("South");
+            }
+        }
+        );
+        
         east = new JButton(eastIcon);
+        east.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().move("East");
+            }
+        }
+        );
+        
         west = new JButton(westIcon);
+        west.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().move("West");
+            }
+        }
+        );
+        
         down = new JButton(downIcon);
+        down.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().move("Down");
+            }
+        }
+        );
+        
         up = new JButton(upIcon);
+        up.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().move("up");
+            }
+        }
+        );
+        
         search = new JButton(searchIcon);
         attack = new JButton(attackIcon);
         
