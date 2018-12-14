@@ -1,13 +1,13 @@
 import java.util.*;
 /**
- * Décrivez votre classe Game ici.
+ * DÃ©crivez votre classe Game ici.
  *
  * @author Group 3
  * @version v0.1 2018nov
  */
 public class Game
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
+    // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Ennemy> listEnnemy = new ArrayList<>();
@@ -17,7 +17,7 @@ public class Game
      */
     public Game(Player newPlayer)
     {
-        // initialisation de la map avec les différentes pièces
+        // initialisation de la map avec les diffÃ©rentes piÃ¨ces
         player1 = newPlayer;
         Room outside, hall, garage, livingroom, daughterRoom, pantry, playroom, kitchen, office, laundryRoom, attic;
         outside = new Room("une description non bidon1");       
@@ -61,4 +61,39 @@ public class Game
         ImageRoom imgOutside, imgHall, imgGarage, imgLivingroom, imgDaughterRoom, imgPantry, imgPlayroom, imgKitchen, imgOffice, imgLaundryRoom, imgAttic;
         imgOutside = new ImageRoom("images/gardenCharacters.jpg",outside);
         //imgOutside.setGif("images/unicrorn.gif");
-        imgHall = new ImageRoom("images/hallMonster.jpg
+        imgHall = new ImageRoom("images/hallMonster.jpg",hall);
+        imgGarage = new ImageRoom("images/garageCharacters.jpg",garage);
+        imgLivingroom = new ImageRoom("images/livingroomCharacters.jpg",livingroom);
+        imgDaughterRoom = new ImageRoom("images/bedroomCharacters.jpg",daughterRoom);
+        imgPantry = new ImageRoom("images/pantryCharacters.jpg",pantry);
+        imgPlayroom = new ImageRoom("images/playroomCharacters.jpg",playroom);
+        imgKitchen = new ImageRoom("images/kitchenCharacters.jpg",kitchen);
+        imgOffice = new ImageRoom("images/officeMonster.jpg",office);
+        imgLaundryRoom = new ImageRoom("images/laundryRoomCharacters.jpg",laundryRoom);
+        imgAttic = new ImageRoom("images/atticCharacters.jpg",attic);
+        
+        //Ajout Ã  la liste 
+        listImgRoom.add(imgOutside);
+        listImgRoom.add(imgHall);
+        listImgRoom.add(imgGarage);
+        listImgRoom.add(imgLivingroom);
+        listImgRoom.add(imgDaughterRoom);
+        listImgRoom.add(imgPantry);
+        listImgRoom.add(imgPlayroom);
+        listImgRoom.add(imgKitchen);
+        listImgRoom.add(imgOffice);
+        listImgRoom.add(imgLaundryRoom);
+        listImgRoom.add(imgAttic);
+    }
+    
+    public ImageRoom getImgCurrentRoom(){
+        for(ImageRoom i : listImgRoom){
+            if (i.getImgRoom() == player1.getRoom()) return i;
+        }
+        return null;
+    }
+    
+    public Player getPlayer(){
+        return player1;
+    }
+}
