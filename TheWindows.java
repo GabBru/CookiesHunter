@@ -43,7 +43,7 @@ public class TheWindows extends JFrame
         myFrame.add(new Image(myGame.getImgCurrentRoom()));
         myFrame.add(new JLabel(""));
         myFrame.add(new ActionPanel(this));
-        //myFrame.add(new Info(myGame));
+        myFrame.add(new Info(this));
         
         myFrame.pack();
         myFrame.setVisible(true);
