@@ -23,7 +23,6 @@ public class TheWindows extends JFrame
     public TheWindows (Game theGame) //
     {
         myGame = theGame;
-        
         JFrame myFrame = new JFrame("Hunter Cookies");
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //myFrame.setSize(1600,900);
@@ -33,8 +32,8 @@ public class TheWindows extends JFrame
         
         myFrame.add(new Image(myGame.getImgCurrentRoom()));
         myFrame.add(new JLabel(""));
-        myFrame.add(new ActionPanel(myGame.getPlayer()));
-        myFrame.add(new Info(myGame));
+        myFrame.add(new ActionPanel(myGame));
+        //myFrame.add(new Info(myGame));
         
         myFrame.pack();
         myFrame.setVisible(true);
