@@ -127,9 +127,9 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                for(Enemy i : theGame.getListEnemy()){
-                    if(i.getEnemyRoom() == theGame.getPlayer().getRoom()){
-                        theGame.getPlayer().fight(i.getLevel(),theGame.getPlayer().getLevel());
+                for(Enemy i : myGame.getListEnemy()){
+                    if(i.getEnemyRoom() == myGame.getPlayer().getRoom()){
+                        myGame.getPlayer().fight(i.getLevel(),myGame.getPlayer().getLevel());
                     }
                 }
         }
