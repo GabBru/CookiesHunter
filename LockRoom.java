@@ -23,7 +23,7 @@ public class LockRoom extends Room
     public LockRoom(String description)
     {
         super(description);
-        isLocked = false;
+        isLocked = true;
     }
 
     /**
