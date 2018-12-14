@@ -1,6 +1,13 @@
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.*;
+import java.awt.Color;
+import java.awt.Container;
+import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * The class Action 
@@ -22,17 +29,17 @@ public class ActionPanel extends JPanel
     //Variable of labels
     private JLabel myLabel1, myLabel2;
     private JPanel myPanel;
-    
+
     // ----- ATTRIBUTS GAME -----
-    private Game theGame;
+    private Game myGame;
     
     /**
      * Action class object builder
      */
-    public ActionPanel(Game myGame)
+    public ActionPanel(TheWindows win)
     {
-        // initialisation variables
-        theGame = myGame;
+        // initialisation variables       
+        myGame = win.getGame();
         
         setLayout(new GridLayout(3,3));
         
