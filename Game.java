@@ -25,17 +25,17 @@ public class Game
         // initialisation map with different rooms
         player1 = newPlayer;
         Room outside, hall, garage, livingroom, daughterRoom, pantry, playroom, kitchen, office, laundryRoom, attic;
-        outside = new Room("une description non bidon1");       
-        hall = new Room("une description non bidon2");
-        garage = new Room("une description non bidon3");
-        livingroom = new Room("une description non bidon4");
-        daughterRoom = new MagicRoom("une description non bidon5","Unicorn");
-        pantry = new LockRoom("une description non bidon6");
-        playroom = new LockRoom("une description non bidon7");
-        kitchen = new Room("une description non bidon8");
-        office = new Room("une description non bidon9");
-        laundryRoom = new Room("une description non bidon10");
-        attic = new MagicRoom("une description non bidon11","Undetermined");
+        outside = new Room("Welcome to Cookies Hunter! You are a creepy monster (yes this blue monster), you are hungry. In this building, a magic Cookie waits. Prepare to enter a modern and psychedelic dark souls. You arrive in the garden. it is sober and well maintained, so you see the dark manor where lies the magic cookies.");       
+        hall = new Room("You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
+        garage = new Room("You arrive in the garage. the father remark you and attacks you with a wrench. Defend yourself !!!");
+        livingroom = new Room("You arrive in the living room. The grampa attack you. Defend yourself !!!");
+        daughterRoom = new MagicRoom("You arrive in a room, it is the room of the little girl. it's very creepy.","Unicorn");
+        pantry = new LockRoom("You enter the pantry room, a servant greets you.");
+        playroom = new LockRoom("You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
+        kitchen = new Room("You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
+        office = new Room("You enter an office ...You are stuck, there is no exit. OMG … BAM, a trap is triggered and you are sucking in a temporary space portal.");
+        laundryRoom = new Room("You enter in a laundry room. A very old and creepy woman waiting for you...");
+        attic = new MagicRoom("I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
         // Ajout des sorties
         outside.setExit("North",hall);
