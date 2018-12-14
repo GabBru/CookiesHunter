@@ -12,7 +12,7 @@ public class Inventory extends JPanel
 {
     private JPanel myUpPanel, myDownPanel;
     private JLabel myLabelTitle;
-    private JTextArea myTextAreaInvent;
+    private JTextField myTextFieldInvent;
     
     public Inventory (Player myPlayer)
     {        
@@ -25,12 +25,12 @@ public class Inventory extends JPanel
         Icon inventScreen = new ImageIcon("Bandeau_inventory.png");
         myLabelTitle = new JLabel();
         myLabelTitle.setIcon(inventScreen);
-        myTextAreaInvent = new JTextArea(myPlayer.returnInventory());
-        myTextAreaInvent.setPreferredSize(new Dimension(myDownPanel.getWidth(),myDownPanel.getHeight()));
+        myTextFieldInvent = new JTextField(myPlayer.returnInventory());
+        myTextFieldInvent.setPreferredSize(new Dimension(myDownPanel.getWidth(),myDownPanel.getHeight()));
         
         // Add to the panel 
         myUpPanel.add(myLabelTitle);
-        myDownPanel.add(myTextAreaInvent);
+        myDownPanel.add(myTextFieldInvent);
         add(myUpPanel);
         add(myDownPanel);
         
