@@ -25,6 +25,7 @@ public class MagicRoom extends Room
        super(newDescription);
        if ((passWord.length()<1) || (passWord.length() - passWord.replace(" ","").length())>0) throw new IllegalArgumentException("Incorrect password");
        this.passWord = passWord;
+       isLocked=true;
    }
    
    /** 
@@ -58,5 +59,10 @@ public class MagicRoom extends Room
    public boolean getIsLocked()
    {
        return isLocked;
+   }
+   
+   public boolean checkPass(String attempt){
+       if(attempt.equals(passWord)) return true;
+       else return false;
    }
 }
