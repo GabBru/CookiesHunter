@@ -32,13 +32,15 @@ public class ActionPanel extends JPanel
 
     // ----- ATTRIBUTS GAME -----
     private Game myGame;
+    private TheWindows win;
     
     /**
      * Action class object builder
      */
-    public ActionPanel(TheWindows win)
+    public ActionPanel(TheWindows myWindows)
     {
         // initialisation variables       
+        win = myWindows;
         myGame = win.getGame();
         
         setLayout(new GridLayout(3,3));
@@ -58,7 +60,8 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().move("North");
+                win.getGame().getPlayer().move("North");
+                win.refresh();
             }
         }
         );
@@ -68,7 +71,8 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().move("South");
+                win.getGame().getPlayer().move("South");
+                win.refresh();
             }
         }
         );
@@ -78,7 +82,8 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().move("East");
+                win.getGame().getPlayer().move("East");
+                win.refresh();
             }
         }
         );
@@ -88,7 +93,8 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().move("West");
+                win.getGame().getPlayer().move("West");
+                win.refresh();
             }
         }
         );
@@ -98,7 +104,8 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().move("Down");
+                win.getGame().getPlayer().move("Down");
+                win.refresh();
             }
         }
         );
@@ -108,13 +115,13 @@ public class ActionPanel extends JPanel
         {
             public void actionPerformed(ActionEvent e)
             {
-                myGame.getPlayer().move("up");
+                win.getGame().getPlayer().move("up");
+                win.refresh();
             }
         }
         );
         
-        search = new JButton(searchIcon);
-        
+        search = new JButton(searchIcon);        
         attack = new JButton(attackIcon);
         attack.addActionListener( new ActionListener()
         {
