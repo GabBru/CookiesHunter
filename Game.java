@@ -38,6 +38,16 @@ public class Game
         laundryRoom = new Room("You enter in a laundry room. A very old and creepy woman waiting for you...");
         attic = new MagicRoom("I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
+        //Ajout des Items
+        daughterRoom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        garage.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        livingroom.addInventoryRoom(new Item("Denture", "Denture of Grand-father"));
+        pantry.addInventoryRoom(new Item("Milk", "Milk must be in a baby bottle"));
+        playroom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        kitchen.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        office.addInventoryRoom(new Item("Baby bottle", "A baby bottle must be milk"));
+        laundryRoom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        
         // Ajout des sorties
         outside.setExit("North",hall);
         hall.setExit("South",outside);
