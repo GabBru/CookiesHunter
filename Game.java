@@ -11,6 +11,7 @@ public class Game
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Ennemy> listEnnemy = new ArrayList<>();
+    private ArrayList<Npc> listNpc = new ArrayList<>();
     
     //Instance
     private Item myItem1, myItem2;
@@ -74,7 +75,7 @@ public class Game
         imgLaundryRoom = new ImageRoom("images/laundryRoomCharacters.jpg",laundryRoom);
         imgAttic = new ImageRoom("images/atticCharacters.jpg",attic);
         
-        //Ajout Ã  la liste 
+        //Ajout Ã la liste
         listImgRoom.add(imgOutside);
         listImgRoom.add(imgHall);
         listImgRoom.add(imgGarage);
@@ -86,6 +87,19 @@ public class Game
         listImgRoom.add(imgOffice);
         listImgRoom.add(imgLaundryRoom);
         listImgRoom.add(imgAttic);
+        
+        //Ajout Liste Ennemy
+        listEnnemy.add(new Ennemy("Grand-father", 0));
+        listEnnemy.add(new Ennemy("Father", 1));
+        listEnnemy.add(new Ennemy("Brother", 3));
+        listEnnemy.add(new Ennemy("Mother", 4));
+        listEnnemy.add(new Ennemy("Grand-Mother", 5));
+        listEnnemy.add(new Ennemy("Baby", 5));
+        
+        //Ajout Liste Npc
+        listNpc.add(new Npc("Daughter"));
+        listNpc.add(new Npc("Cook"));
+        listNpc.add(new Npc("Unicorn"));
         
         // ----- Placement initial du joueur -----
         //player1.setCurrentRoom(outside);
