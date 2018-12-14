@@ -15,18 +15,18 @@ public class Info extends JPanel
     Game theGame;
     Player dCharacter;
     
-    public Info(Game monGame){
-        theGame = monGame;
+    public Info(Game myGame){
+        theGame = myGame;
         setLayout(new GridLayout(1,3));
 
         // set the different Labels
-        myLabel1 = new JLabel("Name : "+ monGame.getPlayer().getName());
+        myLabel1 = new JLabel("Name : "+ myGame.getPlayer().getName());
 
         //createLabel Level
-        myLabel2 = new JLabel("Level "+monGame.getPlayer().getLevel());
+        myLabel2 = new JLabel("Level "+myGame.getPlayer().getLevel());
 
         //create Label CurrentRoom
-        myLabel3 = new JLabel("Current room : " + monGame.getPlayer().getRoom());
+        myLabel3 = new JLabel("Current room : " + myGame.getPlayer().getRoom());
 
         //Add the Label in myPanel
         add(myLabel1);
