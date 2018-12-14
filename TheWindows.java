@@ -1,6 +1,15 @@
-import java.util.*;
-import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.Color;
+import java.awt.Container;
+import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
+import java.util.Set;
+import java.lang.String;
+
 /**
  * Class The window orgenized the different panels : Info, Message, 
  * Menu, ActionPanel,Image and Image Room
@@ -20,22 +29,27 @@ public class TheWindows extends JFrame
      /**
      * Image class object builder
      */
-    public TheWindows (Game theGame) //
+    public TheWindows () //
     {
-        myGame = theGame;
+                
+        myGame = new Game();
         JFrame myFrame = new JFrame("Hunter Cookies");
+        
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //myFrame.setSize(1600,900);
         myFrame.setResizable(true);
         myFrame.setLayout(new GridLayout(2,1));
-        
-        
+                
         myFrame.add(new Image(myGame.getImgCurrentRoom()));
         myFrame.add(new JLabel(""));
-        myFrame.add(new ActionPanel(myGame));
+        myFrame.add(new ActionPanel(this));
         //myFrame.add(new Info(myGame));
         
         myFrame.pack();
         myFrame.setVisible(true);
+    }
+    
+    public Game getGame(){
+        return myGame;
     }
 }
