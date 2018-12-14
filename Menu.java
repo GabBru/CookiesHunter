@@ -7,7 +7,7 @@ import java.awt.event.*;
  * @author Thibaud G.
  * @version 12/12/2018
  */
-public class Menu extends JFrame
+public class Menu extends JPanel
 {
     JMenu fileMenu, helpMenu, newGameMenu, exitMenu;
     public Menu ()
