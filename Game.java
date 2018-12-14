@@ -1,13 +1,13 @@
 import java.util.*;
 /**
- * Décrivez votre classe Game ici.
+ * DÃ©crivez votre classe Game ici.
  *
  * @author Group 3
  * @version v0.1 2018nov
  */
 public class Game
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
+    // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Ennemy> listEnnemy = new ArrayList<>();
@@ -18,7 +18,7 @@ public class Game
     /**
      * Constructeur d'objets de classe Game
      */
-    public Game(String newNamePlayer)
+    public Game()
     {
         //A la fin remettre "Player newPlayer"
         
@@ -33,7 +33,7 @@ public class Game
         pantry = new LockRoom("You enter the pantry room, a servant greets you.");
         playroom = new LockRoom("You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
         kitchen = new Room("You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
-        office = new Room("You enter an office ...You are stuck, there is no exit. OMG … BAM, a trap is triggered and you are sucking in a temporary space portal.");
+        office = new Room("You enter an office ...You are stuck, there is no exit. OMG â€¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
         laundryRoom = new Room("You enter in a laundry room. A very old and creepy woman waiting for you...");
         attic = new MagicRoom("I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
@@ -74,7 +74,7 @@ public class Game
         imgLaundryRoom = new ImageRoom("images/laundryRoomCharacters.jpg",laundryRoom);
         imgAttic = new ImageRoom("images/atticCharacters.jpg",attic);
         
-        //Ajout à la liste 
+        //Ajout Ã  la liste 
         listImgRoom.add(imgOutside);
         listImgRoom.add(imgHall);
         listImgRoom.add(imgGarage);
@@ -89,8 +89,8 @@ public class Game
         
         // ----- Placement initial du joueur -----
         //player1.setCurrentRoom(outside);
-        player1 = new Player(newNamePlayer, outside);
-        myItem1 = new Item("Cookie", "C'est un délicieux cookie");
+        player1 = new Player("Monster", outside);
+        myItem1 = new Item("Cookie", "C'est un dÃ©licieux cookie");
         myItem2 = new Item("Denture", "J'ai plus de dents ...");
         player1.addInventory(myItem1);
         player1.addInventory(myItem2);
