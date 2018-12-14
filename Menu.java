@@ -4,7 +4,7 @@ import java.awt.event.*;
 /**
  * Write a description of class Menu here.
  *
- * @author Thibaud G.
+ * @author Thibaud G & Diama.
  * @version 12/12/2018
  */
 public class Menu extends JPanel
