@@ -9,6 +9,7 @@ public class Game
 {
     // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
     private Player player1;
+    private Enemy enemy1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Ennemy> listEnnemy = new ArrayList<>();
     private ArrayList<Npc> listNpc = new ArrayList<>();
@@ -129,5 +130,9 @@ public class Game
     
     public Player getPlayer(){
         return player1;
+    }
+    
+    public Enemy getEnemy(){
+        return enemy1; 
     }
 }
