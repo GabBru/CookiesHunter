@@ -12,11 +12,11 @@ public class Info extends JPanel
 {
     JPanel myPanel;
     JLabel myLabel1, myLabel2, myLabel3;
-    Game theGame;
+    private Game myGame;
     Player dCharacter;
     
-    public Info(Game myGame){
-        theGame = myGame;
+    public Info(TheWindows win){
+        myGame = win.getGame();
         setLayout(new GridLayout(1,3));
 
         // set the different Labels
