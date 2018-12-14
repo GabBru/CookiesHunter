@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * The class Action 
  *
- * @author Antoine P & Martin P
+ * @author Antoine P & Martin P & Amandine P
  * @version 1
  */
 public class ActionPanel extends JPanel 
