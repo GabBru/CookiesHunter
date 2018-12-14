@@ -17,7 +17,8 @@ public class ActionPanel extends JPanel
     // behide(south),to north stairs (up) or to south stairs (down)
     private JButton north, south, east, west, down, up, search, attack;
     // creation of icons variables
-    private Icon northIcon, southIcon, eastIcon, westIcon, downIcon, upIcon;
+    private Icon northIcon, southIcon, eastIcon, westIcon, downIcon,
+    upIcon, searchIcon, attackIcon;
     //Variable of labels
     private JLabel myLabel1, myLabel2;
     private JPanel myPanel;
@@ -51,9 +52,8 @@ public class ActionPanel extends JPanel
         west = new JButton(westIcon);
         down = new JButton(downIcon);
         up = new JButton(upIcon);
-        
-        search = new JButton("Search");
-        attack = new JButton("Attack");
+        search = new JButton(searchIcon);
+        attack = new JButton(attackIcon);
         
         // Label creation for the gridLayout
         myLabel1 = new JLabel("");
