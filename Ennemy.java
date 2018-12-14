@@ -8,11 +8,12 @@ import java.util.*;
  * @author Amandine Poullot & Gabriel Brunet & Diama FALL
  * @version v0.2 2018-nov
  */
-public class Ennemy extends Character
+public class Enemy extends Character
 {
     protected int level; // The level variable includes the level of the ennemy.
     private boolean isDead; // The isDead variable say if the ennemy is alive or not.
     protected Character Enemy1;
+    protected Room enemyRoom;
     /**
      * Constructor that allows to ceate a new Ennemy.
      * 
@@ -24,12 +25,13 @@ public class Ennemy extends Character
      * @param level Return the current level of the ennemy.
      * @exception IllegalArgumentException Returned in case of level troubles (<0).
      */
-    public Ennemy(String newName, Room newRoom, int level)
+    public Enemy(String newName, Room newRoom, int level, Room enemyRoom)
     {
         super(newName);
         isDead=false;
         if (level<0) throw new IllegalArgumentException("Level must be positive");
         this.level = level;
+        this.enemyRoom = enemyRoom;
     }
     
     /**
@@ -56,6 +58,13 @@ public class Ennemy extends Character
     public int getLevel()
     {
         return level;
+    }
+    
+    /**
+     * @return the room of the enemy
+     */
+    public Room getEnemyRoom(){
+        return this.enemyRoom;
     }
     
     /**
