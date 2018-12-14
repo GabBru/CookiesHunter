@@ -2,38 +2,41 @@ import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 /**
- * Décrivez votre classe TheWindows ici.
- *
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * Class The window orgenized the different panels : Info, Message, 
+ * Menu, ActionPanel,Image and Image Room
+ * 
+ * @author Antoine P. & Martin P.
+ * @version 05/12/2018
  */
 public class TheWindows extends JFrame
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
-    private Game jeu;
-    /**
-     * Constructeur d'objets de classe TheWindows
-     */
+    private ImageRoom test;
+    private Game myGame;
+    // creation of a pTop panel that contains the Image and Inventory panels
+    //that will be organized in BorderLayout.
+    private JPanel pTop, pBottom;
     
-    public TheWindows(Game currentGame)
+     /**
+     * Image class object builder
+     */
+    public TheWindows (Game theGame) //
     {
-        jeu = currentGame;
-        // initialisation des variables d'instance
-        JFrame myFrame = new JFrame("Test");
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myFrame.setSize(1600,900);
-        myFrame.setResizable(true);
-        myFrame.setLayout(new GridLayout(2,2));
-        myFrame.add(new Image(jeu.getImgCurrentRoom()));
-        myFrame.add(new JLabel(""));
-        myFrame.add(new ActionPanel(jeu.getPlayer()));
+        myGame = theGame;
         
-        //Display elements
+        JFrame myFrame = new JFrame("Hunter Cookies");
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //myFrame.setSize(1600,900);
+        myFrame.setResizable(true);
+        myFrame.setLayout(new GridLayout(2,1));
+        
+        
+        myFrame.add(new Image(myGame.getImgCurrentRoom()));
+        myFrame.add(new JLabel(""));
+        myFrame.add(new ActionPanel(myGame.getPlayer()));
+        myFrame.add(new Info(myGame));
+        
         myFrame.pack();
         myFrame.setVisible(true);
-    }
-    
-    public void Initialisation () {
-        //Initialiser tout les ImageRoom        
+
     }
 }
