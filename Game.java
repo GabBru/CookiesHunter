@@ -12,12 +12,17 @@ public class Game
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Ennemy> listEnnemy = new ArrayList<>();
     
+    //Instance
+    private Item myItem1, myItem2;
+    
     /**
      * Constructeur d'objets de classe Game
      */
-    public Game(Player newPlayer)
+    public Game(String newNamePlayer)
     {
-        // initialisation de la map avec les différentes pièces
+        //A la fin remettre "Player newPlayer"
+        
+        // initialisation map with different rooms
         player1 = newPlayer;
         Room outside, hall, garage, livingroom, daughterRoom, pantry, playroom, kitchen, office, laundryRoom, attic;
         outside = new Room("une description non bidon1");       
@@ -54,9 +59,6 @@ public class Game
         office.setExit("Down",outside);
         attic.setExit("Down",laundryRoom);
         
-        //Placement initial du joueur
-        player1.setCurrentRoom(outside);
-        
         //Creation des room avec image associee
         ImageRoom imgOutside, imgHall, imgGarage, imgLivingroom, imgDaughterRoom, imgPantry, imgPlayroom, imgKitchen, imgOffice, imgLaundryRoom, imgAttic;
         imgOutside = new ImageRoom("images/gardenCharacters.jpg",outside);
@@ -84,6 +86,14 @@ public class Game
         listImgRoom.add(imgOffice);
         listImgRoom.add(imgLaundryRoom);
         listImgRoom.add(imgAttic);
+        
+        // ----- Placement initial du joueur -----
+        //player1.setCurrentRoom(outside);
+        player1 = new Player(newNamePlayer, outside);
+        myItem1 = new Item("Cookie", "C'est un délicieux cookie");
+        myItem2 = new Item("Denture", "J'ai plus de dents ...");
+        player1.addInventory(myItem1);
+        player1.addInventory(myItem2);
     }
     
     public ImageRoom getImgCurrentRoom(){
