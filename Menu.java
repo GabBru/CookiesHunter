@@ -4,7 +4,7 @@ import java.awt.event.*;
 /**
  * Write a description of class Menu here.
  *
- * @author Thibaid G.
+ * @author Thibaud G.
  * @version 12/12/2018
  */
 public class Menu extends JFrame
