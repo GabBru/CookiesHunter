@@ -11,7 +11,7 @@ public class Game
     private Player player1;
     private Enemy enemy1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
-    private ArrayList<Ennemy> listEnnemy = new ArrayList<>();
+    private ArrayList<Enemy> listEnemy = new ArrayList<>();
     private ArrayList<Npc> listNpc = new ArrayList<>();
     
     //Instance
