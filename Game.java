@@ -26,14 +26,14 @@ public class Game
         
         // initialisation map with different rooms
         
-        Room outside, hall, garage, livingroom, daughterRoom, pantry, playroom, kitchen, office, laundryRoom, attic;
+        Room outside, hall, garage, livingRoom, daughterRoom, pantry, playRoom, kitchen, office, laundryRoom, attic;
         outside = new Room("Welcome to Cookies Hunter! You are a creepy monster (yes this blue monster), you are hungry. In this building, a magic Cookie waits. Prepare to enter a modern and psychedelic dark souls. You arrive in the garden. it is sober and well maintained, so you see the dark manor where lies the magic cookies.");       
         hall = new Room("You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
         garage = new Room("You arrive in the garage. the father remark you and attacks you with a wrench. Defend yourself !!!");
-        livingroom = new Room("You arrive in the living room. The grampa attack you. Defend yourself !!!");
+        livingRoom = new Room("You arrive in the living room. The grampa attack you. Defend yourself !!!");
         daughterRoom = new MagicRoom("You arrive in a room, it is the room of the little girl. it's very creepy.","Unicorn");
         pantry = new LockRoom("You enter the pantry room, a servant greets you.");
-        playroom = new LockRoom("You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
+        playRoom = new LockRoom("You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
         kitchen = new Room("You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
         office = new Room("You enter an office ...You are stuck, there is no exit. OMG â€¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
         laundryRoom = new Room("You enter in a laundry room. A very old and creepy woman waiting for you...");
@@ -42,9 +42,9 @@ public class Game
         //Ajout des Items
         daughterRoom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
         garage.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        livingroom.addInventoryRoom(new Item("Denture", "Denture of Grand-father"));
+        livingRoom.addInventoryRoom(new Item("Denture", "Denture of Grand-father"));
         pantry.addInventoryRoom(new Item("Milk", "Milk must be in a baby bottle"));
-        playroom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        playRoom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
         kitchen.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
         office.addInventoryRoom(new Item("Baby bottle", "A baby bottle must be milk"));
         laundryRoom.addInventoryRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
@@ -53,34 +53,34 @@ public class Game
         outside.setExit("North",hall);
         hall.setExit("South",outside);
         hall.setExit("West",garage);
-        hall.setExit("East",livingroom);
+        hall.setExit("East",livingRoom);
         hall.setExit("North",daughterRoom);
-        hall.setExit("Up",playroom);
+        hall.setExit("Up",playRoom);
         daughterRoom.setExit("South",hall);
         garage.setExit("East",hall);
         garage.setExit("West",pantry);
         pantry.setExit("East",garage);
-        livingroom.setExit("East",hall);
-        playroom.setExit("Down",hall);
-        playroom.setExit("North",office);
-        playroom.setExit("East",kitchen);
-        playroom.setExit("West",laundryRoom);
-        kitchen.setExit("East",playroom);
-        laundryRoom.setExit("West",playroom);
+        livingRoom.setExit("West",hall);
+        playRoom.setExit("Down",hall);
+        playRoom.setExit("North",office);
+        playRoom.setExit("East",kitchen);
+        playRoom.setExit("West",laundryRoom);
+        kitchen.setExit("East",playRoom);
+        laundryRoom.setExit("East",playRoom);
         laundryRoom.setExit("Up",attic);
         office.setExit("Down",outside);
         attic.setExit("Down",laundryRoom);
         
         //Creation des room avec image associee
-        ImageRoom imgOutside, imgHall, imgGarage, imgLivingroom, imgDaughterRoom, imgPantry, imgPlayroom, imgKitchen, imgOffice, imgLaundryRoom, imgAttic;
+        ImageRoom imgOutside, imgHall, imgGarage, imgLivingRoom, imgDaughterRoom, imgPantry, imgPlayRoom, imgKitchen, imgOffice, imgLaundryRoom, imgAttic;
         imgOutside = new ImageRoom("images/gardenCharacters.jpg",outside);
         //imgOutside.setGif("images/unicrorn.gif");
         imgHall = new ImageRoom("images/hallMonster.jpg",hall);
         imgGarage = new ImageRoom("images/garageCharacters.jpg",garage);
-        imgLivingroom = new ImageRoom("images/livingroomCharacters.jpg",livingroom);
+        imgLivingRoom = new ImageRoom("images/livingroomCharacters.jpg",livingRoom);
         imgDaughterRoom = new ImageRoom("images/bedroomCharacters.jpg",daughterRoom);
         imgPantry = new ImageRoom("images/pantryCharacters.jpg",pantry);
-        imgPlayroom = new ImageRoom("images/playroomCharacters.jpg",playroom);
+        imgPlayRoom = new ImageRoom("images/playroomCharacters.jpg",playRoom);
         imgKitchen = new ImageRoom("images/kitchenCharacters.jpg",kitchen);
         imgOffice = new ImageRoom("images/officeMonster.jpg",office);
         imgLaundryRoom = new ImageRoom("images/laundryRoomCharacters.jpg",laundryRoom);
@@ -90,22 +90,22 @@ public class Game
         listImgRoom.add(imgOutside);
         listImgRoom.add(imgHall);
         listImgRoom.add(imgGarage);
-        listImgRoom.add(imgLivingroom);
+        listImgRoom.add(imgLivingRoom);
         listImgRoom.add(imgDaughterRoom);
         listImgRoom.add(imgPantry);
-        listImgRoom.add(imgPlayroom);
+        listImgRoom.add(imgPlayRoom);
         listImgRoom.add(imgKitchen);
         listImgRoom.add(imgOffice);
         listImgRoom.add(imgLaundryRoom);
         listImgRoom.add(imgAttic);
         
         //Ajout Liste Ennemy
-        listEnnemy.add(new Ennemy("Grand-father", 0));
-        listEnnemy.add(new Ennemy("Father", 1));
-        listEnnemy.add(new Ennemy("Brother", 3));
-        listEnnemy.add(new Ennemy("Mother", 4));
-        listEnnemy.add(new Ennemy("Grand-Mother", 5));
-        listEnnemy.add(new Ennemy("Baby", 5));
+        listEnemy.add(new Enemy("Grand-father", 0, livingRoom));
+        listEnemy.add(new Enemy("Father", 1, garage));
+        listEnemy.add(new Enemy("Brother", 3, playRoom));
+        listEnemy.add(new Enemy("Mother", 4, kitchen));
+        listEnemy.add(new Enemy("Grand-Mother", 5, laundryRoom));
+        listEnemy.add(new Enemy("Baby", 5, attic));
         
         //Ajout Liste Npc
         listNpc.add(new Npc("Daughter"));
@@ -136,7 +136,7 @@ public class Game
         return enemy1; 
     }
     
-    public ArrayList<Npc> getlistNpc(){
-        return listNpc;
+    public ArrayList<Enemy> getListEnemy(){
+        return listEnemy;
     }
 }
