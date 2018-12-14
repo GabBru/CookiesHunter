@@ -9,17 +9,17 @@ import org.junit.Test;
  * @author  Gabriel Brunet & Amandine Poullot
  * @version v0.1 2018nov
  */
-public class EnnemyTest
+public class EnemyTest
 {
     protected int level;
     private boolean isDead;
-    protected Ennemy testEnnemyCharacter;
+    protected Enemy testEnemyCharacter;
     private Room attic;
     
     /**
      * Default constructor for test class EnnemyTest
      */
-    public EnnemyTest()
+    public EnemyTest()
     {
     }
 
@@ -31,7 +31,7 @@ public class EnnemyTest
     @Before
     public void setUp()
     {
-        testEnnemyCharacter = new Ennemy("Baby",attic,10);
+        testEnemyCharacter = new Ennemy("Baby",attic,10);
     }
 
     /**
@@ -50,7 +50,7 @@ public class EnnemyTest
     @Test
     public void testSetIsDead()
     {
-        testEnnemyCharacter.setIsDead(true);
+        testEnemyCharacter.setIsDead(true);
         assertEquals(true,testEnnemyCharacter.getIsDead());
     }
 }
