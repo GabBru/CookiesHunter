@@ -23,7 +23,7 @@ public class Game
         //A la fin remettre "Player newPlayer"
         
         // initialisation map with different rooms
-        player1 = newPlayer;
+        
         Room outside, hall, garage, livingroom, daughterRoom, pantry, playroom, kitchen, office, laundryRoom, attic;
         outside = new Room("Welcome to Cookies Hunter! You are a creepy monster (yes this blue monster), you are hungry. In this building, a magic Cookie waits. Prepare to enter a modern and psychedelic dark souls. You arrive in the garden. it is sober and well maintained, so you see the dark manor where lies the magic cookies.");       
         hall = new Room("You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
