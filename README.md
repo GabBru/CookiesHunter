@@ -1,6 +1,9 @@
 # CookiesHunter
-Martin Pettinotti, Marie Bogusz, Thibaud Gil, Diama Fall, Anthoine Prsn, Amandine Poullot, Gabriel Brunet, Kilian Felesmino
-Opensource code for the CookiesHunter game.
+------------------------
+AUTHORS : Martin Pettinotti, Marie Bogusz, Thibaud Gil, Diama Fall, Anthoine Pierson, Amandine Poullot, Gabriel Brunet, Kilian Felesmino.
+------------------------
+
+**Opensource code for the CookiesHunter game.**
 
 The name of World of Zuul of the group 3 is CookiesHunter game.
 
