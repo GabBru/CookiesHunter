@@ -21,4 +21,5 @@ But, be careful not to get trapped and die.
 How to open the game ?
   Bla bla bla
 
-The arrows comes from [Flaticon®](www.flaticon.com)
+The arrows comes from [Flaticon®](https://www.flaticon.com).
+This README.md files is wrote according to the [Mark Down](https://www.markdownguide.org/basic-syntax/) syntax.
