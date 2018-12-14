@@ -135,4 +135,8 @@ public class Game
     public Enemy getEnemy(){
         return enemy1; 
     }
+    
+    public ArrayList<Npc> getlistNpc(){
+        return listNpc;
+    }
 }
