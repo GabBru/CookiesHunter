@@ -10,6 +10,7 @@ public class Player extends Character
 {  
     protected int level; // The level variable includes the level of character.
     protected Room currentRoom;
+    protected boolean win;
     /**
      * Player class constructors.
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
@@ -22,6 +23,7 @@ public class Player extends Character
         super(newName);
         currentRoom = newRoom;
         this.level=0;
+        win=true;
     }
     
     /**
@@ -110,5 +112,14 @@ public class Player extends Character
             }
         }
         return false;
-    }    
+    }
+    /*
+     * this method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
+     */
+    public void fight(int enemyLevel, int playerLevel){
+        if(enemyLevel > playerLevel){
+            win = false; // ici ça devrait appeler la méthode qui affiche le game over
+        }
+        else {levelUp();}
+    }
 }
