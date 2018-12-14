@@ -31,7 +31,7 @@ public class EnemyTest
     @Before
     public void setUp()
     {
-        testEnemyCharacter = new Ennemy("Baby",attic,10);
+        testEnemyCharacter = new Enemy("Baby",10,attic);
     }
 
     /**
@@ -51,6 +51,6 @@ public class EnemyTest
     public void testSetIsDead()
     {
         testEnemyCharacter.setIsDead(true);
-        assertEquals(true,testEnnemyCharacter.getIsDead());
+        assertEquals(true,testEnemyCharacter.getIsDead());
     }
 }
