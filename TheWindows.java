@@ -11,15 +11,14 @@ import java.awt.*;
 
 public class TheWindows extends JFrame
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private ImageRoom test;
     private Game myGame;
     // creation of a pTop panel that contains the Image and Inventory panels
     //that will be organized in BorderLayout.
     private JPanel pTop, pBottom;
     
-    /**
-     * Constructeur d'objets de classe Image
+     /**
+     * Image class object builder
      */
     public TheWindows (Game theGame) //
     {
