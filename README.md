@@ -2,6 +2,7 @@
 ------------------------
 AUTHORS : Martin Pettinotti, Marie Bogusz, Thibaud Gil, Diama Fall, Anthoine Pierson, Amandine Poullot, Gabriel Brunet, Kilian Felesmino.
 ------------------------
+`Students project from the University of Poitiers - Master degree Bioengineering and computing "Gphy"`
 
 **Opensource code for the CookiesHunter game.**
 
