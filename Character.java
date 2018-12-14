@@ -7,7 +7,6 @@ import java.util.*;
 public class Character
 {
     protected String name; // The name variable includes the name of the character.
-    protected Room currentRoom; // The currentRoom variable includes the current room.
     protected ArrayList<Item> inventory; // The inventory variable includes the character's item list.
     /**
      * Constructor that allows you to create a new character.
@@ -19,30 +18,13 @@ public class Character
      * @param inventory Not given in the constructor method (always empty when characters are created).
      * @exception IllegalArgumentException Returned in case of name's troubles - Less than 3 characters, more than one space or started with a space.
      */
-    public Character(String newName, Room newRoom)
+    public Character(String newName)
     { 
         if (newName.length()<=2 || (newName.substring(0,1).equals(" ")) || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException("Incorrect name");
         name = newName;
-        currentRoom = newRoom;
         inventory = new ArrayList<Item>();
     }
-    
-    /**
-     * Return the current room (Room class) where the character is.
-     */
-    public Room getRoom()
-    {
-        return this.currentRoom;
-    }
-    
-    /**
-     * Change the room (Room class) where the character is.
-    */
-    public void  setCurrentRoom(Room newCurrentRoom)
-    {
-        currentRoom = newCurrentRoom;
-    }
-    
+
     /**
      * Add an item (Item class) in the inventory of the character.
      */
