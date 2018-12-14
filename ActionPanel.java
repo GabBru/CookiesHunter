@@ -42,6 +42,8 @@ public class ActionPanel extends JPanel
         Icon westIcon = new ImageIcon("arrows/west-arrow.png");
         Icon downIcon = new ImageIcon("arrows/down-arrow.png");
         Icon upIcon = new ImageIcon("arrows/up-arrow.png");
+        Icon searchIcon = new ImageIcon("arrows/magnifier.png");
+        Icon attackIcon = new ImageIcon("arrows/spoon.png");
         // Button creation
         north = new JButton(northIcon);
         south = new JButton(southIcon);
