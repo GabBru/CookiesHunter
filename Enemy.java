@@ -25,7 +25,7 @@ public class Enemy extends Character
      * @param level Return the current level of the ennemy.
      * @exception IllegalArgumentException Returned in case of level troubles (<0).
      */
-    public Enemy(String newName, Room newRoom, int level, Room enemyRoom)
+    public Enemy(String newName, int level, Room enemyRoom)
     {
         super(newName);
         isDead=false;
