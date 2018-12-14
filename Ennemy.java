@@ -26,7 +26,7 @@ public class Ennemy extends Character
      */
     public Ennemy(String newName, Room newRoom, int level)
     {
-        super(newName, newRoom);
+        super(newName);
         isDead=false;
         if (level<0) throw new IllegalArgumentException("Level must be positive");
         this.level = level;
