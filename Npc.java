@@ -12,7 +12,7 @@ public class Npc extends Character
      * Constructor 
      * Create a new Npc.
      */
-    public Npc(String newName, Room newRoom)
+    public Npc(String newName)
     {
         super(newName);
     }
