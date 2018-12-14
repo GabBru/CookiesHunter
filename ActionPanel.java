@@ -114,7 +114,16 @@ public class ActionPanel extends JPanel
         );
         
         search = new JButton(searchIcon);
+        
         attack = new JButton(attackIcon);
+        attack.addActionListener( new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                myGame.getPlayer().fight(myGame.getEnemy().getLevel(),myGame.getPlayer().getLevel());
+            }
+        }
+        );
         
         // Label creation for the gridLayout
         myLabel1 = new JLabel("");
