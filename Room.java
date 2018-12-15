@@ -14,6 +14,7 @@ import java.util.*;
 public class Room   
 {
     protected String description; // The description variable includes the description of the room.
+    private String nameRoom;
     private HashMap<String, Room> exits; // The exits variable is a HashMap that includes the rooms associated with the exits.
     protected boolean isVisited; // The isVisited variable indicates if the player has visited the room or not.
     protected ArrayList<Item> inventoryRoom; // The inventoryRoom variable is a ArrayList that includes the items was in the room.
@@ -30,10 +31,11 @@ public class Room
      * @param isVisited Used to inform if the Player has already visited the room. Useful to manage traps and mini map.
      * @exception IllegalArgumentException Returned in case of description's troubles. Incorrect size or format. See instructions above.
      */
-    public Room(String description) 
+    public Room(String nameRoom, String description) 
     {
         if (description.length()<10) throw new IllegalArgumentException("Incorrect description");
         this.description = description;
+        this.nameRoom = nameRoom;
         exits = new HashMap<>();
         isVisited = false;
         inventoryRoom = new ArrayList<Item>();
@@ -80,6 +82,14 @@ public class Room
     public String getDescription()
     {
         return description;
+    }
+    
+    /**
+     * @return Return a name at the room.
+     */
+    public String getNameRoom()
+    {
+        return nameRoom;
     }
     
     /**
