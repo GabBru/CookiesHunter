@@ -40,11 +40,13 @@ public class TheWindows extends JFrame
         myFrame.setLayout(new GridLayout(2,1));
         
         pTop = new Image(myGame.getImgCurrentRoom());
-        pBottom = new Info(this);
+        pBottom = new Info(this);        
+        myFrame.add(pTop);
+        myFrame.add(new Inventory(this));
+        myFrame.add(pBottom);
         myFrame.add(new ActionPanel(this));
         myFrame.add(new JLabel(""));
-        myFrame.add(pBottom);
-        myFrame.add(pTop);
+        
                
         myFrame.pack();
         myFrame.setVisible(true);
