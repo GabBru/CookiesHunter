@@ -11,7 +11,7 @@ import java.util.*;
  * 
  * Les classes-test sont documentees ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basees sur le document Å  2002 Robert A. Ballance intitulee
+ * et sont basees sur le document Ã…Â  2002 Robert A. Ballance intitulee
  * "JUnit: Unit Testing Framework".
  */
 public class RoomTest
@@ -35,7 +35,7 @@ public class RoomTest
     @Before
     public void setUp() 
     {
-       roomTest = new Room ("azertyu est une salle random");
+       roomTest = new Room ("name","azertyu est une salle random");
        dentier = new Item("Denture","Buuuurk, there is mamy's slime on it");
     }
     
@@ -44,7 +44,7 @@ public class RoomTest
      */
     @Test
     public void testSetExit() {
-        Room thing = new Room("sxcvgjgvfgjhgfhuk");
+        Room thing = new Room("name","sxcvgjgvfgjhgfhuk");
         roomTest.setExit("north",thing);
         assertEquals(thing, roomTest.getExit("north"));
     }
@@ -79,7 +79,7 @@ public class RoomTest
     {
         boolean result = true;
         try{
-            Room test = new Room("");
+            Room test = new Room("name","");
         } catch (IllegalArgumentException e) {
             result=false;
         }
