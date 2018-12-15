@@ -27,17 +27,17 @@ public class Game
         // initialisation map with different rooms
         
         Room outside, hall, garage, livingRoom, daughterRoom, pantry, playRoom, kitchen, office, laundryRoom, attic;
-        outside = new Room("outside","Welcome to Cookies Hunter! You are a creepy monster (yes this blue monster), you are hungry. In this building, a magic Cookie waits. Prepare to enter a modern and psychedelic dark souls. You arrive in the garden. it is sober and well maintained, so you see the dark manor where lies the magic cookies.");       
-        hall = new Room("hall","You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
-        garage = new Room("garage","You arrive in the garage. the father remark you and attacks you with a wrench. Defend yourself !!!");
-        livingRoom = new Room("livingRoom","You arrive in the living room. The grampa attack you. Defend yourself !!!");
-        daughterRoom = new MagicRoom("daughterRoom","You arrive in a room, it is the room of the little girl. it's very creepy.","Unicorn");
-        pantry = new LockRoom("pantry","You enter the pantry room, a servant greets you.");
-        playRoom = new LockRoom("playRoom","You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
-        kitchen = new Room("kitchen","You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
-        office = new Room("office","You enter an office ...You are stuck, there is no exit. OMG Ã¢â‚¬Â¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
-        laundryRoom = new Room("laundryRoom","You enter in a laundry room. A very old and creepy woman waiting for you...");
-        attic = new MagicRoom("attic","I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
+        outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a creepy monster (yes this blue monster), you are hungry. In this building, a magic Cookie waits. Prepare to enter a modern and psychedelic dark souls. You arrive in the garden. it is sober and well maintained, so you see the dark manor where lies the magic cookies.");
+        hall = new Room("hall","<html>You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
+        garage = new Room("<html>garage","You arrive in the garage. the father remark you and attacks you with a wrench. Defend yourself !!!");
+        livingRoom = new Room("livingRoom","<html>You arrive in the living room. The grampa attack you. Defend yourself !!!");
+        daughterRoom = new MagicRoom("daughterRoom","<html>You arrive in a room, it is the room of the little girl. it's very creepy.","Unicorn");
+        pantry = new LockRoom("pantry","<html>You enter the pantry room, a servant greets you.");
+        playRoom = new LockRoom("playRoom","<html>You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
+        kitchen = new Room("kitchen","<html>You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
+        office = new Room("office","<html>You enter an office ...You are stuck, there is no exit. OMG Ã¢â‚¬Â¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
+        laundryRoom = new Room("laundryRoom","<html>You enter in a laundry room. A very old and creepy woman waiting for you...");
+        attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
         
         //Ajout des Items
