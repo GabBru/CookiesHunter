@@ -11,7 +11,7 @@ import org.junit.Test;
 public class MagicRoomTest
 {
     private MagicRoom okMagicRoom, badMagicRoom;
-    private String okDescription, okPassWord;
+    private String okDescription, okPassWord, okName;
     /**
      * Default constructor for test class MagicRoomTest
      * 
@@ -34,8 +34,9 @@ public class MagicRoomTest
     public void setUp()
     {
         okDescription = ("Doors of Durin, lord of the Moria, say \"friends\" and come in");
+        okName = ("name");
         okPassWord = ("mellon");
-        okMagicRoom = new MagicRoom(okDescription, okPassWord);
+        okMagicRoom = new MagicRoom(okName,okDescription, okPassWord);
     }
     
     /**
@@ -57,15 +58,15 @@ public class MagicRoomTest
         boolean result = true;
         assertEquals(okDescription,okMagicRoom.getDescription());
         assertEquals(okPassWord, okMagicRoom.getPassword());
-        try { badMagicRoom = new MagicRoom("ShortDesc",okPassWord);}
+        try { badMagicRoom = new MagicRoom("Name","ShortDesc",okPassWord);}
         catch (IllegalArgumentException e) {result=false;}
         assertEquals(false, result);
         tearDown();
-        try { badMagicRoom = new MagicRoom(okDescription,"Iam baaadpassword");}
+        try { badMagicRoom = new MagicRoom("Name",okDescription,"Iam baaadpassword");}
         catch (IllegalArgumentException e) {result=false;}
         assertEquals(false, result);
         tearDown();
-        try { badMagicRoom = new MagicRoom(okDescription,"");}
+        try { badMagicRoom = new MagicRoom("Name",okDescription,"");}
         catch (IllegalArgumentException e) {result=false;}
         assertEquals(false, result);        
     }
