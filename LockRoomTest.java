@@ -10,7 +10,7 @@ import org.junit.Test;
  *
  * Les classes-test sont documentees ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basees sur le document Å  2002 Robert A. Ballance intitule
+ * et sont basees sur le document Ã…Â  2002 Robert A. Ballance intitule
  * "JUnit: Unit Testing Framework".
  *
  */
@@ -37,7 +37,7 @@ public class LockRoomTest
     public void setUp()
     {
         myDescription = "You are in the kitchen";
-        LockRoom goodRoom = new LockRoom(myDescription);
+        LockRoom goodRoom = new LockRoom("name",myDescription);
     }
     
     /**
@@ -48,7 +48,7 @@ public class LockRoomTest
     {
         boolean result = true;
         try{
-            okLockRoom = new LockRoom(myDescription);
+            okLockRoom = new LockRoom("name",myDescription);
         } catch (IllegalArgumentException e){
             result = false;
         }
@@ -63,7 +63,7 @@ public class LockRoomTest
     @Test
     public void testSetIsLocked()
     {
-        okLockRoom = new LockRoom(myDescription);
+        okLockRoom = new LockRoom("name",myDescription);
         okLockRoom.setLocked();
         assertEquals(true, okLockRoom.getLocked());
         okLockRoom.setLocked();
