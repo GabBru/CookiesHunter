@@ -1,4 +1,6 @@
 import java.util.*;
+import java.lang.String;
+
 /**
  * Subclass Ennemies inherites the superclass Character. 
  * Like the LockRoom, this one needs an entity (here a String passWord) to be unlocked.
@@ -20,9 +22,9 @@ public class MagicRoom extends Room
     * @param passWord Must be compare to a given String to be changed as an unlockedRoom. If the two spring are not the same, the room stay blocked and the Player cannot go inside.
     * @exception IllegalArgumentException Returned in case of passWord troubles (spaces).
     */
-   public MagicRoom (String newDescription, String passWord)
+   public MagicRoom (String nameRoom, String newDescription, String passWord)
    {
-       super(newDescription);
+       super(nameRoom, newDescription);
        if ((passWord.length()<1) || (passWord.length() - passWord.replace(" ","").length())>0) throw new IllegalArgumentException("Incorrect password");
        this.passWord = passWord;
        isLocked=true;
