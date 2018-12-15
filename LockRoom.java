@@ -20,9 +20,9 @@ public class LockRoom extends Room
      * @param description See details in superclass. 
      * @param isLocked This attributes allows us to manage the accessibility of a room to an other.We cannot access it without unlocking it with a key (Item).
      */
-    public LockRoom(String description)
+    public LockRoom(String nameRoom, String description)
     {
-        super(description);
+        super(nameRoom, description);
         isLocked = true;
     }
 
