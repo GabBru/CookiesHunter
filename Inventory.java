@@ -13,9 +13,14 @@ public class Inventory extends JPanel
     private JPanel myUpPanel, myDownPanel;
     private JLabel myLabelTitle;
     private JTextField myTextFieldInvent;
+    private Game myGame;
+    private Player myPlayer;
     
-    public Inventory (Player myPlayer)
+    public Inventory (TheWindows win)
     {        
+        myGame = win.getGame();
+        myPlayer = myGame.getPlayer();
+        
         myUpPanel = new JPanel();
         myDownPanel = new JPanel();
         myDownPanel.setSize(getWidth(),getHeight());
