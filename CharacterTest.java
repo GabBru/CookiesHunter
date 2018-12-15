@@ -1,105 +1,88 @@
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import java.util.*;
 /**
- * Classe-test CharacterTest - for Character class.
- *
- * @author  Brunet Gabriel & Amandine Poullot
+ * This class is the super-class using by the different characters constructors.
+ * @author Amandine POULLOT & Gabriel BRUNET
  * @version v0.1 2018nov
- *
- * Les classes-test sont documentÃƒÂ©es ici :
- * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basÃƒÂ©es sur le document Ã…Â  2002 Robert A. Ballance intitulÃƒÂ©
- * "JUnit: Unit Testing Framework".
  */
-public class CharacterTest
+public class Character
 {
-    private Character okCharacter, testCharacter;
-    private ArrayList<Item> testInvent;
-    private Item cookie;
-    private Room grenier;
+    protected String name; // The name variable includes the name of the character.
+    protected ArrayList<Item> inventory; // The inventory variable includes the character's item list.
     /**
-    * Classe-test CharacterTest constructor.
+     * Constructor that allows you to create a new character.
+     * Each character's name have to contain at least 3 characters. It also 
+     * cannot start with a space or contain more than 1 space (ex : "firstname family_name").
+     * If one of those restrictions are not respected, the object cannot be created and an Exception statement will be returned.
+     * @param newName This parameter represent the name of the Character. It will be automatically initialised depending on which Character is created except for the Player class.
+     * @param newRoom This parameter represent the current room where the character is located. It will evolve according to the progress of the game (Player case).
+     * @param inventory Not given in the constructor method (always empty when characters are created).
+     * @exception IllegalArgumentException Returned in case of name's troubles - Less than 3 characters, more than one space or started with a space.
      */
-    public CharacterTest()
-    {
+    public Character(String newName)
+    { 
+        if (newName.length()<=2 || (newName.substring(0,1).equals(" ")) || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException("Incorrect name");
+        name = newName;
+        inventory = new ArrayList<Item>();
     }
 
     /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     * 
-     * @param okCharacter Used to do the tests in general.
-     * @param testCharacter Used to do the constructor test - Useful to make sure that there is no conflicts with other methods. 
-     * Variables "cookie", "grenier" and "testInvent" are used and constructed for help during the process of test methods.
+     * Add an item (Item class) in the inventory of the character.
      */
-    @Before
-    public void setUp() 
+    public void addInventory(Item theItem)
     {
-        okCharacter = new Character("You");
-        grenier = new Room("Vous ÃƒÂªtes dans le grenier du gros bÃƒÂ©bÃƒÂ©!");
-        cookie = new Item ("Cookie", "Gros cookie pour gros bÃƒÂ©bÃƒÂ©");
-    }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown() 
-    {
-        //LibÃƒÂ©rez ici les ressources engagÃƒÂ©es par setUp()
+        inventory.add(theItem);
     }
     
     /**
-     * Method testConstructorBlankName() : Check if there is no blank as name.
+     * Remove one type of item (Item class) from the inventory of the character.
      */
-    @Test
-    public void testConstructorBlankName()
+    public void removeInventory(String nameItem)
     {
-        boolean result=true;
-        try {
-            testCharacter = new Character("   ");
-        } catch (IllegalArgumentException e) {
-            result = false;
-        }
-        assertEquals(false, result);
+        for (Item i : inventory)
+            if (i.name.equals(nameItem)){
+                inventory.remove(i);
+            } 
     }
     
     /**
-     * Method testRemoveItem() : Check the good process of removing items from the list.
+     * Recovers the name of the character.
      */
-    @Test
-    public void testRemoveItem()
+    public String getName()
     {
-        okCharacter.addInventory(cookie);
-        assertEquals(1,okCharacter.getNumberItemGave("Cookie"));
-        okCharacter.removeInventory("Cookie");
-        assertEquals(true,okCharacter.inventory.isEmpty());
+        return name;
     }
     
     /**
-     * Method testAddItem() : Check if an item is correctly add to the inventory
+     * Count the number of item given as parameters in the inventory of the player.
+     * @return Return an integer which represent the occurence of an Item in an inventory.
      */
-    @Test
-    public void testAddItem()
+    
+    public int getNumberItemGave(String nameItem)
     {
-        okCharacter.addInventory(cookie);
-        assertEquals(1,okCharacter.inventory.size());
+        int numberItem = 0;
+        for (Item i : inventory)
+            if (i.name.equals(nameItem)){
+                numberItem++;
+            }
+        return(numberItem);
     }
     
     /**
-     * Method testReturnInventory() : Check if the good string is returned when the character's inventory is non empty.
-     * Also check if nothing is returned in case of empty inventory.
+     * This is a method which return the contents of the inventory.
+     * @return Return a string listing items in the character's inventory. 
      */
-    @Test
-    public void testReturnInventory()
+    
+    public String returnInventory()
     {
-        okCharacter.addInventory(cookie);
-        assertEquals("Your inventory contains : 1 Cookie ;",okCharacter.returnInventory());
-    }
+        String contents = "Your inventory contains : ";
+        int count = 0;
+        for (String nameItem : Item.validItems) {
+        count = getNumberItemGave(nameItem);
+            if ( count >0){
+                contents = (contents + count + " " +nameItem+" ;");
+                count = 0;
+            }
+        } 
+        return contents;
+    } 
 }
