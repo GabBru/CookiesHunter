@@ -33,8 +33,7 @@ public class Player extends Character
     {
         return level;
     }
-    
-    
+        
     /**
      * Return the current room (Room class) where the character is.
      */
@@ -118,7 +117,7 @@ public class Player extends Character
      */
     public void fight(int enemyLevel, int playerLevel){
         if(enemyLevel > playerLevel){
-            win = false; // ici ça devrait appeler la méthode qui affiche le game over
+            win = false; // ici Ã§a devrait appeler la mÃ©thode qui affiche le game over
         }
         else {levelUp();}
     }
