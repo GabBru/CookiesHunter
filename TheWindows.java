@@ -25,7 +25,7 @@ public class TheWindows extends JFrame
     private JFrame myFrame;
     // creation of a pTop panel that contains the Image and Inventory panels
     //that will be organized in BorderLayout.
-    private JPanel pTop, pBottom;
+    private JPanel pTop, pBottom, desc;
     
      /**
      * Image class object builder
@@ -35,19 +35,21 @@ public class TheWindows extends JFrame
         myGame = new Game();
         myFrame = new JFrame("Hunter Cookies");
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //myFrame.setSize(1600,900);
+       myFrame.setSize(1600,900);
         myFrame.setResizable(true);
-        myFrame.setLayout(new GridLayout(2,1));
+        myFrame.setLayout(new GridLayout(3,2));
         
         pTop = new Image(myGame.getImgCurrentRoom());
-        pBottom = new Info(this);        
-        myFrame.add(pTop);
-        myFrame.add(new Inventory(this));
-        myFrame.add(pBottom);
-        myFrame.add(new ActionPanel(this));
-        myFrame.add(new JLabel(""));
+        pBottom = new Info(this);
+        desc = new DescriptionRoom(this);
         
-               
+        myFrame.add(pTop); //Image
+        //myFrame.add(new Inventory(this)); // marche pas
+        myFrame.add(pBottom); // Infos
+        myFrame.add(new ActionPanel(this)); // Boutons
+        myFrame.add(new JLabel(""));
+        myFrame.add(desc); // Description of the current room       
+        
         myFrame.pack();
         myFrame.setVisible(true);
     }
@@ -62,8 +64,11 @@ public class TheWindows extends JFrame
     public void refresh(){
         pBottom.removeAll();
         pTop.removeAll();
+        desc.removeAll();
         pBottom.add(new Info(this));
-        pTop.add(new Image(myGame.getImgCurrentRoom()));        
+        pTop.add(new Image(myGame.getImgCurrentRoom()));  
+        desc.add(new DescriptionRoom(this));
+        
         myFrame.revalidate();
         myFrame.repaint();
     }  
