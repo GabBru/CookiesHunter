@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Item
+comment0.text=\r\n\ Class\ Item\ is\ used\ to\ manipulate\ items\ in\ the\ game.\ \r\n\ An\ item\ is\ owned\ by\ a\ character\ and\ composed\ of\ a\ proper\ name,\ description\ for\ each\ of\ themand\ and\ \r\n\ a\ String\ array\ with\ the\ valid\ names\ of\ the\ items.\r\n\ \r\n\ @author\ \:\ Marie\ Bogusz\ &\ Gabriel\ Brunet\r\n\ @version\ v0.2\ 2018nov\r\n
+comment1.params=name\ description
+comment1.target=Item(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ of\ Item\ class\ allows\ you\ to\ create\ a\ new\ Item.\r\n\ Each\ item's\ name\ must\ contain\ at\ least\ 1\ character\ and\ doesn't\ have\ to\ start\ with\ a\ space.\r\n\ Description\ must\ contain\ at\ least\ 10\ characters\ and\ have\ not\ to\ start\ with\ a\ space.\r\n\ If\ one\ of\ those\ restrictions\ are\ not\ respected,\ the\ object\ cannot\ be\ created\ and\ an\ exception\ statement\ is\ returned.\r\n\ \r\n\ @param\ name\ Proper\ name\ for\ the\ item\ created.\r\n\ @param\ description\ Proper\ description\ for\ the\ item\ created.\r\n\ @exception\ IllegalArgumentException\ Returned\ in\ case\ of\ name\ or\ description\ troubles.\ See\ restrictions\ above.\r\n
+comment2.params=name
+comment2.target=boolean\ isItem(java.lang.String)
+comment2.text=\r\n\ This\ method\ check\ the\ presence\ of\ a\ given\ string\ in\ the\ list\ "validItems".\r\n\ \r\n\ @return\ Return\ a\ boolean\ true\ if\ a\ given\ string\ is\ in\ the\ list\ of\ valid\ items.\ False\ if\ not.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment3.text=\r\n\ @return\ Return\ the\ name\ of\ the\ item\ under\ a\ String\ form.\ \r\n
+comment4.params=
+comment4.target=java.lang.String\ getDescription()
+comment4.text=\r\n\ @return\ Return\ the\ full\ description\ of\ the\ item\ under\ a\ String\ form.\r\n
+numComments=5

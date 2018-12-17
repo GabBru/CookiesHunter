@@ -50,17 +50,6 @@ public class RoomTest
     }
     
     /**
-    *
-    * Method testsetterIsVisited() : Check the good operation for the isVisited setter.
-    */
-    @Test
-    public void testsetterIsVisited()
-    {
-       roomTest.setIsVisited();
-       assertEquals(true,roomTest.getIsVisited());
-    }
-    
-    /**
      * Tears down the test fixture.
      *
      * Called after every test case method.
@@ -84,26 +73,5 @@ public class RoomTest
             result=false;
         }
         assertEquals(false,result);
-    }
-    
-    /**
-     * Method testAddItem() : Check if an item is correctly add to the inventory
-     */
-    @Test
-    public void testAddItemRoom()
-    {
-        roomTest.addInventoryRoom(dentier);
-        assertEquals(1,roomTest.inventoryRoom.size());
-    }
-    
-    /**
-     * Method testReturnInventory() : Check if the good string is returned when the character's inventory is non empty.
-     * Also check if nothing is returned in case of empty inventory.
-     */
-    @Test
-    public void testReturnInventoryRoom()
-    {
-        roomTest.addInventoryRoom(dentier);
-        assertEquals("1 Denture ;",roomTest.returnInventoryRoom());
     }
 }

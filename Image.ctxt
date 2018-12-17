@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Image
+comment0.text=\r\n\ The\ Image\ class\ allows\ you\ to\ manage\ images\ and\ Gifs\ that\ will\ be\ displayed\ during\ the\ game.\r\n\ There\ is\ always\ one\ image\ of\ a\ room\ to\ display\ during\ the\ game.\ \r\n\ There\ is\ not\ always\ a\ Gif\ to\ display\ during\ the\ game.\r\n\r\n\ @author\ kilian\ felesmino\ &\ Marie\ Bogusz\r\n\ @version\ 11/12/2018\r\n
+comment1.params=img
+comment1.target=Image(ImageRoom)
+comment1.text=\r\n\ Image\ class\ constructor.\r\n\ If\ there\ is\ no\ GIF,\ we\ simply\ want\ to\ display\ the\ image\ of\ the\ room.\r\n\ If\ there\ is\ Gif,\ we\ want\ to\ display\ the\ Gif\ next\ to\ the\ image\ of\ the\ room.\r\n
+numComments=2

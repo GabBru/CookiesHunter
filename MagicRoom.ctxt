@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=MagicRoom
+comment0.text=\r\n\ Subclass\ Ennemies\ inherites\ the\ superclass\ Character.\ \r\n\ Like\ the\ LockRoom,\ this\ one\ needs\ an\ entity\ (here\ a\ String\ passWord)\ to\ be\ unlocked.\r\n\r\n\ @author\ GIL\ Thibaud\ &\ Kilian\ Felesmino\ &\ Marie\ Bogusz\r\n\ @version\ v0.2\ 2018nov\r\n
+comment1.params=nameRoom\ newDescription\ passWord
+comment1.target=MagicRoom(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ that\ allows\ to\ create\ a\ new\ MagicRoom.\r\n\ As\ one\ of\ the\ subclass\ of\ the\ LockRoom\ superclass,\ each\ attributes\ of\ this\ class\ has\ the\ same\ restrictions.\r\n\ The\ password\ must\ contain\ at\ least\ 1\ character\ and\ must\ not\ contain\ any\ spaces.\r\n\ If\ there\ is\ a\ space\ in\ the\ password,\ the\ object\ cannot\ be\ created\ and\ an\ exception\ is\ returned.\r\n\ \r\n\ @param\ newDescription\ See\ details\ in\ the\ superclass.\r\n\ @param\ passWord\ Must\ be\ compare\ to\ a\ given\ String\ to\ be\ changed\ as\ an\ unlockedRoom.\ If\ the\ two\ spring\ are\ not\ the\ same,\ the\ room\ stay\ blocked\ and\ the\ Player\ cannot\ go\ inside.\r\n\ @exception\ IllegalArgumentException\ Returned\ in\ case\ of\ passWord\ troubles\ (spaces).\r\n
+comment2.params=newPassWord
+comment2.target=void\ setPassword(java.lang.String)
+comment2.text=\ \r\n\ Able\ to\ change\ the\ value\ of\ the\ String\ passWord.\ Should\ not\ be\ used\ once\ the\ object\ created\ whithout\ exception.\ \r\n
+comment3.params=
+comment3.target=java.lang.String\ getPassword()
+comment3.text=\ \r\n\ @return\ Return\ the\ string\ corresponding\ to\ the\ passWord.\r\n
+comment4.params=
+comment4.target=void\ setIsLocked()
+comment4.text=\ \r\n\ Method\ changing\ automatically\ the\ value\ of\ the\ boolean\ isLocked.\ Switch\ the\ state\ "true"\ or\ false"\ to\ its\ inverse.\r\n
+comment5.params=
+comment5.target=boolean\ getIsLocked()
+comment5.text=\ \r\n\ @return\ Return\ the\ boolean\ isLocked.\r\n
+comment6.params=attempt
+comment6.target=boolean\ checkPass(java.lang.String)
+numComments=7

@@ -22,36 +22,79 @@ public class TheWindows extends JFrame
 {
     private ImageRoom test;
     private Game myGame;
-    private JFrame myFrame;
+    // private JFrame myFrame;
+    
     // creation of a pTop panel that contains the Image and Inventory panels
-    //that will be organized in BorderLayout.
-    private JPanel pTop, pBottom, desc;
+    // that will be organized in BorderLayout.
+    // Creation of a pBottom panel that contains the Message, DirectionInfo
+    // panels that will be organized in BorderLayout
+    // Creation of the DirectionInfo panel that contains the ActionPanel
+    // and the Info, will be organized in BorderLayout
+    private JPanel pTop, pBottom, pDirectionInfo, pDead;
     
      /**
      * Image class object builder
      */
     public TheWindows () //
     {
+        // Organization of the Frame
         myGame = new Game();
-        myFrame = new JFrame("Hunter Cookies");
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       myFrame.setSize(1600,900);
-        myFrame.setResizable(true);
-        myFrame.setLayout(new GridLayout(3,2));
+        this.setTitle("Hunter Cookies");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(1300,600);
+        this.setResizable(true);
+        this.setLayout(new BorderLayout());
         
-        pTop = new Image(myGame.getImgCurrentRoom());
-        pBottom = new Info(this);
-        desc = new DescriptionRoom(this);
+        playerLive();
+       
+        this.pack();
+        this.setVisible(true);
+    }
+    
+    public void playerDead(){
+        this.removeAll();
         
-        myFrame.add(pTop); //Image
+        
+        pDead = new JPanel();
+        pDead.add(new Image(new ImageRoom("images/gameOver.gif",new Room("gameOver"," "))));
+        this.add(pDead);
+    }
+    
+    public void playerLive(){
+        // --- TOP PANEL ---
+        pTop = new JPanel();
+        pTop.setLayout(new BorderLayout());
+        pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.WEST);
+        //pTop.add(new Inventory(this), BorderLayout.EAST);
+        this.add(pTop); //Image
+        
+        // --- BOTTOM PANEL ---
+        pBottom = new JPanel();
+        pBottom.setLayout(new BorderLayout());
+        
+        // *** DIRECTION INFO PANEL ***
+        pDirectionInfo = new JPanel();
+        pDirectionInfo.setLayout(new BorderLayout());
+        pDirectionInfo.add(new ActionPanel(this));
+        pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
+        // *** ***
+        
+        //pBottom.add(new Message(this));
+        pBottom.add(new DescriptionRoom(this));
+        pBottom.add(pDirectionInfo, BorderLayout.EAST);
+        //desc = new DescriptionRoom(this);
+        
+        
+        // --- ADD PANEL IN THE FRAME ---
+        this.add(new Menu(this));
+        this.add(pTop, BorderLayout.NORTH);
+        this.add(pBottom, BorderLayout.SOUTH);
+        
         //myFrame.add(new Inventory(this)); // marche pas
-        myFrame.add(pBottom); // Infos
-        myFrame.add(new ActionPanel(this)); // Boutons
-        myFrame.add(new JLabel(""));
-        myFrame.add(desc); // Description of the current room       
-        
-        myFrame.pack();
-        myFrame.setVisible(true);
+         // Infos
+        //this.add(new ActionPanel(this)); // Boutons
+        //this.add(new JLabel(""));
+        //this.add(desc); // Description of the current room     
     }
     
     public Game getGame(){
@@ -62,14 +105,28 @@ public class TheWindows extends JFrame
      * Method who refresh the Frame
      */
     public void refresh(){
+        // remove all Panels
         pBottom.removeAll();
         pTop.removeAll();
-        desc.removeAll();
-        pBottom.add(new Info(this));
-        pTop.add(new Image(myGame.getImgCurrentRoom()));  
-        desc.add(new DescriptionRoom(this));
+        pDirectionInfo.removeAll();
+        //desc.removeAll();
         
-        myFrame.revalidate();
-        myFrame.repaint();
+        // Add the new Panels
+        // pBottom.add(new Info(this));
+        // pTop.add(new Image(myGame.getImgCurrentRoom()));  
+        // desc.add(new DescriptionRoom(this));
+        pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.WEST);
+        pDirectionInfo.add(new ActionPanel(this));
+        pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
+        //pBottom.add(new Message(this));
+        
+        pBottom.add(new DescriptionRoom(this));
+        pBottom.add(pDirectionInfo, BorderLayout.EAST);
+        this.add(pTop, BorderLayout.NORTH);
+        this.add(pBottom, BorderLayout.SOUTH);
+        
+        // Validate the frame
+        this.revalidate();
+        this.repaint();
     }  
 }

@@ -17,7 +17,7 @@ public class Room
     private String nameRoom;
     private HashMap<String, Room> exits; // The exits variable is a HashMap that includes the rooms associated with the exits.
     protected boolean isVisited; // The isVisited variable indicates if the player has visited the room or not.
-    protected ArrayList<Item> inventoryRoom; // The inventoryRoom variable is a ArrayList that includes the items was in the room.
+    protected Item itemRoom; // The inventoryRoom variable is a ArrayList that includes the items was in the room.
     /**
      * Constructor 
      * Create a new Room.
@@ -38,7 +38,7 @@ public class Room
         this.nameRoom = nameRoom;
         exits = new HashMap<>();
         isVisited = false;
-        inventoryRoom = new ArrayList<Item>();
+        this.itemRoom = null; 
     }
 
     /**
@@ -84,6 +84,11 @@ public class Room
         return description;
     }
     
+    public void setDescription(String des)
+    {
+        description = des;
+    }
+    
     /**
      * @return Return a name at the room.
      */
@@ -101,61 +106,23 @@ public class Room
     }
     
     /**
-     * Method changing automatically the value of the boolean isVisited. Switch the state "true" or false" to it inverse. 
-     */
-    public void setIsVisited()
-    {
-        if (isVisited == true){isVisited = false;}
-        else {isVisited = true;} 
-    }
-    
-    /**
      * Add an item (Item class) in the inventory of the character.
      */
-    public void addInventoryRoom(Item theItem)
+    public void addItemRoom(Item theItem)
     {
-        inventoryRoom.add(theItem);
+        itemRoom = theItem;
+    }
+    
+    public Item getItem(){
+        return itemRoom;
     }
     
     /**
      * Remove an item (Item class) from the inventory of the character.
      */
-    public void removeInventoryRoom(Item theItem)
+    public void removeItemRoom(Item theItem)
     {
-        inventoryRoom.remove(theItem);
+        itemRoom = null;
     }
-    
-    /**
-     * Count the number of item given as parameters in the room.
-     * @return Return an integer which represent the occurence of an Item in an inventory.
-     */
-    
-    public int getNumberItemGaveRoom(String nameItemRoom)
-    {
-        int numberItem = 0;
-        for (Item i : inventoryRoom)
-            if (i.name.equals(nameItemRoom)){
-                numberItem++;
-            }
-        return(numberItem);
-    }
-    
-    /**
-     * This is a method which return the contents of the inventory of the room.
-     * @return Return a string listing items in the room's inventory. 
-     */
-    
-    public String returnInventoryRoom()
-    {
-        String contents = "";
-        int count = 0;
-        for (String nameItem : Item.validItems) {
-        count = getNumberItemGaveRoom(nameItem);
-            if ( count >0){
-                contents = (contents + count + " " +nameItem+" ;");
-                count = 0;
-            }
-        } 
-        return contents;
-    } 
+
 }

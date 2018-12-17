@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MagicRoomTest
+comment0.text=\r\n\ The\ test\ class\ MagicRoomTest\ -\ for\ class\ MagicRoom.\r\n\r\n\ @author\ \ Brunet\ Gabriel\r\n\ @version\ v0.1\ 2018nov\r\n
+comment1.params=
+comment1.target=MagicRoomTest()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ MagicRoomTest\r\n\ \r\n\ @param\ badMagicRoom\ Object\ used\ to\ tests\ setter\ and\ good\ process\ of\ exceptions.\ No\ respect\ of\ rules.\r\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\r\n\ Sets\ up\ the\ test\ fixture.\r\n\r\n\ Called\ before\ every\ test\ case\ method.\r\n\ \r\n\ @param\ okDescription\ Used\ as\ default\ description\ for\ the\ correct\ test\ object\ (String).\r\n\ @param\ okPassWord\ Used\ as\ default\ password\ for\ the\ correct\ test\ object\ (String).\r\n\ @param\ okMagicRoom\ Object\ used\ to\ do\ tests\ in\ general.\ Respect\ all\ restrictions\ and\ set\ in\ the\ setUp()\ method.\r\n
+comment3.params=
+comment3.target=void\ tearDown()
+comment3.text=\r\n\ Tears\ down\ the\ test\ fixture.\r\n\r\n\ Called\ after\ every\ test\ case\ method.\r\n
+comment4.params=
+comment4.target=void\ testConstructorMagicRoom()
+comment4.text=\r\n\ Method\ testConstructorMagicRoom()\ \:\ Test\ the\ good\ process\ of\ the\ constructor.\r\n
+numComments=5

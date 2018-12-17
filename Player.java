@@ -34,6 +34,10 @@ public class Player extends Character
         return level;
     }
         
+    public boolean getWin(){
+        return win;
+    }
+    
     /**
      * Return the current room (Room class) where the character is.
      */
@@ -61,64 +65,65 @@ public class Player extends Character
     {
         level++;
     }
-    
-    /**
-     * Count the number of item given as parameters in the inventory of the player.
-     * @return Return an integer which represent the occurence of an Item in an inventory.
-     */
-    
-    public int getNumberItemGave(Item theItem)
-    {
-        int numberItem = 0;
-        for (Item i : inventory)
-            if (i.equals(theItem)){
-                numberItem++;
-            }
-        return(numberItem);
-    }
-    
-    public boolean move(String direction){       
+
+    public void move(String direction){       
         Room nextRoom = currentRoom.getExit(direction);
-        if (nextRoom == null) return false;
-        else {
             if (nextRoom instanceof LockRoom ){
                 LockRoom lr = (LockRoom)nextRoom;
-                if(hasKey(lr)){
-                    lr.setLocked();
-                    currentRoom=lr;
-                    return true;
-                }else{return false;}
+                currentRoom=nextRoom;
+                for(Item i : inventory){
+                    //if(i.getName().equals("Key")){
+                        currentRoom=nextRoom;
+                        //removeInventory("Key"); marche pas
+                        lr.setLocked();           
+                    //}
+                }
+                    
             } else if (nextRoom instanceof MagicRoom) {
-                //check password
+                //check password                
                 MagicRoom mr = (MagicRoom)nextRoom;
-                Scanner reader = new Scanner(System.in);
-                String attempt = reader.nextLine();
-                if(mr.checkPass(attempt)){
-                    mr.setIsLocked();
-                    currentRoom=mr;
-                    return true;
-                }else {return false;}
-            } else { currentRoom=nextRoom; }
-        }
-        return true;
+                currentRoom=nextRoom;
+                mr.setIsLocked();
+                
+                //Scanner reader = new Scanner(System.in);
+                //String attempt = reader.nextLine();
+                //if(mr.checkPass(attempt)){
+                  //  mr.setIsLocked();                   
+
+                //}
+            } else { 
+                currentRoom.isVisited = true;
+                currentRoom=nextRoom; 
+                }
+        
     }
     
-    public boolean hasKey(LockRoom thisRoom){
+    public void hasKey(LockRoom lr, Room r){
         for(Item i : inventory){
-            if(i instanceof Key){
-                Key k = (Key)i;
-                if(thisRoom == k.getLockRoom()) return true;
+            System.out.println("j1");
+            if(i.getName().equals("Key")){
+                removeInventory("Key");
+                lr.setLocked();
+                currentRoom=r;
+                    
+                
             }
         }
-        return false;
+       
     }
-    /*
+    
+    /**
      * this method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
      */
-    public void fight(int enemyLevel, int playerLevel){
-        if(enemyLevel > playerLevel){
-            win = false; // ici Ã§a devrait appeler la mÃ©thode qui affiche le game over
+    public void fight(Enemy enemy, int playerLevel){
+        if(enemy.getLevel() > playerLevel){
+            win = false; // ici ÃƒÂ§a devrait appeler la mÃƒÂ©thode qui affiche le game over
         }
-        else {levelUp();}
+        else{
+            enemy.setIsDead(true);
+            levelUp(); 
+            //Donner cookie
+            //changer description piece
+        }
     }
 }

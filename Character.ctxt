@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Character
+comment0.text=\r\n\ This\ class\ is\ the\ super-class\ using\ by\ the\ different\ characters\ constructors.\r\n\ @author\ Amandine\ POULLOT\ &\ Gabriel\ BRUNET\r\n\ @version\ v0.1\ 2018nov\r\n
+comment1.params=newName
+comment1.target=Character(java.lang.String)
+comment1.text=\r\n\ Constructor\ that\ allows\ you\ to\ create\ a\ new\ character.\r\n\ Each\ character's\ name\ have\ to\ contain\ at\ least\ 3\ characters.\ It\ also\ \r\n\ cannot\ start\ with\ a\ space\ or\ contain\ more\ than\ 1\ space\ (ex\ \:\ "firstname\ family_name").\r\n\ If\ one\ of\ those\ restrictions\ are\ not\ respected,\ the\ object\ cannot\ be\ created\ and\ an\ Exception\ statement\ will\ be\ returned.\r\n\ @param\ newName\ This\ parameter\ represent\ the\ name\ of\ the\ Character.\ It\ will\ be\ automatically\ initialised\ depending\ on\ which\ Character\ is\ created\ except\ for\ the\ Player\ class.\r\n\ @param\ newRoom\ This\ parameter\ represent\ the\ current\ room\ where\ the\ character\ is\ located.\ It\ will\ evolve\ according\ to\ the\ progress\ of\ the\ game\ (Player\ case).\r\n\ @param\ inventory\ Not\ given\ in\ the\ constructor\ method\ (always\ empty\ when\ characters\ are\ created).\r\n\ @exception\ IllegalArgumentException\ Returned\ in\ case\ of\ name's\ troubles\ -\ Less\ than\ 3\ characters,\ more\ than\ one\ space\ or\ started\ with\ a\ space.\r\n
+comment2.params=theItem
+comment2.target=void\ addInventory(Item)
+comment2.text=\r\n\ Add\ an\ item\ (Item\ class)\ in\ the\ inventory\ of\ the\ character.\r\n
+comment3.params=nameItem
+comment3.target=void\ removeInventory(java.lang.String)
+comment3.text=\r\n\ Remove\ one\ type\ of\ item\ (Item\ class)\ from\ the\ inventory\ of\ the\ character.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment4.text=\r\n\ Recovers\ the\ name\ of\ the\ character.\r\n
+comment5.params=nameItem
+comment5.target=int\ getNumberItemGave(java.lang.String)
+comment5.text=\r\n\ Count\ the\ number\ of\ item\ given\ as\ parameters\ in\ the\ inventory\ of\ the\ player.\r\n\ @return\ Return\ an\ integer\ which\ represent\ the\ occurence\ of\ an\ Item\ in\ an\ inventory.\r\n
+comment6.params=
+comment6.target=java.lang.String\ returnInventory()
+comment6.text=\r\n\ This\ is\ a\ method\ which\ return\ the\ contents\ of\ the\ inventory.\r\n\ @return\ Return\ a\ string\ listing\ items\ in\ the\ character's\ inventory.\ \r\n
+numComments=7

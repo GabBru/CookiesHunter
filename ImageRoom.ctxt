@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=ImageRoom
+comment0.text=\r\n\ Class\ imageRoom\ associates\ an\ image\ and\ a\ Gif\ with\ a\ room.\r\n\ A\ room\ necessarily\ has\ a\ room\ image\ but\ does\ not\ necessarily\ have\ a\ Gif.\r\n\r\n\ @author\ \:\ Marie\ Bogusz\r\n\ @version\ (1)\r\n
+comment1.params=image\ aRoom
+comment1.target=ImageRoom(java.lang.String,\ Room)
+comment1.text=\r\n\ Constructor\ of\ ImageRoom\ class.\r\n\ A\ room\ necessarily\ has\ a\ room\ image\ but\ does\ not\ necessarily\ have\ a\ Gif.\r\n
+comment2.params=ima
+comment2.target=void\ setImage(java.lang.String)
+comment2.text=\r\n\ SetImage\ allows\ to\ changes\ the\ room\ image\ associated\ at\ the\ room.\r\n
+comment3.params=gi
+comment3.target=void\ setGif(java.lang.String)
+comment3.text=\r\n\ setGif\ allows\ you\ changes\ the\ gif\ associated\ at\ the\ room.\r\n
+comment4.params=
+comment4.target=Room\ getImgRoom()
+comment4.text=\r\n\ @return\ Return\ the\ room.\r\n
+comment5.params=
+comment5.target=java.lang.String\ getImage()
+comment5.text=\r\n\ @return\ Return\ the\ image\ associated\ at\ the\ room.\r\n
+comment6.params=
+comment6.target=java.lang.String\ getGif()
+comment6.text=\r\n\ @return\ Return\ the\ gif\ associated\ at\ the\ room.\r\n
+comment7.params=
+comment7.target=void\ deleteGif()
+comment7.text=\r\n\ Allows\ to\ delete\ the\ gif\ associated\ at\ the\ room.\r\n
+numComments=8

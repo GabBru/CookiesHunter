@@ -15,27 +15,28 @@ public class Message extends JPanel
     JPanel JPanelTxt, JPanelGet;
     JTextArea myTextArea;
     JTextField textField;
-    Player thisPlayer;
+    //Player thisPlayer;
+    private TheWindows myWindow;
     Message message;
 
-    public Message(Player nn)
+    public Message(TheWindows win)
     { 
-        thisPlayer=nn;
-        //Creation of the objects (Buttons)
+        myWindow = win;
+        //Creation of the objects (Text)
         JPanelTxt = new JPanel();
         JPanelGet = new JPanel();
         setLayout(new BorderLayout());
         JPanelTxt.setLayout(new GridLayout(1,1));
         JPanelGet.setLayout(new FlowLayout());
         //monLabel = new JLabel("ah que coucou", JLabel.CENTER);
-        myTextArea = new JTextArea(thisPlayer.getRoom().getDescription());
+        myTextArea = new JTextArea(myWindow.getGame().getPlayer().getRoom().getDescription());
         
         JTextField textField = new JTextField();
         textField.setColumns(30);
         
         // add in the panel
-       JPanelTxt.add(myTextArea);
-       JPanelGet.add(textField);
+        JPanelTxt.add(myTextArea);
+        JPanelGet.add(textField);
        
         //Add object to the Frame
         add(JPanelTxt, BorderLayout.NORTH);
@@ -48,7 +49,7 @@ public class Message extends JPanel
         setVisible(true); 
     }
     
-        /**
+    /**
      * method for a performed action
      */
     public String actionPerformed(ActionEvent evt) {

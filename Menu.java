@@ -7,13 +7,15 @@ import java.awt.event.*;
  * @author Thibaud G & Diama.
  * @version 12/12/2018
  */
-public class Menu extends JFrame
+public class Menu extends JPanel
 {
     JMenu fileMenu, helpMenu, newGameMenu, exitMenu;
-    public Menu ()
+    private TheWindows win;
+    public Menu (TheWindows myWindows)
     {
+        win = myWindows;
         JMenuBar menuBar = new JMenuBar();
-        this.setJMenuBar(menuBar);
+        win.setJMenuBar(menuBar);
         
         fileMenu = new JMenu("File");
         fileMenu.setMnemonic(KeyEvent.VK_F);
@@ -31,4 +33,5 @@ public class Menu extends JFrame
         fileMenu.addSeparator();
         fileMenu.add(exitMenu);
         
+        setVisible(true);
     }}

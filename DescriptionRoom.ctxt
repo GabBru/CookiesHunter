@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=DescriptionRoom
+comment0.text=\r\n\ this\ class\ will\ allow\ a\ display\ of\ information\ such\ as\ the\ name\ of\ the\ player,\ the\ current\ room\ ...\r\n\r\n\ @author\ Marie\ Bogusz\r\n\ @version\ 15/12/18\r\n
+comment1.params=win
+comment1.target=DescriptionRoom(TheWindows)
+numComments=2

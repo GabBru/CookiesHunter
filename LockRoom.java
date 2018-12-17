@@ -41,6 +41,6 @@ public class LockRoom extends Room
     public void setLocked()
     {
         if (isLocked == false){isLocked = true;}
-        else {isLocked = false;}
+        //une salle ouverte ne se referme pas
     }
 }

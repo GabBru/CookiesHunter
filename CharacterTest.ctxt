@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=CharacterTest
+comment0.text=\r\n\ Classe-test\ CharacterTest\ -\ for\ Character\ class.\r\n\r\n\ @author\ \ Brunet\ Gabriel\ &\ Amandine\ Poullot\r\n\ @version\ v0.1\ 2018nov\r\n\r\n\ Les\ classes-test\ sont\ document\u00C3\u0192\u00C6\u2019\u00C3\u2020\u00E2\u20AC\u2122\u00C3\u0192\u00E2\u20AC\u0161\u00C3\u201A\u00C2\u00A9es\ ici\ \:\r\n\ http\://junit.sourceforge.net/javadoc/junit/framework/TestCase.html\r\n\ et\ sont\ bas\u00C3\u0192\u00C6\u2019\u00C3\u2020\u00E2\u20AC\u2122\u00C3\u0192\u00E2\u20AC\u0161\u00C3\u201A\u00C2\u00A9es\ sur\ le\ document\ \u00C3\u0192\u00C6\u2019\u00C3\u00A2\u00E2\u201A\u00AC\u00C2\u00A6\u00C3\u0192\u00E2\u20AC\u0161\u00C3\u201A\u00C2\u00A0\ 2002\ Robert\ A.\ Ballance\ intitul\u00C3\u0192\u00C6\u2019\u00C3\u2020\u00E2\u20AC\u2122\u00C3\u0192\u00E2\u20AC\u0161\u00C3\u201A\u00C2\u00A9\r\n\ "JUnit\:\ Unit\ Testing\ Framework".\r\n
+comment1.params=
+comment1.target=CharacterTest()
+comment1.text=\r\n\ Classe-test\ CharacterTest\ constructor.\r\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\r\n\ Sets\ up\ the\ test\ fixture.\r\n\r\n\ Called\ before\ every\ test\ case\ method.\r\n\ \r\n\ @param\ okCharacter\ Used\ to\ do\ the\ tests\ in\ general.\r\n\ @param\ testCharacter\ Used\ to\ do\ the\ constructor\ test\ -\ Useful\ to\ make\ sure\ that\ there\ is\ no\ conflicts\ with\ other\ methods.\ \r\n\ Variables\ "cookie",\ "grenier"\ and\ "testInvent"\ are\ used\ and\ constructed\ for\ help\ during\ the\ process\ of\ test\ methods.\r\n
+comment3.params=
+comment3.target=void\ tearDown()
+comment3.text=\r\n\ Tears\ down\ the\ test\ fixture.\r\n\r\n\ Called\ after\ every\ test\ case\ method.\r\n
+comment4.params=
+comment4.target=void\ testConstructorBlankName()
+comment4.text=\r\n\ Method\ testConstructorBlankName()\ \:\ Check\ if\ there\ is\ no\ blank\ as\ name.\r\n
+comment5.params=
+comment5.target=void\ testRemoveItem()
+comment5.text=\r\n\ Method\ testRemoveItem()\ \:\ Check\ the\ good\ process\ of\ removing\ items\ from\ the\ list.\r\n
+comment6.params=
+comment6.target=void\ testAddItem()
+comment6.text=\r\n\ Method\ testAddItem()\ \:\ Check\ if\ an\ item\ is\ correctly\ add\ to\ the\ inventory\r\n
+comment7.params=
+comment7.target=void\ testReturnInventory()
+comment7.text=\r\n\ Method\ testReturnInventory()\ \:\ Check\ if\ the\ good\ string\ is\ returned\ when\ the\ character's\ inventory\ is\ non\ empty.\r\n\ Also\ check\ if\ nothing\ is\ returned\ in\ case\ of\ empty\ inventory.\r\n
+numComments=8
