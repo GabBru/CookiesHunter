@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Npc
-comment0.text=\r\n\ Npc\ is\ a\ class\ of\ non-player\ character,\ not\ agressive\ and\ extremely\ boring.\r\n\ Why\ does\ this\ class\ exist\ ?\r\n\ @Amandine\ POULLOT\ &\ Gabriel\ BRUNET\r\n\ @version\ v0.1\ 2018nov\r\n
-comment1.params=newName
-comment1.target=Npc(java.lang.String)
-comment1.text=\r\n\ Constructor\ \r\n\ Create\ a\ new\ Npc.\r\n
-numComments=2

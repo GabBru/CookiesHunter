@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=Inventory
-comment0.text=\r\n\ Class\ Inventory.\r\n\ This\ class\ is\ a\ part\ of\ the\ graphical\ interface.\r\n\ -->\ Display\ the\ player's\ inventory\ on\ a\ panel\ (Texte\ +\ Image).\r\n\r\n\ @author\ Gabriel\ Brunet\r\n\ @version\ v0.2\ dec2018\r\n
-comment1.params=win
-comment1.target=Inventory(TheWindows)
-numComments=2

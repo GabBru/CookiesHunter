@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=Info
-comment0.text=\r\n\ this\ class\ will\ allow\ a\ display\ of\ information\ such\ as\ the\ name\ of\ the\ player,\ the\ current\ room\ ...\r\n\r\n\ @author\ Diama\ FALL\r\n\ @version\ 11/12/18\r\n
-comment1.params=win
-comment1.target=Info(TheWindows)
-numComments=2
