@@ -10,7 +10,6 @@ AUTHORS : Martin Pettinotti, Marie Bogusz, Thibaud Gil, Diama Fall, Anthoine Pie
 **Opensource code for the CookiesHunter game.**
 
 ***Description of the game :***
-___
 > You are Cookie-Monster, a famous cookie connoisseur, ready to do anything to get cookies. 
 Now you walk down the street and stops in front of the Chip family's house, famous for having the best cookies in the world.
 The goal is to retrieve as many cookies as possible and retrieve the Magic Cookie.
@@ -19,9 +18,9 @@ But, be careful not to get trapped and die.
 
 ### How to open the game ?
   
-  - First you have to click on blabla
-  - Then on blibli
-  - And finally you can play, and enjoy our game !
+  - Download the entire repository of the game on our [GitHub page](https://github.com/GabBru/CookiesHunter).
+  - Unzip it and lauch the game by double clicking on the `.jar` file.
+  - And now you can play, and enjoy our game !
   
 ### How to play ?
 
