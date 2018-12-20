@@ -244,25 +244,27 @@ public class ActionPanel extends JPanel
             {
                 for(Enemy i : myGame.getListEnemy()){
                     if(i.getEnemyRoom() == myGame.getPlayer().getRoom()){
-                        myGame.getPlayer().fight(i,myGame.getPlayer().getLevel());
-                    }
-                    if(i.getIsDead()){
-                        if(nameR.equals("livingRoom")){
-                            myGame.getImgCurrentRoom().setImage("images/livingroomMonster.jpg");
-                            myGame.getImgCurrentRoom().setGif("images/grandfather.gif");
-                            cRoom.setDescription("You killed the GrandPa"); // on peut ajouter un gif
+                        if(i.getIsDead()){
+                            if(nameR.equals("livingRoom")){
+                                myGame.getImgCurrentRoom().setImage("images/livingroomMonster.jpg");
+                                myGame.getImgCurrentRoom().setGif("images/grandfather.gif");
+                                cRoom.setDescription("You killed the GrandPa"); // on peut ajouter un gif
+                            }
+                            if(nameR.equals("garage")){
+                                myGame.getImgCurrentRoom().setImage("images/garageMonster.jpg");
+                                cRoom.setDescription("You killed the father.");
+                            }
+                            if(nameR.equals("playRoom")){
+                                myGame.getImgCurrentRoom().setImage("images/playroomMonster.jpg");
+                                cRoom.setDescription("You killed the son.");
+                            }
+                            if(nameR.equals("kitchen")){
+                                myGame.getImgCurrentRoom().setImage("images/kitchenMonster.jpg");
+                                cRoom.setDescription("You killed the mother.");
+                            }  
                         }
-                        if(nameR.equals("garage")){
-                            myGame.getImgCurrentRoom().setImage("images/garageMonster.jpg");
-                            cRoom.setDescription("You killed the father.");
-                        }
-                        if(nameR.equals("playRoom")){
-                            myGame.getImgCurrentRoom().setImage("images/playroomMonster.jpg");
-                            cRoom.setDescription("You killed the son.");
-                        }
-                        if(nameR.equals("kitchen")){
-                            myGame.getImgCurrentRoom().setImage("images/kitchenMonster.jpg");
-                            cRoom.setDescription("You killed the mother.");
+                        else {   
+                            myGame.getPlayer().fight(i,myGame.getPlayer().getLevel());
                         }
                     }
                 }
