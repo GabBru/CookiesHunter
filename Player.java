@@ -70,13 +70,17 @@ public class Player extends Character
         Room nextRoom = currentRoom.getExit(direction);
             if (nextRoom instanceof LockRoom ){
                 LockRoom lr = (LockRoom)nextRoom;
-                for(Item i : inventory){
-                    if(i.getName().equals("Key")){
-                        currentRoom=nextRoom;
-                        //removeInventory("Key"); 
-                        lr.setLocked();           
+                if(lr.getLocked()==true){
+                    for(Item i : inventory){
+                        if(i.getName().equals("Key")){         
+                            lr.setLocked();
+                            if(lr.getLocked()==true)System.out.println("RoomLocked still");
+                            else System.out.println("Room unlocked");
+                            currentRoom=lr;
+                            removeInventory("Key");
+                        }
                     }
-                }
+                } else { currentRoom=lr;}
                     
             } else if (nextRoom instanceof MagicRoom) {
                 //check password                
@@ -88,7 +92,7 @@ public class Player extends Character
                 //String attempt = reader.nextLine();
                 //if(mr.checkPass(attempt)){
                   //  mr.setIsLocked();                   
-                  //currentRoom=nextRoom; 
+                  //currentRoom=mr; 
                 //}
             } else { 
                 currentRoom.isVisited = true;
