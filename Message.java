@@ -36,7 +36,8 @@ public class Message extends JPanel
         myLabel1 = new JLabel(myGame.getPlayer().getRoom().getDescription());
         Panel labelPane = new Panel(new GridLayout(0,1));
 
-        TextField textField = new TextField("Enter your keyword here");
+        TextField textField = new TextField("Perhaps you get a cookie if click here ?");
+        textField.setForeground(Color.GRAY);
         
         //Description's size and text getter's size
         textField.setColumns(60);
@@ -50,12 +51,42 @@ public class Message extends JPanel
         add(PanelTxt, BorderLayout.NORTH);
         add(PanelGet, BorderLayout.SOUTH);
         
+        //Action listener and focus listener (meaning if you're currently focusing on the writing area or not)
+        textField.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent evt) {
+                    String text = textField.getText();
+                    myWindow.getGame().setAnswer(text);
+                    textField.setText("");
+                }
+            }
+        );
+        
+        textField.addFocusListener(new FocusListener() 
+            {
+                @Override
+                public void focusGained(FocusEvent e) {
+                    if (textField.getText().equals("Perhaps you get a cookie if click here ?")) {
+                        textField.setText("");
+                        textField.setForeground(Color.BLACK);
+                    }
+                }
+                @Override
+                public void focusLost(FocusEvent e) {
+                    if (textField.getText().isEmpty()) {
+                        textField.setForeground(Color.GRAY);
+                        textField.setText("Perhaps you get a cookie if click here ?");
+                    }
+                }
+            }
+        );
+        
         //Display elements
         PanelTxt.setVisible(true);
-        if (myGame.getPlayer().getRoom().getNameRoom() == "hall" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
+        //if (myGame.getPlayer().getRoom().getNameRoom() == "hall" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
             PanelGet.setVisible(true);
-        }
-        else {PanelGet.setVisible(false);}
+        //}
+        //else {PanelGet.setVisible(false);}
         setVisible(true);
 
         
