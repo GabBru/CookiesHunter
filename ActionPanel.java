@@ -169,7 +169,7 @@ public class ActionPanel extends JPanel
                    }
                    if(nameR.equals("daughterRoom")){
                        if(cRoom.getItem() != null){
-                            cRoom.setDescription("<html>Well done ! You answered my riddle! To reward you, here is a key that allows you to go upstairs");
+                            cRoom.setDescription("<html>Well done ! You answered my riddle! To reward you, here is a key that allows you to walk around the house more easily");
                             myGame.getPlayer().addInventory(cRoom.getItem());
                             cRoom.removeItemRoom(cRoom.getItem());
                             win.refresh();
