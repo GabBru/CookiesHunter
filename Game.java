@@ -26,7 +26,7 @@ public class Game
         // initialisation map with different rooms
         
         Room outside, hall, garage, livingRoom, daughterRoom, pantry, playRoom, kitchen, office, laundryRoom, attic;
-        outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a very hungry monster (yes, this blue monster) which likes cookies. In the house in front of you, a magic Cookie is waiting for you... Prepare yourself to enter a dark and psychedelic game. You actualy are in the garden of the house. It is sober and well maintained. You can also feel a lot of magic in the ai");
+        outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a very hungry monster (yes, this blue monster) which likes cookies. In the house in front of you, a magic Cookie is waiting for you... Prepare yourself to enter a dark and psychedelic game. You actualy are in the garden of the house. It is sober and well maintained. You can also feel a lot of magic in the air");
         hall = new Room("hall","<html>You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
         garage = new Room("garage","<html>You arrive in the garage. The father is tinkering with his car. A smell of cookie separates from the smell of the motor and makes you want to attack him ...");
         livingRoom = new Room("livingRoom","<html>You arrive in the living room. The grampa is watching the TV and smells like a cookie. It makes you want to attack him ...");
