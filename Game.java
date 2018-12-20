@@ -88,6 +88,8 @@ public class Game
         imgAttic.setGif("images/Baby.gif");
         imgPantry.setGif("images/cook.gif");
         imgLaundryRoom.setGif("images/grannyScary.gif");
+        imgKitchen.setGif("images/mom.gif");
+        imgPlayRoom.setGif("images/boy.gif");
         
         //Add of the list of room
         listImgRoom.add(imgOutside);
