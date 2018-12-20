@@ -8,9 +8,10 @@ import java.util.*;
  */
 public class Player extends Character
 {  
-    private int level; // The level variable includes the level of character.
-    private Room currentRoom;
-    private boolean win;
+    protected int level; // The level variable includes the level of character.
+    protected Room currentRoom;
+    protected boolean win;
+    private ArrayList<Item> inventory; // The inventory variable includes the character's item list.
     /**
      * Player class constructors.
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
@@ -24,6 +25,7 @@ public class Player extends Character
         currentRoom = newRoom;
         this.level=0;
         win=true;
+                inventory = new ArrayList<Item>();
     }
     
     /**
@@ -49,6 +51,56 @@ public class Player extends Character
     public Room getRoom(){
         return currentRoom;
     }
+    
+        /**
+     * Count the number of item given as parameters in the inventory of the player.
+     * @return Return an integer which represent the occurence of an Item in an inventory.
+     */
+    
+    public int getNumberItemGave(String nameItem)
+    {
+        int numberItem = 0;
+        for (Item i : inventory)
+            if (i.name.equals(nameItem)){
+                numberItem++;
+            }
+        return(numberItem);
+    }
+    
+        /**
+     * Add an item (Item class) in the inventory of the character.
+     */
+    public void addInventory(Item theItem)
+    {
+        inventory.add(theItem);
+    }
+    
+    /**
+     * Remove one type of item (Item class) from the inventory of the character.
+     */
+    public void removeInventory(Item i)
+    {
+        inventory.remove(i);
+    }
+    
+        /**
+     * This is a method which return the contents of the inventory.
+     * @return Return a string listing items in the character's inventory. 
+     */
+    
+    public String returnInventory()
+    {
+        String contents = "Your inventory contains : ";
+        int count = 0;
+        for (String nameItem : Item.validItems) {
+        count = getNumberItemGave(nameItem);
+            if ( count >0){
+                contents = (contents + count + " " +nameItem+" ;");
+                count = 0;
+            }
+        } 
+        return contents;
+    } 
     
     /**
      * Change the room (Room class) where the character is.
@@ -77,7 +129,8 @@ public class Player extends Character
                             if(lr.getLocked()==true)System.out.println("RoomLocked still");
                             else System.out.println("Room unlocked");
                             currentRoom=lr;
-                            removeInventory("Key");
+                            inventory.remove(i);
+                            break;
                         }
                     }
                 } else { currentRoom=lr;}
