@@ -153,14 +153,19 @@ public class ActionPanel extends JPanel
                    }
                    if(nameR.equals("pantry")){
                        if(cRoom.getItem() != null){
-                           //if pas les 4 cookies
-                            cRoom.setDescription("<html> Hey ! You are not a member of the family ! I am prisoner here because I am a good cook. If you defeat the family and bring me 4 cookies as proof, I could help you.");
-                       //esle { suppri les cookies du player et lui donner du lait et suppr lait de la piece
-                           //cRoom.setDescription("<html>Vous avez obtenue du lait");
-                       //}
+                           int nbCookies = myGame.getPlayer().getNumberItemGave("Cookie");
+                           if(nbCookies<3)
+                            cRoom.setDescription("<html>Hi, I am the chief cook of this house, but they treat me as a slave... <br>If you bring me 3 cookies, I will give you milk. I am sure you'll find a use for it. But you will need a container to hold it.");
+                           else if (myGame.getPlayer().getNumberItemGave("Baby-bottle")==0)
+                            cRoom.setDescription("<html>Oh ? You brought the cookies !<br>You can keep them, I asked for it only to see if you had the determination !Because bringing cookies means that you had to teach a lecon to those slavers !<br>But you don't have a container for the milk !");
+                           else {
+                            cRoom.setDescription("<html>Oh ? You brought the cookies !<br>You can keep them, I asked for it only to see if you had the determination !Because bringing cookies means that you had to teach a lecon to those slavers !<br>Here,take this milk!");
+                            myGame.getPlayer().addInventory(cRoom.getItem());
+                            cRoom.removeItemRoom(cRoom.getItem());
+                        }
+                       }
                        win.refresh();
-                       cRoom.setDescription("<html>You are in the pantry. The cook looks at you, smiling.");
-                    }
+                       cRoom.setDescription("<html>Vous etes dans le pantry.");
                    }
                    if(nameR.equals("daughterRoom")){
                        if(cRoom.getItem() != null){
