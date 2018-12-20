@@ -40,7 +40,7 @@ public class Game
         pantry.addItemRoom(new Item("Bottle of milk", "A baby bottle full of milk"));
         playRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         kitchen.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
-        office.addItemRoom(new Item("baby-bottle", "An empty baby-bottle"));
+        office.addItemRoom(new Item("Baby-bottle", "An empty baby-bottle"));
         laundryRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         outside.addItemRoom(new Item("Key", "Allows to unlock a door"));
         daughterRoom.addItemRoom(new Item("Key", "Allows to unlock a door"));
