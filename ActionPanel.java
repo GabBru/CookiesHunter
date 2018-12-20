@@ -165,7 +165,7 @@ public class ActionPanel extends JPanel
                         }
                        }
                        win.refresh();
-                       cRoom.setDescription("<html>Vous etes dans le pantry.");
+                       cRoom.setDescription("<html>You are in the pantry.");
                    }
                    if(nameR.equals("daughterRoom")){
                        if(cRoom.getItem() != null){
