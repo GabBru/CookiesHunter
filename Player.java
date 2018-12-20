@@ -150,7 +150,8 @@ public class Player extends Character
                 MagicRoom mr = (MagicRoom)nextRoom;
                 if (mr.getIsLocked() == true){
                     if (mr.checkPass(answer)){
-                        mr.setIsLocked();                        
+                        mr.setIsLocked();
+                        currentRoom.setDescription("<html>You arrive in the hall with 3 other doors. The door facing north is opened.");
                         currentRoom=mr;
                     }
                 } else {currentRoom=mr;}             
