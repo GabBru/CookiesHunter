@@ -51,8 +51,7 @@ public class MagicRoom extends Room
     */
    public void setIsLocked()
    {
-       if (isLocked == true) {isLocked = false;}
-       else {isLocked = true;}
+       isLocked=true;
    }
 
    /** 
