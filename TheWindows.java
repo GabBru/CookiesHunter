@@ -36,6 +36,7 @@ public class TheWindows extends JFrame
         this.setPreferredSize(new Dimension(1120,960));
         this.setResizable(true);
         this.setLayout(new BorderLayout());
+        this.setBackground(new java.awt.Color(98, 5, 5));
         
         playerLive();
         
@@ -52,12 +53,14 @@ public class TheWindows extends JFrame
     
     public void playerLive(){
         // --- TOP PANEL ---
-        pTop = new JPanel();
+        pTop = new JPanel();        
         pTop.setLayout(new BorderLayout());
-        pTop.setBorder(BorderFactory.createMatteBorder(2,0,8,0,Color.blue));
+        
+        
+        pTop.setBorder(BorderFactory.createMatteBorder(2,0,8,0,new java.awt.Color(98, 5, 5)));
         pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.CENTER);
         this.add(pTop); //Image
-        
+
         // --- BOTTOM PANEL ---
         pBottom = new JPanel();
         pBottom.setLayout(new BorderLayout());
@@ -75,6 +78,7 @@ public class TheWindows extends JFrame
         //pBottom.add(new DescriptionRoom(this));
         pBottom.add(pDirectionInfo, BorderLayout.EAST);
         
+        pBottom.setBackground(new java.awt.Color(98, 5, 5));
         // --- ADD PANEL IN THE FRAME ---
         this.add(new Menu(this));
         this.add(pTop, BorderLayout.NORTH);
