@@ -163,6 +163,12 @@ public class ActionPanel extends JPanel
                             cRoom.setDescription("<html>Oh ? You brought the cookies !<br>You can keep them, I asked for it only to see if you had the determination !Because bringing cookies means that you had to teach a lecon to those slavers !<br>Here,take this milk!");
                             myGame.getPlayer().addInventory(cRoom.getItem());
                             cRoom.removeItemRoom(cRoom.getItem());
+                            for(Item i : myGame.getPlayer().returnInventoryPlayer()){
+                                if(i.getName().equals("Baby-bottle")){         
+                                    myGame.getPlayer().removeInventory(i);
+                                    break;
+                                }
+                            }
                         }
                        }
                        win.refresh();
