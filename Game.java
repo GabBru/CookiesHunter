@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Decrivez votre classe Game ici.
+ * This class contains all the objects of the game and allows the passage of information between objects.
  *
  * @author Group 3
  * @version v0.2 2018dec
@@ -17,14 +17,11 @@ public class Game
     private Item myItem1, myItem2;
     
     /**
-     * Constructeur d'objets de classe Game
+     * Object constructor for the Game class
      */
     public Game()
     {
-        //A la fin remettre "Player newPlayer"
-        
         // initialisation map with different rooms
-        
         Room outside, hall, garage, livingRoom, daughterRoom, pantry, playRoom, kitchen, office, laundryRoom, attic;
         outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a very hungry monster (yes, this blue monster) which likes cookies. In the house in front of you, a magic Cookie is waiting for you... Prepare yourself to enter a dark and psychedelic game. You actualy are in the garden of the house. It is sober and well maintained. You can also feel a lot of magic in the air");
         hall = new Room("hall","<html>You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
@@ -38,7 +35,7 @@ public class Game
         laundryRoom = new Room("laundryRoom","<html>You enter in a laundry. A very old and creepy woman is watching you...");
         attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
-        //Ajout des Items
+        //Add of the items
         daughterRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         garage.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         livingRoom.addItemRoom(new Item("Denture", "Denture of Grand-father"));
@@ -50,7 +47,7 @@ public class Game
         outside.addItemRoom(new Item("Key", "Allows to unlock a door"));
         daughterRoom.addItemRoom(new Item("Key", "Allows to unlock a door"));
         
-        // Ajout des sorties
+        //Add of the exits
         outside.setExit("North",hall);
         hall.setExit("South",outside);
         hall.setExit("West",garage);
@@ -72,7 +69,7 @@ public class Game
         office.setExit("Down",outside);
         attic.setExit("Down",laundryRoom);
         
-        //Creation des room avec image associee
+        //Creation of the rooms avec associated pictures
         ImageRoom imgOutside, imgHall, imgGarage, imgLivingRoom, imgDaughterRoom, imgPantry, imgPlayRoom, imgKitchen, imgOffice, imgLaundryRoom, imgAttic;
         imgOutside = new ImageRoom("images/gardenCharacters.jpg",outside);
         
@@ -89,7 +86,7 @@ public class Game
         
         imgOffice.setGif("images/orig.gif");
         
-        //Ajout Ãƒ la liste
+        //Add of the list of room
         listImgRoom.add(imgOutside);
         listImgRoom.add(imgHall);
         listImgRoom.add(imgGarage);
@@ -102,7 +99,7 @@ public class Game
         listImgRoom.add(imgLaundryRoom);
         listImgRoom.add(imgAttic);
         
-        //Ajout Liste Ennemy
+        //Add of the Enemy list
         listEnemy.add(new Enemy("Grand-father", 0, livingRoom));
         listEnemy.add(new Enemy("Father", 1, garage));
         listEnemy.add(new Enemy("Brother", 2, playRoom));
@@ -110,12 +107,12 @@ public class Game
         listEnemy.add(new Enemy("Grand-Mother", 4, laundryRoom));
         listEnemy.add(new Enemy("Baby", 4, attic));
         
-        //Ajout Liste Npc
+        //Add of the Npc list
         listNpc.add(new Npc("Daughter"));
         listNpc.add(new Npc("Cook"));
         listNpc.add(new Npc("Unicorn"));
         
-        // ----- Placement initial du joueur -----
+        // ----- initial position of the player -----
         player1 = new Player("Monster", outside);
     }
     
