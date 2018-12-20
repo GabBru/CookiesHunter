@@ -38,7 +38,7 @@ public class Message extends JPanel
         TextField textField = new TextField("Enter your keyword here");
         
         //Description's size and text getter's size
-        textField.setColumns(90);
+        textField.setColumns(60);
         PanelTxt.setPreferredSize(new Dimension(460,200));
         
         // add in the panel
@@ -51,7 +51,7 @@ public class Message extends JPanel
         
         //Display elements
         PanelTxt.setVisible(true);
-        if (myGame.getPlayer().getRoom().getNameRoom() == "Hall" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
+        if (myGame.getPlayer().getRoom().getNameRoom() == "hall" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
             PanelGet.setVisible(true);
         }
         else {PanelGet.setVisible(false);}
