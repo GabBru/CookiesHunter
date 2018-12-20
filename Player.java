@@ -83,19 +83,19 @@ public class Player extends Character
         inventory.remove(i);
     }
     
-        /**
+    /**
      * This is a method which return the contents of the inventory.
      * @return Return a string listing items in the character's inventory. 
      */
     
     public String returnInventory()
     {
-        String contents = "Your inventory contains : ";
+        String contents = "<html>";
         int count = 0;
         for (String nameItem : Item.validItems) {
         count = getNumberItemGave(nameItem);
             if ( count >0){
-                contents = (contents + count + " " +nameItem+" ;");
+                contents = (contents + count + " " +nameItem+" ;<br>");
                 count = 0;
             }
         } 
