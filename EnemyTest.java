@@ -50,7 +50,7 @@ public class EnemyTest
     @Test
     public void testSetIsDead()
     {
-        testEnemyCharacter.setIsDead(true);
+        testEnemyCharacter.setIsDead();
         assertEquals(true,testEnemyCharacter.getIsDead());
     }
 }
