@@ -7,13 +7,11 @@ import java.util.*;
  */
 public class Game
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
+    // Instance variables
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Enemy> listEnemy = new ArrayList<>();
     private ArrayList<Npc> listNpc = new ArrayList<>();
-    
-    //Instance
     private Item myItem1, myItem2;
     
     /**
