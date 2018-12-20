@@ -21,11 +21,8 @@ public class Image extends JPanel
     public Image (ImageRoom img)
     {
         roomImage = img;
-        if (roomImage.getGif() == "null")
+        if (roomImage.getGif() == null)
         {
-           //setLayout(new BoxLayout(getContentPane(),BoxLayout.X_AXIS));
-           //Icon room = new ImageIcon(roomImage.getImage());
-           //add(new JButton(room));
            this.setBackground(Color.BLACK);
            Icon inventScreen = new ImageIcon(roomImage.getImage());
            myLabel1 = new JLabel();
@@ -38,7 +35,6 @@ public class Image extends JPanel
            myLabel1 = new JLabel();
            myLabel2 = new JLabel();
            myLabel2.setIcon(new ImageIcon(roomImage.getImage()));
-           
            myLabel1.setIcon(new ImageIcon(roomImage.getGif()));
            add(myLabel1); 
            add(myLabel2);                     
