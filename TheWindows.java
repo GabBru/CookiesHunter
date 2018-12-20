@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.Iterator;
 import java.util.Set;
 import java.lang.String;
-
 /**
  * Class The window orgenized the different panels : Info, Message, 
  * Menu, ActionPanel,Image and Image Room
@@ -17,7 +16,6 @@ import java.lang.String;
  * @author Antoine P. & Martin P.
  * @version 05/12/2018
  */
-
 public class TheWindows extends JFrame
 {
     private ImageRoom test;
@@ -65,7 +63,7 @@ public class TheWindows extends JFrame
         pTop = new JPanel();
         pTop.setLayout(new BorderLayout());
         pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.WEST);
-        //pTop.add(new Inventory(this), BorderLayout.EAST);
+        pTop.add(new Inventory(this), BorderLayout.EAST);
         this.add(pTop); //Image
         
         // --- BOTTOM PANEL ---
@@ -116,9 +114,10 @@ public class TheWindows extends JFrame
         // pTop.add(new Image(myGame.getImgCurrentRoom()));  
         // desc.add(new DescriptionRoom(this));
         pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.WEST);
+        pTop.add(new Inventory(this), BorderLayout.EAST);
         pDirectionInfo.add(new ActionPanel(this));
         pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
-        //pBottom.add(new Message(this));
+        pBottom.add(new Message(this));
         
         pBottom.add(new DescriptionRoom(this));
         pBottom.add(pDirectionInfo, BorderLayout.EAST);

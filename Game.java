@@ -1,9 +1,9 @@
 import java.util.*;
 /**
- * DÃƒÂ©crivez votre classe Game ici.
+ * Decrivez votre classe Game ici.
  *
  * @author Group 3
- * @version v0.1 2018nov
+ * @version v0.2 2018dec
  */
 public class Game
 {
@@ -47,8 +47,8 @@ public class Game
         kitchen.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
         office.addItemRoom(new Item("Bottle of milk", "A baby bottle must be milk"));
         laundryRoom.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
-        outside.addItemRoom(new Item("Key", "Permet d'ouvrir une porte fermée à clé"));
-        daughterRoom.addItemRoom(new Item("Key", "Permet d'ouvrir une porte fermée à clé"));
+        outside.addItemRoom(new Item("Key", "Permet d'ouvrir une porte fermï¿½e ï¿½ clï¿½"));
+        daughterRoom.addItemRoom(new Item("Key", "Permet d'ouvrir une porte fermï¿½e ï¿½ clï¿½"));
         
         
         // Ajout des sorties
@@ -117,7 +117,6 @@ public class Game
         listNpc.add(new Npc("Unicorn"));
         
         // ----- Placement initial du joueur -----
-        //player1.setCurrentRoom(outside);
         player1 = new Player("Monster", outside);
     }
     

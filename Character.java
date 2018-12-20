@@ -74,12 +74,12 @@ public class Character
     
     public String returnInventory()
     {
-        String contents = "Your inventory contains : ";
+        String contents = "";
         int count = 0;
         for (String nameItem : Item.validItems) {
         count = getNumberItemGave(nameItem);
             if ( count >0){
-                contents = (contents + count + " " +nameItem+" ;");
+                contents = (contents + count + " " +nameItem+" ; \n");
                 count = 0;
             }
         } 

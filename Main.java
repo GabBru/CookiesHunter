@@ -1,9 +1,9 @@
 
 /**
- * Décrivez votre classe Main ici.
+ * Decrivez votre classe Main ici.
  *
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * @author Groupe 3
+ * @version v0.1 2018dec
  */
 public class Main
 {

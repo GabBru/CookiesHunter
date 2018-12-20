@@ -1,9 +1,9 @@
 import java.awt.*;
-import javax.swing.*; //swing.ImageIcon;
+import javax.swing.*;
 /**
  * Class Inventory.
  * This class is a part of the graphical interface.
- * --> Display the player's inventory on a panel (Texte + Image).
+ * --> Display the player's inventory on a panel (Texte).
  *
  * @author Gabriel Brunet
  * @version v0.2 dec2018
@@ -12,7 +12,7 @@ public class Inventory extends JPanel
 {
     private JPanel myUpPanel, myDownPanel;
     private JLabel myLabelTitle;
-    private JTextField myTextFieldInvent;
+    private JLabel myLabelInvent;
     private Game myGame;
     private Player myPlayer;
     
@@ -27,15 +27,15 @@ public class Inventory extends JPanel
         
         setLayout(new GridLayout(2,1));
         
-        Icon inventScreen = new ImageIcon("Bandeau_inventory.png");
+        Icon inventScreen = new ImageIcon("images/Bandeau_inventory.png");
         myLabelTitle = new JLabel();
         myLabelTitle.setIcon(inventScreen);
-        myTextFieldInvent = new JTextField(myPlayer.returnInventory());
-        myTextFieldInvent.setPreferredSize(new Dimension(myDownPanel.getWidth(),myDownPanel.getHeight()));
+        myLabelInvent = new JLabel(myPlayer.returnInventory());
+        myLabelInvent.setPreferredSize(new Dimension(myDownPanel.getWidth(),myDownPanel.getHeight()));
         
         // Add to the panel 
         myUpPanel.add(myLabelTitle);
-        myDownPanel.add(myTextFieldInvent);
+        myDownPanel.add(myLabelInvent);
         add(myUpPanel);
         add(myDownPanel);
         
