@@ -20,20 +20,21 @@ public class Inventory extends JPanel
     {        
         myGame = win.getGame();
         myPlayer = myGame.getPlayer();
-        // setPreferredSize(new Dimension(500,800));
         myUpPanel = new JPanel();
         myDownPanel = new JPanel();
         myDownPanel.setSize(getWidth(),getHeight());
         
+        Icon inventScreen = new ImageIcon("images/Bandeau_inventory.png");
+        Icon borderInvent = new ImageIcon("images/chest.png");        
+        setBorder(BorderFactory.createMatteBorder(20,20,20,20,borderInvent));
         setLayout(new GridLayout(2,1));
         
-        Icon inventScreen = new ImageIcon("images/Bandeau_inventory.png");
         myLabelTitle = new JLabel();
         myLabelTitle.setIcon(inventScreen);
         myLabelInvent = new JLabel(myPlayer.returnInventory());
-        myLabelInvent.setPreferredSize(new Dimension(100,200));
+        myLabelInvent.setPreferredSize(new Dimension(150,150));
         
-        // Add to the panel 
+        // Add to the panel
         myUpPanel.add(myLabelTitle);
         myDownPanel.add(myLabelInvent);
         add(myUpPanel);
