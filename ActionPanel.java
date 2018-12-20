@@ -229,15 +229,16 @@ public class ActionPanel extends JPanel
                         }
                    }
                    if(nameR.equals("laundryRoom")){
-                       // if the player gots the denture                          
-                            cRoom.setDescription("<html>Oh thank you for the denture ! Now : answer my riddle or die!");
-                       //esle { 
-                           //cRoom.setDescription("<html>iezgnfiuHEFUNZH?CFOQJEFBL? HJEBGFLQK");
-                       //}
-                            myGame.getImgCurrentRoom().setGif("gannyScary.gif");
+                       if(myGame.getPlayer().getNumberItemGave("Denture")==0)                           
+                            cRoom.setDescription("<html>Viwout maaaa zentiuuwe ai kwant toholk waywee vell!");
+                       else {
+                           MagicRoom tmpRoom = (MagicRoom)cRoom;
+                           cRoom.setDescription("<html>Haha ! Thank you for the denture, but it tastes like the one of my husband !<br>If you want to go in the attic where my little angel sleeps, you must answer my riddle :<br>We are even, we are immortal but also fleeting. We die everday to be reborn on the next. Each and everyone of us hits you,the last one kills you. What are we ?");
+                           myGame.getImgCurrentRoom().setGif("gannyScary.gif");                           
+                       }
                        win.refresh();
-                       cRoom.setDescription("<html>You are in the landry.");
-                    }
+                       cRoom.setDescription("<html>Vous etes dans le laundry room.");
+                   } 
                 }
             }
         }
