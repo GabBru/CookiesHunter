@@ -30,6 +30,7 @@ public class Message extends JPanel
         PanelGet = new JPanel();
         setLayout(new BorderLayout());
         PanelTxt.setLayout(new GridLayout());
+        PanelTxt.setBorder(BorderFactory.createMatteBorder(5,5,5,5,Color.black));
         PanelGet.setLayout(new BorderLayout());
         myLabel1 = new JLabel(myGame.getPlayer().getRoom().getDescription());
         Panel labelPane = new Panel(new GridLayout(0,1));
@@ -38,7 +39,7 @@ public class Message extends JPanel
         
         //Description's size and text getter's size
         textField.setColumns(90);
-        PanelTxt.setPreferredSize(new Dimension(660,400));
+        PanelTxt.setPreferredSize(new Dimension(460,200));
         
         // add in the panel
         PanelTxt.add(myLabel1);
