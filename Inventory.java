@@ -26,13 +26,13 @@ public class Inventory extends JPanel
         
         Icon inventScreen = new ImageIcon("images/Bandeau_inventory.png");
         Icon borderInvent = new ImageIcon("images/chest.png");        
-        setBorder(BorderFactory.createMatteBorder(20,20,20,20,borderInvent));
+        setBorder(BorderFactory.createMatteBorder(4,4,4,4,borderInvent));
         setLayout(new GridLayout(2,1));
         
         myLabelTitle = new JLabel();
         myLabelTitle.setIcon(inventScreen);
         myLabelInvent = new JLabel(myPlayer.returnInventory());
-        myLabelInvent.setPreferredSize(new Dimension(150,150));
+        myLabelInvent.setPreferredSize(new Dimension(150,140));
         
         // Add to the panel
         myUpPanel.add(myLabelTitle);
