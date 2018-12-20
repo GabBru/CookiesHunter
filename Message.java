@@ -25,6 +25,7 @@ public class Message extends JPanel
     { 
         myWindow = win;
         myGame = win.getGame();
+        this.setBackground(new java.awt.Color(98, 5, 5));
         //Creation of the objects (Text)
         PanelTxt = new JPanel();
         PanelGet = new JPanel();
