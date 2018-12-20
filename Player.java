@@ -114,6 +114,15 @@ public class Player extends Character
     } 
     
     /**
+     * This is a method which return an inventory.
+     * @return the inventory of the player
+     */
+    public ArrayList<Item> returnInventoryPlayer()
+    {
+        return inventory;
+    }
+    
+    /**
      * Change the room (Room class) where the character is.
     */
     public void  setCurrentRoom(Room newCurrentRoom)
