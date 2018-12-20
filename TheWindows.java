@@ -39,12 +39,12 @@ public class TheWindows extends JFrame
         myGame = new Game();
         this.setTitle("Hunter Cookies");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(1300,600);
+        this.setPreferredSize(new Dimension(1080,800));
         this.setResizable(true);
         this.setLayout(new BorderLayout());
         
         playerLive();
-       
+        
         this.pack();
         this.setVisible(true);
     }
