@@ -11,7 +11,6 @@ public class Game
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Enemy> listEnemy = new ArrayList<>();
-    private ArrayList<Npc> listNpc = new ArrayList<>();
     private Item myItem1, myItem2;
     private String answer;
     
@@ -111,11 +110,6 @@ public class Game
         listEnemy.add(new Enemy("Mother", 3, kitchen));
         listEnemy.add(new Enemy("Grand-Mother", 4, laundryRoom));
         listEnemy.add(new Enemy("Baby", 4, attic));
-        
-        //Add of the Npc list
-        listNpc.add(new Npc("Daughter"));
-        listNpc.add(new Npc("Cook"));
-        listNpc.add(new Npc("Unicorn"));
         
         // ----- initial position of the player -----
         player1 = new Player("Monster", outside);
