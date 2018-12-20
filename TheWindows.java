@@ -10,8 +10,10 @@ import java.util.Iterator;
 import java.util.Set;
 import java.lang.String;
 /**
- * Class The window orgenized the different panels : Info, Message, 
- * Menu, ActionPanel,Image and Image Room
+ * Class The window orgenized the different panels : Info, Message, Menu, ActionPanel,Image and Image Room.
+ * Creation of a pTop panel that contains the Image and Inventory panels that will be organized in BorderLayout.
+ * Creation of a pBottom panel that contains the Message, DirectionInfo panels that will be organized in BorderLayout.
+ * Creation of the DirectionInfo panel that contains the ActionPanel and the Info, will be organized in BorderLayout.
  * 
  * @author Antoine P. & Martin P.
  * @version 05/12/2018
@@ -20,14 +22,6 @@ public class TheWindows extends JFrame
 {
     private ImageRoom test;
     private Game myGame;
-    // private JFrame myFrame;
-    
-    // creation of a pTop panel that contains the Image and Inventory panels
-    // that will be organized in BorderLayout.
-    // Creation of a pBottom panel that contains the Message, DirectionInfo
-    // panels that will be organized in BorderLayout
-    // Creation of the DirectionInfo panel that contains the ActionPanel
-    // and the Info, will be organized in BorderLayout
     private JPanel pTop, pBottom, pDirectionInfo, pDead;
     
      /**
@@ -37,9 +31,9 @@ public class TheWindows extends JFrame
     {
         // Organization of the Frame
         myGame = new Game();
-        this.setTitle("Hunter Cookies");
+        this.setTitle("Cookies Hunter");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setPreferredSize(new Dimension(1080,800));
+        this.setPreferredSize(new Dimension(1120,960));
         this.setResizable(true);
         this.setLayout(new BorderLayout());
         
@@ -60,66 +54,57 @@ public class TheWindows extends JFrame
         // --- TOP PANEL ---
         pTop = new JPanel();
         pTop.setLayout(new BorderLayout());
-        pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.WEST);
-        pTop.add(new Inventory(this), BorderLayout.EAST);
+        pTop.setBorder(BorderFactory.createMatteBorder(2,0,8,0,Color.blue));
+        pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.CENTER);
         this.add(pTop); //Image
         
         // --- BOTTOM PANEL ---
         pBottom = new JPanel();
         pBottom.setLayout(new BorderLayout());
+        pBottom.setBorder(BorderFactory.createEmptyBorder(5,15,5,15));
         
         // *** DIRECTION INFO PANEL ***
         pDirectionInfo = new JPanel();
         pDirectionInfo.setLayout(new BorderLayout());
         pDirectionInfo.add(new ActionPanel(this));
         pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
-        // *** ***
+        // ****************************
         
-        pBottom.add(new Message(this));
+        pBottom.add(new Message(this), BorderLayout.WEST);
+        pBottom.add(new Inventory(this), BorderLayout.CENTER);        
         //pBottom.add(new DescriptionRoom(this));
         pBottom.add(pDirectionInfo, BorderLayout.EAST);
-        //desc = new DescriptionRoom(this);
-        
         
         // --- ADD PANEL IN THE FRAME ---
         this.add(new Menu(this));
         this.add(pTop, BorderLayout.NORTH);
-        this.add(pBottom, BorderLayout.SOUTH);
-        
-        //myFrame.add(new Inventory(this)); // marche pas
-         // Infos
-        //this.add(new ActionPanel(this)); // Boutons
-        //this.add(new JLabel(""));
-        //this.add(desc); // Description of the current room     
+        this.add(pBottom, BorderLayout.SOUTH);  
     }
     
     public Game getGame(){
         return myGame;
     }
     
-    /*
-     * Method who refresh the Frame
+    /**
+     * Method which refresh the Frame
      */
     public void refresh(){
         // remove all Panels
         pBottom.removeAll();
         pTop.removeAll();
         pDirectionInfo.removeAll();
-        //desc.removeAll();
         
         // Add the new Panels
-        // pBottom.add(new Info(this));
-        // pTop.add(new Image(myGame.getImgCurrentRoom()));  
-        // desc.add(new DescriptionRoom(this));
-        pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.WEST);
-        pTop.add(new Inventory(this), BorderLayout.EAST);
+        pTop.add(new Image(myGame.getImgCurrentRoom()), BorderLayout.CENTER);
         pDirectionInfo.add(new ActionPanel(this));
         pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
         pBottom.add(new Message(this));
         
         //pBottom.add(new DescriptionRoom(this));
-        pBottom.add(new Message(this));
+        pBottom.add(new Message(this), BorderLayout.WEST);
         pBottom.add(pDirectionInfo, BorderLayout.EAST);
+        pBottom.add(new Inventory(this), BorderLayout.CENTER);
+        
         this.add(pTop, BorderLayout.NORTH);
         this.add(pBottom, BorderLayout.SOUTH);
         
