@@ -9,8 +9,11 @@ import java.awt.event.*;
  */
 public class Menu extends JPanel
 {
-    JMenu fileMenu, helpMenu, newGameMenu, exitMenu;
+    private JMenu fileMenu ;
+    private JMenuItem helpItem, newGameItem, exitItem;
     private TheWindows win;
+    private Game myGame;
+    
     public Menu (TheWindows myWindows)
     {
         win = myWindows;
@@ -19,19 +22,60 @@ public class Menu extends JPanel
         
         fileMenu = new JMenu("File");
         fileMenu.setMnemonic(KeyEvent.VK_F);
-        helpMenu = new JMenu("Help");
-        helpMenu.setMnemonic(KeyEvent.VK_H);
-        newGameMenu = new JMenu ("New Game");
-        newGameMenu.setMnemonic(KeyEvent.VK_N);
-        exitMenu = new JMenu ("Exit");
-        exitMenu.setMnemonic(KeyEvent.VK_E);
         
-        menuBar.add(fileMenu);
-        fileMenu.add(helpMenu);
+        helpItem = new JMenuItem("Help");
+        helpItem.setMnemonic(KeyEvent.VK_H);
+        helpItem.addActionListener(new ActionListener()
+
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    JDialog helpDialog = new JDialog((Frame)null,"attention",true);
+                    /**
+                     * Texte help  faire
+                     */    
+                    JTextArea textHelp = new JTextArea(5,20);
+
+                    helpDialog.setSize(250,150);
+                    helpDialog.setResizable(true);
+                    helpDialog.setVisible(true);
+                }
+            }
+        );
+        
+        newGameItem = new JMenuItem ("New Game");
+        newGameItem.setMnemonic(KeyEvent.VK_N);
+        newGameItem.addActionListener(new ActionListener()
+
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    /**
+                    * je regarde pour essayer de la faire mais la methode que j'ai fait une nouvelle fenetre
+                    */
+                }
+            }
+        );
+        
+          exitItem = new JMenuItem ("Exit");
+        exitItem.setMnemonic(KeyEvent.VK_E);
+        exitItem.addActionListener(new ActionListener()
+
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    System.exit(0);    
+                }
+            }
+        );
+
+        
+         menuBar.add(fileMenu);
+        fileMenu.add(helpItem);
         fileMenu.addSeparator();
-        fileMenu.add(newGameMenu);
+        fileMenu.add(newGameItem);
         fileMenu.addSeparator();
-        fileMenu.add(exitMenu);
+        fileMenu.add(exitItem);
         
         setVisible(true);
     }}
