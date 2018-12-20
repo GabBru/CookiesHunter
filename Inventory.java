@@ -20,7 +20,7 @@ public class Inventory extends JPanel
     {        
         myGame = win.getGame();
         myPlayer = myGame.getPlayer();
-        
+        // setPreferredSize(new Dimension(500,800));
         myUpPanel = new JPanel();
         myDownPanel = new JPanel();
         myDownPanel.setSize(getWidth(),getHeight());
@@ -31,7 +31,7 @@ public class Inventory extends JPanel
         myLabelTitle = new JLabel();
         myLabelTitle.setIcon(inventScreen);
         myLabelInvent = new JLabel(myPlayer.returnInventory());
-        myLabelInvent.setPreferredSize(new Dimension(myDownPanel.getWidth(),myDownPanel.getHeight()));
+        myLabelInvent.setPreferredSize(new Dimension(100,200));
         
         // Add to the panel 
         myUpPanel.add(myLabelTitle);
