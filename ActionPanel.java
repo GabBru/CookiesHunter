@@ -12,8 +12,8 @@ import java.util.Set;
 /**
  * The class Action 
  *
- * @author Antoine P & Martin P & Amandine P, kilian F
- * @version 2
+ * @author Antoine P & Martin P & Amandine P
+ * @version 1
  */
 public class ActionPanel extends JPanel 
 {
@@ -145,42 +145,40 @@ public class ActionPanel extends JPanel
                    if(nameR.equals("outside")){
                        myGame.getPlayer().addInventory(cRoom.getItem());
                        cRoom.removeItemRoom(cRoom.getItem());
-                       cRoom.setDescription("<html>Unicorn: Good morning Dear friend  !!! I am a unicorn ! The most wonderful animal. I am Life, and maybe one day, I will be able to save your life !!!!!!<br> <br> You found a key !!!");
+                       cRoom.setDescription("<html>Licorne : bjr je suis la licorne ...<br> <br> Vous avez trouvez ue clé !!!");
                        myGame.getImgCurrentRoom().setGif("images/unicorn.gif");
                        win.refresh();
-                       cRoom.setDescription("<html>You are in the garden.");
+                       cRoom.setDescription("<html>Vous etes dans le jardin.");
                    }
                    if(nameR.equals("pantry")){
                        if(cRoom.getItem() != null){
                            //if pas les 10 cookies
-                            cRoom.setDescription("<html>Good morning dear friends !! Can I help you ? <br> <br> Sory, to help you I need 10 cookies.");
-                            myGame.getImgCurrentRoom().setGif("images/cook.gif");
-                            //esle { suppri les cookies du player et lui donner du lait et suppr lait de la piece
+                            cRoom.setDescription("<html>Bjr je suis le cuisinier ... jai besoin de 10 cookies pour vous donner du lait");
+                       //esle { suppri les cookies du player et lui donner du lait et suppr lait de la piece
                            //cRoom.setDescription("<html>Vous avez obtenue du lait");
                        //}
                        win.refresh();
-                       cRoom.setDescription("<html>You are in a pantry room.");
+                       cRoom.setDescription("<html>Vous etes dans le pantry.");
                     }
                    }
                    if(nameR.equals("daughterRoom")){
                        if(cRoom.getItem() != null){
-                           //if porte ferm�e de la current room
-                            cRoom.setDescription("<html>welcome creature. You are in my room. If you want to go out, you'll have to give me the password. What is my favorite magic animal? ");
-                            myGame.getImgCurrentRoom().setGif("images/girl.gif");
-                            //esle { donner la cle au player et la suppr de la piece
+                           //if porte fermée de la current room
+                            cRoom.setDescription("<html>Bjr je suis la petite moche, répond à mon enigme pour sortir");
+                       //esle { donner la cle au player et la suppr de la piece
                            //cRoom.setDescription("<html>Vous avez obtenue une cle");
                        //}
                        win.refresh();
-                       cRoom.setDescription("<html>You are in little girl bedroom.");
+                       cRoom.setDescription("<html>Vous etes dans la chambre.");
                     }
                    }
                    if(nameR.equals("livingRoom")){
                        if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
-                           cRoom.setDescription("<html>You recover the denture on the grandfather�s corpse! Good job my friend!");
+                           cRoom.setDescription("<html>Vous avez trouvé le dentier du vieux !!!");
                            win.refresh();
-                           cRoom.setDescription("<html>You are in livingRoom.");
+                           cRoom.setDescription("<html>Vous etes dans le livingRoom.");
                            //myGame.getImgCurrentRoom().setGif("null");
                     }
                    }
@@ -188,47 +186,47 @@ public class ActionPanel extends JPanel
                        if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
-                           cRoom.setDescription("<html>You got a cookie on his corpse");
+                           cRoom.setDescription("<html>Vous avez trouvé un cookieiekzjfbi!!!");
                            win.refresh();
-                           cRoom.setDescription("<html>You are in the garage.");
+                           cRoom.setDescription("<html>Vous etes dans le garage.");
                         }
                    }
                    if(nameR.equals("playRoom")){
                        if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
-                           cRoom.setDescription("<html>You got a cookie on his corpse");
+                           cRoom.setDescription("<html>Vous avez trouvé un cookieiekzjfbi!!!");
                            win.refresh();
-                           cRoom.setDescription("<html>You are in playRoom.");
+                           cRoom.setDescription("<html>Vous etes dans le playRoom.");
                         }
                    }
                    if(nameR.equals("kitchen")){
                        if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
-                           cRoom.setDescription("<html>You got a cookie on his corpse");
+                           cRoom.setDescription("<html>Vous avez trouvé un cookieiekzjfbi!!!");
                            win.refresh();
-                           cRoom.setDescription("<html>You are in the kitchen.");
+                           cRoom.setDescription("<html>Vous etes dans la kitchen.");
                         }
                    }
                    if(nameR.equals("office")){
                        if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
-                           cRoom.setDescription("<html>You got a baby bootle!!!");
+                           cRoom.setDescription("<html>Vous avez trouvé un baby bootle!!!");
                            win.refresh();
-                           cRoom.setDescription("<html>You are in the office.");
+                           cRoom.setDescription("<html>Vous etes dans le bureau.");
                         }
                    }
                    if(nameR.equals("laundryRoom")){
                        // if le player a le dentien                            
-                            cRoom.setDescription("<html>Thank you ! I can speak now � <br><br> If you want to see my little son, you will have to solve my riddle.");
+                            cRoom.setDescription("<html>Pour passer il faut repondre à mon enigme !");
                        //esle { 
                            //cRoom.setDescription("<html>iezgnfiuHEFUNZH?CFOQJEFBL? HJEBGFLQK");
                        //}
-                            myGame.getImgCurrentRoom().setGif("images/grannyScary.gif");
+                            myGame.getImgCurrentRoom().setGif("gannyScary.gif");
                        win.refresh();
-                       cRoom.setDescription("<html>You are in laundry room.");
+                       cRoom.setDescription("<html>Vous etes dans le laundry room.");
                     }                   
             }
         }
@@ -247,19 +245,19 @@ public class ActionPanel extends JPanel
                         if(nameR.equals("livingRoom")){
                             myGame.getImgCurrentRoom().setImage("images/livingroomMonster.jpg");
                             myGame.getImgCurrentRoom().setGif("images/grandfather.gif");
-                            cRoom.setDescription("You euthanized it."); // on peut ajouter un gif
+                            cRoom.setDescription("Vous avez tué le vieux"); // on peut ajouter un gif
                         }
                         if(nameR.equals("garage")){
                             myGame.getImgCurrentRoom().setImage("images/garageMonster.jpg");
-                            cRoom.setDescription("You killed the father");
+                            cRoom.setDescription("Vous avez tué le père");
                         }
                         if(nameR.equals("playRoom")){
                             myGame.getImgCurrentRoom().setImage("images/playroomMonster.jpg");
-                            cRoom.setDescription("That's good, you gave him an eternal vacation.");
+                            cRoom.setDescription("Vous avez tué le fils");
                         }
                         if(nameR.equals("kitchen")){
                             myGame.getImgCurrentRoom().setImage("images/kitchenMonster.jpg");
-                            cRoom.setDescription("You got rid of a hard life of toil. Well played friend!");
+                            cRoom.setDescription("Vous avez tué la maman, elle etait un peu psykedelik ..");
                         }
                     }
                 }
