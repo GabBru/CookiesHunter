@@ -26,30 +26,29 @@ public class Game
         // initialisation map with different rooms
         
         Room outside, hall, garage, livingRoom, daughterRoom, pantry, playRoom, kitchen, office, laundryRoom, attic;
-        outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a creepy monster (yes this blue monster), you are hungry. In this building, a magic Cookie waits. Prepare to enter a modern and psychedelic dark souls. You arrive in the garden. it is sober and well maintained, so you see the dark manor where lies the magic cookies.");
+        outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a very hungry monster (yes, this blue monster) which likes cookies. In the house in front of you, a magic Cookie is waiting for you... Prepare yourself to enter a dark and psychedelic game. You actualy are in the garden of the house. It is sober and well maintained. You can also feel a lot of magic in the ai");
         hall = new Room("hall","<html>You arrive in the hall. You have an important several choices: right door,door in front of you, left door and the stairs. Be careful, each of your choices is important. If you do not attention, an untimely death awaits you.");
-        garage = new Room("garage","<html>You arrive in the garage. the father remark you and attacks you with a wrench. Defend yourself !!!");
-        livingRoom = new Room("livingRoom","<html>You arrive in the living room. The grampa attack you. Defend yourself !!!");
-        daughterRoom = new MagicRoom("daughterRoom","<html>You arrive in a room, it is the room of the little girl. it's very creepy.","Unicorn");
-        pantry = new LockRoom("pantry","<html>You enter the pantry room, a servant greets you.");
-        playRoom = new LockRoom("playRoom","<html>You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
-        kitchen = new Room("kitchen","<html>You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
-        office = new Room("office","<html>You enter an office ...You are stuck, there is no exit. OMG Ã¢â‚¬Â¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
-        laundryRoom = new Room("laundryRoom","<html>You enter in a laundry room. A very old and creepy woman waiting for you...");
+        garage = new Room("garage","<html>You arrive in the garage. The father is tinkering with his car. A smell of cookie separates from the smell of the motor and makes you want to attack him ...");
+        livingRoom = new Room("livingRoom","<html>You arrive in the living room. The grampa is watching the TV and smells like a cookie. It makes you want to attack him ...");
+        daughterRoom = new MagicRoom("daughterRoom","<html>You arrive in a bedroom, it is the bedroom of a little girl. it's very creepy. You can observe the many unicorns","Unicorn");
+        pantry = new LockRoom("pantry","<html>You enter in a pantry, a servant is cooking a meal. Maybe you can talk to him");
+        playRoom = new LockRoom("playRoom","<html>You arrive on the next floor, more precisely in a playroom. A little boy is playing quietly. It makes you want to attack him ! ");
+        kitchen = new Room("kitchen","<html>You enter a spacious kitchen. A woman with an empty stare coming you. She is holding a spoon. Let's see who has the better spoon between you and her !");
+        office = new Room("office","<html>You enter an office ... OMG THERE IS A BLACK HOWL IN THE MIDDLE OF THE ROOM !! And now, you can not leave the room because the door is blocked! What will happen if you try to jump into the hole?...");
+        laundryRoom = new Room("laundryRoom","<html>You enter in a laundry. A very old and creepy woman is watching you...");
         attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
         //Ajout des Items
-        daughterRoom.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        garage.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        daughterRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
+        garage.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         livingRoom.addItemRoom(new Item("Denture", "Denture of Grand-father"));
         pantry.addItemRoom(new Item("Milk", "Milk must be in a baby bottle"));
-        playRoom.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        kitchen.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        playRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
+        kitchen.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         office.addItemRoom(new Item("Bottle of milk", "A baby bottle must be milk"));
-        laundryRoom.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        outside.addItemRoom(new Item("Key", "Permet d'ouvrir une porte ferm�e � cl�"));
-        daughterRoom.addItemRoom(new Item("Key", "Permet d'ouvrir une porte ferm�e � cl�"));
-        
+        laundryRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
+        outside.addItemRoom(new Item("Key", "Allows to unlock a door"));
+        daughterRoom.addItemRoom(new Item("Key", "Allows to unlock a door"));
         
         // Ajout des sorties
         outside.setExit("North",hall);
