@@ -153,6 +153,7 @@ public class Player extends Character
                 currentRoom.isVisited = true;
                 currentRoom=nextRoom; 
                 }
+    }
     
     /**
      * hasKey method
