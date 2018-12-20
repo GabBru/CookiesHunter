@@ -37,9 +37,9 @@ public class Image extends JPanel
            this.setBackground(Color.BLACK);
            myLabel1 = new JLabel();
            myLabel2 = new JLabel();
-           myLabel1.setIcon(new ImageIcon(roomImage.getImage()));
+           myLabel2.setIcon(new ImageIcon(roomImage.getImage()));
            
-           myLabel2.setIcon(new ImageIcon(roomImage.getGif()));
+           myLabel1.setIcon(new ImageIcon(roomImage.getGif()));
            add(myLabel1); 
            add(myLabel2);                     
         }       
