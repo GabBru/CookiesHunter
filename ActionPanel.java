@@ -317,7 +317,10 @@ public class ActionPanel extends JPanel
                 east.setEnabled(true);
                 west.setEnabled(true);
                 down.setEnabled(false);
-                up.setEnabled(true);
+                // Enable the button when the player have a key
+                if (myWindow.getGame().getPlayer().hasKey() == true){
+                    up.setEnabled(true);
+                } else {up.setEnabled(false);}
                 search.setEnabled(false);
                 attack.setEnabled(false);
                 break;
