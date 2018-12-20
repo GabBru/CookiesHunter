@@ -83,6 +83,10 @@ public class Game
         imgAttic = new ImageRoom("images/atticCharacters.jpg",attic);
         
         imgOffice.setGif("images/orig.gif");
+        imgGarage.setGif("images/father.gif");
+        imgAttic.setGif("images/Baby.gif");
+        imgPantry.setGif("images/cook.gif");
+        imgLaundryRoom.setGif("images/grannyScary.gif");
         
         //Add of the list of room
         listImgRoom.add(imgOutside);
