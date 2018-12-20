@@ -13,6 +13,7 @@ public class Game
     private ArrayList<Enemy> listEnemy = new ArrayList<>();
     private ArrayList<Npc> listNpc = new ArrayList<>();
     private Item myItem1, myItem2;
+    private String answer;
     
     /**
      * Object constructor for the Game class
@@ -116,6 +117,9 @@ public class Game
         
         // ----- initial position of the player -----
         player1 = new Player("Monster", outside);
+        
+        //default answer
+        answer=""; 
     }
     
     public ImageRoom getImgCurrentRoom(){
@@ -138,5 +142,13 @@ public class Game
     
     public ArrayList<Enemy> getListEnemy(){
         return listEnemy;
+    }
+    
+    public void setAnswer(String s){
+        answer = s;
+    }
+    
+    public String getAnswer(){
+        return answer;
     }
 }
