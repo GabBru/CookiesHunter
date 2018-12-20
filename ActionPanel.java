@@ -164,14 +164,12 @@ public class ActionPanel extends JPanel
                    }
                    if(nameR.equals("daughterRoom")){
                        if(cRoom.getItem() != null){
-                           //if porte fermÃ©e de la current room
                             cRoom.setDescription("<html>Bjr je suis la petite moche, rÃ©pond Ã  mon enigme pour sortir");
-                       //esle { donner la cle au player et la suppr de la piece
-                           //cRoom.setDescription("<html>Vous avez obtenue une cle");
-                       //}
-                       win.refresh();
-                       cRoom.setDescription("<html>Vous etes dans la chambre.");
-                    }
+                            myGame.getPlayer().addInventory(cRoom.getItem());
+                            cRoom.removeItemRoom(cRoom.getItem());
+                            win.refresh();
+                          cRoom.setDescription("<html>Vous etes dans la chambre.");
+                        }
                    }
                    if(nameR.equals("livingRoom")){
                        if(cRoom.getItem() != null){
