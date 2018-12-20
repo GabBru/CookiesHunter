@@ -142,7 +142,7 @@ public class Player extends Character
                         mr.setIsLocked();
                         if (mr.getNameRoom().equals("daughterRoom"))
                         {
-                            currentRoom.setDescription("");
+                            currentRoom.setDescription("You are in the hall. The north-facing door is open");
                         }
                         currentRoom=mr;
                     }
