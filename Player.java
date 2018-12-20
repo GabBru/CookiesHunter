@@ -177,7 +177,7 @@ public class Player extends Character
             win = false; // ici ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§a devrait appeler la mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©thode qui affiche le game over
         }
         else{
-            enemy.setIsDead(true);
+            enemy.setIsDead();
             levelUp(); 
             //Donner cookie
             //changer description piece
