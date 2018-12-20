@@ -25,7 +25,7 @@ public class Player extends Character
         currentRoom = newRoom;
         this.level=0;
         win=true;
-                inventory = new ArrayList<Item>();
+        inventory = new ArrayList<Item>();
     }
     
     /**
@@ -87,10 +87,9 @@ public class Player extends Character
      * This is a method which return the contents of the inventory.
      * @return Return a string listing items in the character's inventory. 
      */
-    
     public String returnInventory()
     {
-        String contents = "<html>";
+        String contents = "<html><FONT size=5>";
         int count = 0;
         for (String nameItem : Item.validItems) {
         count = getNumberItemGave(nameItem);
@@ -99,6 +98,7 @@ public class Player extends Character
                 count = 0;
             }
         } 
+        contents = contents + "</FONT></html>";
         return contents;
     } 
     
@@ -138,7 +138,7 @@ public class Player extends Character
             else if (nextRoom instanceof MagicRoom) {               
                 MagicRoom mr = (MagicRoom)nextRoom;
                 if (mr.getIsLocked() == true){
-                    if (mr.checkPass("on récupère le string saisi ici")){
+                    if (mr.checkPass("on rÃ©cupÃ¨re le string saisi ici")){
                         mr.setIsLocked();
                         if (mr.getNameRoom().equals("daughterRoom"))
                         {
@@ -174,7 +174,7 @@ public class Player extends Character
      */
     public void fight(Enemy enemy, int playerLevel){
         if(enemy.getLevel() > playerLevel){
-            win = false; // ici ÃƒÆ’Ã‚Â§a devrait appeler la mÃƒÆ’Ã‚Â©thode qui affiche le game over
+            win = false; // ici ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§a devrait appeler la mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©thode qui affiche le game over
         }
         else{
             enemy.setIsDead(true);
