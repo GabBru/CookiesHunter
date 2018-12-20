@@ -59,11 +59,4 @@ public class Message extends JPanel
         
     }
     
-    /**
-     * method for a performed action
-     */
-    public String actionPerformed(ActionEvent evt) {
-        String text = textField.getText();
-        return text;
-    }
 }
