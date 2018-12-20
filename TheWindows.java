@@ -140,7 +140,7 @@ public class TheWindows extends JFrame
         return myGame;
     }
     
-    **
+    /**
      * Method who refresh the Frame
      * If the player is lived the frame of the game is displaying
      * Else the frame gameOver is displaying
