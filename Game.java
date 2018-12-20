@@ -37,10 +37,10 @@ public class Game
         daughterRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         garage.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         livingRoom.addItemRoom(new Item("Denture", "Denture of Grand-father"));
-        pantry.addItemRoom(new Item("Milk", "Milk must be in a baby bottle"));
+        pantry.addItemRoom(new Item("Bottle of milk", "A baby bottle full of milk"));
         playRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         kitchen.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
-        office.addItemRoom(new Item("Bottle of milk", "A baby bottle must be milk"));
+        office.addItemRoom(new Item("baby-bottle", "An empty baby-bottle"));
         laundryRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
         outside.addItemRoom(new Item("Key", "Allows to unlock a door"));
         daughterRoom.addItemRoom(new Item("Key", "Allows to unlock a door"));
