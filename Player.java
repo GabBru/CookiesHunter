@@ -101,19 +101,19 @@ public class Player extends Character
         
     }
     
-    public void hasKey(LockRoom lr, Room r){
+    /**
+     * hasKey method
+     * @return boolean if there is a "Key" in the inventory
+     */
+    public boolean hasKey(){
         for(Item i : inventory){
-            System.out.println("j1");
             if(i.getName().equals("Key")){
-                removeInventory("Key");
-                lr.setLocked();
-                currentRoom=r;
-                    
-                
+                return true; // there is a key in the inventory
             }
+            else {return false;} // there is not a key in the inventory
         }
-       
-    }
+        return false; // return false if the method not enter in the for loop
+}
     
     /**
      * this method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
