@@ -105,7 +105,7 @@ public class Player extends Character
         for (String nameItem : Item.validItems) {
         count = getNumberItemGave(nameItem);
             if ( count >0){
-                contents = (contents + count + " " +nameItem+" ;<br>");
+                contents = (contents + count + " " +nameItem+"<br>");
                 count = 0;
             }
         } 
@@ -162,7 +162,7 @@ public class Player extends Character
     }
     
     /**
-     * hasKey method
+     * HasKey method
      * @return boolean if there is a "Key" in the inventory
      */
     public boolean hasKey(){
@@ -176,7 +176,7 @@ public class Player extends Character
 }
     
     /**
-     * this method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
+     * This method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
      */
     public void fight(Enemy enemy, int playerLevel){
         if(enemy.getLevel() > playerLevel){
