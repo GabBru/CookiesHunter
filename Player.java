@@ -70,13 +70,12 @@ public class Player extends Character
         Room nextRoom = currentRoom.getExit(direction);
             if (nextRoom instanceof LockRoom ){
                 LockRoom lr = (LockRoom)nextRoom;
-                currentRoom=nextRoom;
                 for(Item i : inventory){
-                    //if(i.getName().equals("Key")){
+                    if(i.getName().equals("Key")){
                         currentRoom=nextRoom;
-                        //removeInventory("Key"); marche pas
+                        //removeInventory("Key"); 
                         lr.setLocked();           
-                    //}
+                    }
                 }
                     
             } else if (nextRoom instanceof MagicRoom) {
@@ -89,7 +88,7 @@ public class Player extends Character
                 //String attempt = reader.nextLine();
                 //if(mr.checkPass(attempt)){
                   //  mr.setIsLocked();                   
-
+                  //currentRoom=nextRoom; 
                 //}
             } else { 
                 currentRoom.isVisited = true;
@@ -117,7 +116,7 @@ public class Player extends Character
      */
     public void fight(Enemy enemy, int playerLevel){
         if(enemy.getLevel() > playerLevel){
-            win = false; // ici ÃƒÂ§a devrait appeler la mÃƒÂ©thode qui affiche le game over
+            win = false; // ici ÃƒÆ’Ã‚Â§a devrait appeler la mÃƒÆ’Ã‚Â©thode qui affiche le game over
         }
         else{
             enemy.setIsDead(true);
