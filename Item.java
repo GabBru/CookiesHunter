@@ -12,7 +12,7 @@ public class Item
     protected String name; // the name variable is the name of the item that is limited to a specific list
     protected String description; // the description variable is the description of the item
     public static final String[] validItems = {
-      "Cookie", "Denture", "Baby bottle", "Milk", "Key", "Bottle of milk"
+      "Cookie", "Denture", "Baby-bottle", "Milk", "Key", "Bottle of milk"
     }; // ValisItems is a String array with the valid names of the items.
     /**
      * Constructor of Item class allows you to create a new Item.
