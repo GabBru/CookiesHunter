@@ -39,9 +39,9 @@ public class Character
     public void removeInventory(String nameItem)
     {
         for (Item i : inventory)
-            if (i.name.equals(nameItem)){
+            if (i.getName().equals(nameItem)){
                 inventory.remove(i);
-            } 
+            }
     }
     
     /**
