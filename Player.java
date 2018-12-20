@@ -12,6 +12,7 @@ public class Player extends Character
     protected Room currentRoom;
     protected boolean win;
     private ArrayList<Item> inventory; // The inventory variable includes the character's item list.
+    private String answer;
     /**
      * Player class constructors.
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
@@ -26,6 +27,7 @@ public class Player extends Character
         this.level=0;
         win=true;
         inventory = new ArrayList<Item>();
+        answer="";
     }
     
     /**
@@ -38,6 +40,15 @@ public class Player extends Character
         
     public boolean getWin(){
         return win;
+    }
+    
+        
+    public void setAnswer(String s){
+        answer = s;
+    }
+    
+    public String getAnswer(){
+        return answer;
     }
     
     /**
@@ -138,16 +149,11 @@ public class Player extends Character
             else if (nextRoom instanceof MagicRoom) {               
                 MagicRoom mr = (MagicRoom)nextRoom;
                 if (mr.getIsLocked() == true){
-                    if (mr.checkPass("on rÃ©cupÃ¨re le string saisi ici")){
-                        mr.setIsLocked();
-                        if (mr.getNameRoom().equals("daughterRoom"))
-                        {
-                            currentRoom.setDescription("You are in the hall. The north-facing door is open");
-                        }
+                    if (mr.checkPass(answer)){
+                        mr.setIsLocked();                        
                         currentRoom=mr;
                     }
-                }
-                
+                } else {currentRoom=mr;}             
             } 
             else { 
                 currentRoom.isVisited = true;
