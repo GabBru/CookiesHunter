@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.*;
 /**
  * Class Room - a room in an adventure game.  
@@ -14,13 +13,12 @@ import java.util.*;
 public class Room   
 {
     protected String description; // The description variable includes the description of the room.
-    private String nameRoom;
+    private String nameRoom; // The nameRoom variable contains the name of the room.
     private HashMap<String, Room> exits; // The exits variable is a HashMap that includes the rooms associated with the exits.
     protected boolean isVisited; // The isVisited variable indicates if the player has visited the room or not.
     protected Item itemRoom; // The inventoryRoom variable is a ArrayList that includes the items was in the room.
     /**
-     * Constructor 
-     * Create a new Room.
+     * Constructor that allows to create a new Room.
      * 
      * Initially, it has no exits. 
      * Description must contain at least 10 characters and have not to start with a space. 
@@ -37,8 +35,8 @@ public class Room
         this.description = description;
         this.nameRoom = nameRoom;
         exits = new HashMap<>();
-        isVisited = false;
-        this.itemRoom = null; 
+        isVisited = false; //A new LockRoom is not vidited.
+        this.itemRoom = null; //A new LockRoom does not have an item.
     }
 
     /**
@@ -61,21 +59,7 @@ public class Room
     public void setExit(String direction, Room neighbor){
             exits.put(direction, neighbor);
     }
-    
-    /**
-     * This method displays a sentence containing exits of the current room.
-     * 
-     * @return displayExits String returned containing all exits of the current room. Use the HashMap<> tool.
-     */
-    public String getExitString(){
-        String displayExits = "Exits:";
-        Set<String> keys = exits.keySet();
-        for(String exit : keys) {
-            displayExits += " " + exit;
-        }
-        return displayExits;
-    }
-    
+
     /**
      * @return Return a string describing the room (=description).
      */
@@ -84,6 +68,9 @@ public class Room
         return description;
     }
     
+    /**
+     * Change the description at the room.
+     */
     public void setDescription(String des)
     {
         description = des;
@@ -105,16 +92,19 @@ public class Room
         return isVisited;
     }
     
+        /**
+     * @return The item of the room.
+     */
+    public Item getItem(){
+        return itemRoom;
+    }
+    
     /**
      * Add an item (Item class) in the inventory of the character.
      */
     public void addItemRoom(Item theItem)
     {
         itemRoom = theItem;
-    }
-    
-    public Item getItem(){
-        return itemRoom;
     }
     
     /**
@@ -124,5 +114,4 @@ public class Room
     {
         itemRoom = null;
     }
-
 }
