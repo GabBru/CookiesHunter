@@ -12,41 +12,51 @@ import java.awt.event.*;
 public class Message extends JPanel
 {
     // variable declaration
-    JPanel JPanelTxt, JPanelGet;
+    JPanel PanelTxt, PanelGet;
     JTextArea myTextArea;
     JTextField textField;
     //Player thisPlayer;
     private TheWindows myWindow;
     Message message;
+    private JLabel myLabel1;
+    private Game myGame;
 
     public Message(TheWindows win)
     { 
         myWindow = win;
+        myGame = win.getGame();
         //Creation of the objects (Text)
-        JPanelTxt = new JPanel();
-        JPanelGet = new JPanel();
+        PanelTxt = new JPanel();
+        PanelGet = new JPanel();
         setLayout(new BorderLayout());
-        JPanelTxt.setLayout(new GridLayout(1,1));
-        JPanelGet.setLayout(new FlowLayout());
-        //monLabel = new JLabel("ah que coucou", JLabel.CENTER);
-        myTextArea = new JTextArea(myWindow.getGame().getPlayer().getRoom().getDescription());
+        PanelTxt.setLayout(new GridLayout());
+        PanelGet.setLayout(new BorderLayout());
+        myLabel1 = new JLabel(myGame.getPlayer().getRoom().getDescription());
+        Panel labelPane = new Panel(new GridLayout(0,1));
+
+        TextField textField = new TextField("Enter your keyword here");
         
-        JTextField textField = new JTextField();
-        textField.setColumns(30);
+        //Description's size and text getter's size
+        textField.setColumns(90);
+        PanelTxt.setPreferredSize(new Dimension(660,400));
         
         // add in the panel
-        JPanelTxt.add(myTextArea);
-        JPanelGet.add(textField);
+        PanelTxt.add(myLabel1);
+        PanelGet.add(textField, BorderLayout.WEST);
        
         //Add object to the Frame
-        add(JPanelTxt, BorderLayout.NORTH);
-        add(JPanelGet, BorderLayout.SOUTH);
-       
+        add(PanelTxt, BorderLayout.NORTH);
+        add(PanelGet, BorderLayout.SOUTH);
         
         //Display elements
-        JPanelTxt.setVisible(true);
-        JPanelGet.setVisible(true);
-        setVisible(true); 
+        PanelTxt.setVisible(true);
+        if (myGame.getPlayer().getRoom().getNameRoom() == "daughterRoom" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
+            PanelGet.setVisible(true);
+        }
+        else {PanelGet.setVisible(false);}
+        setVisible(true);
+
+        
     }
     
     /**
