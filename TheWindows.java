@@ -51,8 +51,6 @@ public class TheWindows extends JFrame
     
     public void playerDead(){
         this.removeAll();
-        
-        
         pDead = new JPanel();
         pDead.add(new Image(new ImageRoom("images/gameOver.gif",new Room("gameOver"," "))));
         this.add(pDead);
@@ -77,8 +75,8 @@ public class TheWindows extends JFrame
         pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
         // *** ***
         
-        //pBottom.add(new Message(this));
-        pBottom.add(new DescriptionRoom(this));
+        pBottom.add(new Message(this));
+        //pBottom.add(new DescriptionRoom(this));
         pBottom.add(pDirectionInfo, BorderLayout.EAST);
         //desc = new DescriptionRoom(this);
         
@@ -119,7 +117,8 @@ public class TheWindows extends JFrame
         pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
         pBottom.add(new Message(this));
         
-        pBottom.add(new DescriptionRoom(this));
+        //pBottom.add(new DescriptionRoom(this));
+        pBottom.add(new Message(this));
         pBottom.add(pDirectionInfo, BorderLayout.EAST);
         this.add(pTop, BorderLayout.NORTH);
         this.add(pBottom, BorderLayout.SOUTH);
