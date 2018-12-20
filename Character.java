@@ -7,7 +7,7 @@ import java.util.*;
 public class Character
 {
     protected String name; // The name variable includes the name of the character.
-    protected ArrayList<Item> inventory; // The inventory variable includes the character's item list.
+
     /**
      * Constructor that allows you to create a new character.
      * Each character's name have to contain at least 3 characters. It also 
@@ -22,27 +22,10 @@ public class Character
     { 
         if (newName.length()<=2 || (newName.substring(0,1).equals(" ")) || (newName.length() - newName.replace(" ","").length())>1) throw new IllegalArgumentException("Incorrect name");
         name = newName;
-        inventory = new ArrayList<Item>();
+
     }
 
-    /**
-     * Add an item (Item class) in the inventory of the character.
-     */
-    public void addInventory(Item theItem)
-    {
-        inventory.add(theItem);
-    }
-    
-    /**
-     * Remove one type of item (Item class) from the inventory of the character.
-     */
-    public void removeInventory(String nameItem)
-    {
-        for (Item i : inventory)
-            if (i.getName().equals(nameItem)){
-                inventory.remove(i);
-            }
-    }
+
     
     /**
      * Recovers the name of the character.
@@ -52,37 +35,7 @@ public class Character
         return name;
     }
     
-    /**
-     * Count the number of item given as parameters in the inventory of the player.
-     * @return Return an integer which represent the occurence of an Item in an inventory.
-     */
+
     
-    public int getNumberItemGave(String nameItem)
-    {
-        int numberItem = 0;
-        for (Item i : inventory)
-            if (i.name.equals(nameItem)){
-                numberItem++;
-            }
-        return(numberItem);
-    }
-    
-    /**
-     * This is a method which return the contents of the inventory.
-     * @return Return a string listing items in the character's inventory. 
-     */
-    
-    public String returnInventory()
-    {
-        String contents = "";
-        int count = 0;
-        for (String nameItem : Item.validItems) {
-        count = getNumberItemGave(nameItem);
-            if ( count >0){
-                contents = (contents + count + " " +nameItem+" ; \n");
-                count = 0;
-            }
-        } 
-        return contents;
-    } 
+
 }
