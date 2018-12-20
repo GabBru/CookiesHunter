@@ -1,11 +1,10 @@
-// import java.util.*;
 /**
  * Class Item is used to manipulate items in the game. 
  * An item is owned by a character and composed of a proper name, description for each of themand and 
  * a String array with the valid names of the items.
  * 
  * @author : Marie Bogusz & Gabriel Brunet
- * @version v0.2 2018nov
+ * @version @version 20/12/18
  */
 public class Item
 {
@@ -34,7 +33,6 @@ public class Item
     
     /**
      * This method check the presence of a given string in the list "validItems".
-     * 
      * @return Return a boolean true if a given string is in the list of valid items. False if not.
      */
     private boolean isItem (String name)
