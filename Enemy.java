@@ -1,8 +1,8 @@
 import java.util.*;
 /**
- * Subclass Ennemies inheriting the superclass Character. 
- * This class represents the different members of the family : 
- * the mother, the father, the sister, the brother, the grand-mother, the grand-father and 
+ * Subclass Enemy inheriting the superclass Character. 
+ * This class represents the different members of the family who can be attacked :
+ * the mother, the father, the brother, the grand-mother, the grand-father and 
  * the baby who holds the magic cookie.
  *
  * @author Amandine Poullot & Gabriel Brunet & Diama FALL
@@ -10,18 +10,18 @@ import java.util.*;
  */
 public class Enemy extends Character
 {
-    private int level; // The level variable contains the level of the ennemy.
-    private boolean isDead; // The isDead variable says if the ennemy is alive or not.
+    private int level; // The level variable contains the level of the enemy.
+    private boolean isDead; // The isDead variable says if the enemy is alive or not.
     private Room enemyRoom; // The enemyRoom variable contains the room where the enemy is.
     /**
-     * Constructor that allows to ceate a new Ennemy.
+     * Constructor that allows to ceate a new Enemy.
      * 
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
-     * The ennemy have a status which determine if he is dead or not. It will allows the Player to picked up the ennemy inventory.
+     * The enemy have a status which determine if he is dead or not. It will allows the Player to picked up the enemy inventory.
      * The level must be up to 0, initialised during creation and determine if the user is able to beat him.
      * 
-     * @param isDead informs on the living or non-living status of ennemy.
-     * @param level Returns the current level of the ennemy.
+     * @param isDead informs on the living or non-living status of enemy.
+     * @param level Returns the current level of the enemy.
      * @param enemyRoom contains the enemy room.
      * @exception IllegalArgumentException Returned in case of level troubles (<0).
      */
@@ -36,7 +36,7 @@ public class Enemy extends Character
     
     /**
      * @return Return the value of the boolean isDead.
-     * This method informs of the living or non-living status of ennemy.
+     * This method informs of the living or non-living status of enemy.
      */
     public boolean getIsDead()
     {
@@ -44,7 +44,7 @@ public class Enemy extends Character
     }
     
     /**
-     * This method allows to kill the ennemy.
+     * This method allows to kill the enemy.
      * An enemy can not come back to life. He dies only once.
      */
     public void setIsDead()
