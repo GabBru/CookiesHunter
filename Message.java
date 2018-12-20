@@ -50,7 +50,7 @@ public class Message extends JPanel
         
         //Display elements
         PanelTxt.setVisible(true);
-        if (myGame.getPlayer().getRoom().getNameRoom() == "daughterRoom" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
+        if (myGame.getPlayer().getRoom().getNameRoom() == "Hall" || myGame.getPlayer().getRoom().getNameRoom() == "laundryRoom" ){
             PanelGet.setVisible(true);
         }
         else {PanelGet.setVisible(false);}
