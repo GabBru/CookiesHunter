@@ -126,8 +126,6 @@ public class Player extends Character
                     for(Item i : inventory){
                         if(i.getName().equals("Key")){         
                             lr.setLocked();
-                            if(lr.getLocked()==true)System.out.println("RoomLocked still");
-                            else System.out.println("Room unlocked");
                             currentRoom=lr;
                             inventory.remove(i);
                             break;
