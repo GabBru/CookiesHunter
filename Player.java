@@ -131,26 +131,28 @@ public class Player extends Character
                             break;
                         }
                     }
-                } else { currentRoom=lr;}
+                } 
+                else { currentRoom=lr;}
                     
-            } else if (nextRoom instanceof MagicRoom) {
-                //check password                
+            } 
+            else if (nextRoom instanceof MagicRoom) {               
                 MagicRoom mr = (MagicRoom)nextRoom;
-                currentRoom=nextRoom;
-                mr.setIsLocked();
+                if (mr.getIsLocked() == true){
+                    if (mr.checkPass("on récupère le string saisi ici")){
+                        mr.setIsLocked();
+                        if (mr.getNameRoom().equals("daughterRoom"))
+                        {
+                            currentRoom.setDescription("");
+                        }
+                        currentRoom=mr;
+                    }
+                }
                 
-                //Scanner reader = new Scanner(System.in);
-                //String attempt = reader.nextLine();
-                //if(mr.checkPass(attempt)){
-                  //  mr.setIsLocked();                   
-                  //currentRoom=mr; 
-                //}
-            } else { 
+            } 
+            else { 
                 currentRoom.isVisited = true;
                 currentRoom=nextRoom; 
                 }
-        
-    }
     
     /**
      * hasKey method
