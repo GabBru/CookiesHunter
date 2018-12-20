@@ -67,4 +67,3 @@ public class Message extends JPanel
         return text;
     }
 }
-
