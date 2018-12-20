@@ -56,7 +56,7 @@ public class Message extends JPanel
             {
                 public void actionPerformed(ActionEvent evt) {
                     String text = textField.getText();
-                    myWindow.getGame().setAnswer(text);
+                    myWindow.getGame().getPlayer().setAnswer(text);
                     textField.setText("");
                 }
             }
