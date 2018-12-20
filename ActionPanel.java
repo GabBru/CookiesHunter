@@ -45,6 +45,7 @@ public class ActionPanel extends JPanel
      */
     public ActionPanel(TheWindows myWindows)
     {
+        this.setBackground(new java.awt.Color(98, 5, 5));
         // initialisation variables       
         win = myWindows;
         myGame = win.getGame();
