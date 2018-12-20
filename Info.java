@@ -26,8 +26,6 @@ public class Info extends JPanel
     public Info(TheWindows win){
         myGame = win.getGame();
         
-        setLayout(new GridLayout());
-        
         // set the different Labels
         myLabel1 = new JLabel("Name : "+ myGame.getPlayer().getName());
 
