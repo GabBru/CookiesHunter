@@ -6,14 +6,13 @@ import java.util.*;
  * the baby who holds the magic cookie.
  *
  * @author Amandine Poullot & Gabriel Brunet & Diama FALL
- * @version v0.2 2018-nov
+ * @version 20/12/18
  */
 public class Enemy extends Character
 {
-    protected int level; // The level variable includes the level of the ennemy.
-    private boolean isDead; // The isDead variable say if the ennemy is alive or not.
-    protected Character Enemy1;
-    protected Room enemyRoom;
+    private int level; // The level variable contains the level of the ennemy.
+    private boolean isDead; // The isDead variable says if the ennemy is alive or not.
+    private Room enemyRoom; // The enemyRoom variable contains the room where the enemy is.
     /**
      * Constructor that allows to ceate a new Ennemy.
      * 
@@ -21,14 +20,15 @@ public class Enemy extends Character
      * The ennemy have a status which determine if he is dead or not. It will allows the Player to picked up the ennemy inventory.
      * The level must be up to 0, initialised during creation and determine if the user is able to beat him.
      * 
-     * @param isDead Inform on the living or non-living status of ennemy.
-     * @param level Return the current level of the ennemy.
+     * @param isDead informs on the living or non-living status of ennemy.
+     * @param level Returns the current level of the ennemy.
+     * @param enemyRoom contains the enemy room.
      * @exception IllegalArgumentException Returned in case of level troubles (<0).
      */
     public Enemy(String newName, int level, Room enemyRoom)
     {
         super(newName);
-        isDead=false;
+        isDead=false; //When an enemy is created, he is alive
         if (level<0) throw new IllegalArgumentException("Level must be positive");
         this.level = level;
         this.enemyRoom = enemyRoom;
@@ -44,12 +44,12 @@ public class Enemy extends Character
     }
     
     /**
-     * Change the value of the boolean isDead;
-     * This method allows to modify the status of ennemy.
+     * This method allows to kill the ennemy.
+     * An enemy can not come back to life. He dies only once.
      */
-    public void setIsDead(boolean isDead)
+    public void setIsDead()
     {
-        this.isDead = isDead;
+        isDead = true;
     }
     
     /**
@@ -65,13 +65,5 @@ public class Enemy extends Character
      */
     public Room getEnemyRoom(){
         return this.enemyRoom;
-    }
-    
-    /**
-     * Change the value of the character's level.
-     */
-    public void setLevel(int newLevel)
-    {
-        level = newLevel;
     }
 }
