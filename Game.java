@@ -1,13 +1,13 @@
 import java.util.*;
 /**
- * DÃ©crivez votre classe Game ici.
+ * DÃƒÂ©crivez votre classe Game ici.
  *
  * @author Group 3
  * @version v0.1 2018nov
  */
 public class Game
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vÃ´tre
+    // variables d'instance - remplacez l'exemple qui suit par le vÃƒÂ´tre
     private Player player1;
     private ArrayList<ImageRoom> listImgRoom = new ArrayList<>();
     private ArrayList<Enemy> listEnemy = new ArrayList<>();
@@ -34,21 +34,21 @@ public class Game
         pantry = new LockRoom("pantry","<html>You enter the pantry room, a servant greets you.");
         playRoom = new LockRoom("playRoom","<html>You arrive on the next floor, more precisely in the playroom. A little boy awaits you there. be careful ! he attacks you !");
         kitchen = new Room("kitchen","<html>You enter a spacious kitchen. a woman with an empty stare coming you. She is holding a knife and is aiming at your throat !!! defend yourself !!!");
-        office = new Room("office","<html>You enter an office ...You are stuck, there is no exit. OMG Ã¢â‚¬Â¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
+        office = new Room("office","<html>You enter an office ...You are stuck, there is no exit. OMG ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ BAM, a trap is triggered and you are sucking in a temporary space portal.");
         laundryRoom = new Room("laundryRoom","<html>You enter in a laundry room. A very old and creepy woman waiting for you...");
         attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
         
         //Ajout des Items
-        daughterRoom.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        garage.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
+        daughterRoom.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
+        garage.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
         livingRoom.addItemRoom(new Item("Denture", "Denture of Grand-father"));
-        pantry.addItemRoom(new Item("Milk", "Milk must be in a baby bottle"));
-        playRoom.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        kitchen.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        office.addItemRoom(new Item("Bottle of milk", "A baby bottle must be milk"));
-        laundryRoom.addItemRoom(new Item("Cookie", "C'est un dÃ©licieux cookie"));
-        outside.addItemRoom(new Item("Key", "Permet d'ouvrir une porte ferm�e � cl�"));
-        daughterRoom.addItemRoom(new Item("Key", "Permet d'ouvrir une porte ferm�e � cl�"));
+        pantry.addItemRoom(new Item("Bottle of milk", "A baby bottle full of milk"));
+        playRoom.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
+        kitchen.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
+        office.addItemRoom(new Item("Baby-bottle", "A baby bottle must be milk"));
+        laundryRoom.addItemRoom(new Item("Cookie", "C'est un dÃƒÂ©licieux cookie"));
+        outside.addItemRoom(new Item("Key", "Permet d'ouvrir une porte fermée à clé"));
+        daughterRoom.addItemRoom(new Item("Key", "Permet d'ouvrir une porte fermée à clé"));
         
         
         // Ajout des sorties
@@ -90,7 +90,7 @@ public class Game
         
         imgOffice.setGif("images/orig.gif");
         
-        //Ajout Ãƒ la liste
+        //Ajout ÃƒÆ’ la liste
         listImgRoom.add(imgOutside);
         listImgRoom.add(imgHall);
         listImgRoom.add(imgGarage);
