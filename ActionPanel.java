@@ -228,18 +228,18 @@ public class ActionPanel extends JPanel
                            cRoom.setDescription("<html>You are in the office. The door is still locked. The black hole is still there. You have to jump into it.");
                         }
                    }
-                   if(nameR.equals("laundryRoom")){
+                }
+                if(nameR.equals("laundryRoom")){
                        if(myGame.getPlayer().getNumberItemGave("Denture")==0)                           
                             cRoom.setDescription("<html>Viwout maaaa zentiuuwe ai kwant toholk waywee vell!");
-                       else {
-                           MagicRoom tmpRoom = (MagicRoom)cRoom;
+                       else{
+                           //MagicRoom tmpRoom = (MagicRoom)cRoom;
                            cRoom.setDescription("<html>Haha ! Thank you for the denture, but it tastes like the one of my husband !<br>If you want to go in the attic where my little angel sleeps, you must answer my riddle :<br>We are even, we are immortal but also fleeting. We die everday to be reborn on the next. Each and everyone of us hits you,the last one kills you. What are we ?");
                            myGame.getImgCurrentRoom().setGif("gannyScary.gif");                           
                        }
                        win.refresh();
-                       cRoom.setDescription("<html>Vous etes dans le laundry room.");
-                   } 
-                }
+                       cRoom.setDescription("<html>You are in the laundry room.");
+                }                
             }
         }
         );
