@@ -5,7 +5,7 @@ import java.util.*;
  * the mother, the father, the brother, the grand-mother, the grand-father and 
  * the baby who holds the magic cookie.
  *
- * @author Amandine Poullot & Gabriel Brunet & Diama FALL
+ * @author Amandine Poullot & Gabriel Brunet & Diama Fall
  * @version 20/12/18
  */
 public class Enemy extends Character
@@ -19,6 +19,7 @@ public class Enemy extends Character
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
      * The enemy have a status which determine if he is dead or not. It will allows the Player to picked up the enemy inventory.
      * The level must be up to 0, initialised during creation and determine if the user is able to beat him.
+     * An enemy is initially setted up to the status "alive".
      * 
      * @param isDead informs on the living or non-living status of enemy.
      * @param level Returns the current level of the enemy.
@@ -28,15 +29,15 @@ public class Enemy extends Character
     public Enemy(String newName, int level, Room enemyRoom)
     {
         super(newName);
-        isDead=false; //When an enemy is created, he is alive
+        isDead=false;
         if (level<0) throw new IllegalArgumentException("Level must be positive");
         this.level = level;
         this.enemyRoom = enemyRoom;
     }
     
     /**
-     * @return Return the value of the boolean isDead.
      * This method informs of the living or non-living status of enemy.
+     * @return Return the value of the boolean isDead.
      */
     public boolean getIsDead()
     {
@@ -61,7 +62,7 @@ public class Enemy extends Character
     }
     
     /**
-     * @return the room of the enemy
+     * @return Return the room of the enemy.
      */
     public Room getEnemyRoom(){
         return this.enemyRoom;
