@@ -62,6 +62,9 @@ public class MagicRoom extends Room
        return isLocked;
    }
    
+   /**
+    * @return Return a boolean to check the password entered in case of right password or not.
+    */
    public boolean checkPass(String attempt){
        if(attempt.equals(passWord)) return true;
        else return false;
