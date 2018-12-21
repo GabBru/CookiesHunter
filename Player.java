@@ -232,4 +232,5 @@ public class Player extends Character
             enemy.setIsDead();
             levelUp(); 
         }
+     }
 }
