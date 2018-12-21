@@ -68,7 +68,7 @@ public class Menu extends JPanel
             {
                 public void actionPerformed(ActionEvent click)
                 {
-                    win.reset();
+                    win.newGame();
                 }
             }
         );
