@@ -129,11 +129,9 @@ public class ActionPanel extends JPanel
             {
                 public void actionPerformed(ActionEvent e)
                 {
-                    if(myGame.getEnemy() == null || myGame.getEnemy().getIsDead() == true){
                         win.getGame().getPlayer().move("Up");
                         nameR = cRoom.getNameRoom();
                         win.refresh();
-                    }
                 }
             }
         );
