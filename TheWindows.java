@@ -176,6 +176,24 @@ public class TheWindows extends JFrame
     }
     
     /**
+     * Frame victory display when the player win the game
+     */
+    public void newGame(){
+        this.setSize(new Dimension(10,10));
+        //remove all Panels
+        pBottom.removeAll();
+        pTop.removeAll();
+        pDirectionInfo.removeAll();
+        
+        //Creation new game
+        new TheWindows();
+        
+        // Validate the frame
+        this.revalidate();
+        this.repaint();
+    }
+    
+    /**
      * Refresh when the player is not dead
      */
     public void refreshInLive(){
