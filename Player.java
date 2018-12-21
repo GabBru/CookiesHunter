@@ -212,12 +212,28 @@ public class Player extends Character
      * This method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
      */
     public void fight(Enemy enemy, int playerLevel){
+        boolean ok = true;
+        
         if(enemy.getLevel() > playerLevel){
-            win = false; 
+            win = false;
         }
-        else{
+        else if (enemy.getName().equals("Baby")){
+            for(Item i : inventory){
+                if(i.getName().equals("Bottle of milk")){
+                    enemy.setIsDead();
+                    ok = true;
+                    break;
+                }
+                else{ 
+                    ok = false; 
+                }
+            }
+            if (ok = false) {
+                win = false;
+            }
+        }
+        else {
             enemy.setIsDead();
             levelUp(); 
         }
-    }
 }
