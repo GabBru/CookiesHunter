@@ -4,7 +4,7 @@
  * A room necessarily has a room image but does not necessarily have a Gif.
  *
  * @author : Marie Bogusz
- * @version (1)
+ * @version v0.4 2018dec
  */
 public class ImageRoom
 {
