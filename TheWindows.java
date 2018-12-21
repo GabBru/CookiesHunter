@@ -15,7 +15,7 @@ import java.lang.String;
  * Creation of a pBottom panel that contains the Message, DirectionInfo panels
  * Creation of the DirectionInfo panel that contains the ActionPanel and the Info
  * 
- * @author Antoine P. & Martin P.
+ * @author Antoine Pierson & Martin Pettinotti & Marie Bogusz & Amandine Poullot & Gabriel Brunet
  * @version 05/12/2018
  */
 public class TheWindows extends JFrame
@@ -24,10 +24,6 @@ public class TheWindows extends JFrame
     private ImageRoom test;
     private Game myGame;
     private JPanel pDirectionInfo, pDead;
-
-    // --- ATTRIBUTS OBJECTS CLASS ---
-    //private JButton buttonPlay = new JButton(" PLAY ");
-    //private Icon iconStart;
 
     // --- ATTRIBUTS First Frame ---
     private JPanel pTop = new JPanel();
@@ -50,7 +46,6 @@ public class TheWindows extends JFrame
         // Param of the Frame
         myGame = new Game();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //this.setPreferredSize(new Dimension(1147,779));
         this.setResizable(true);
         this.setLayout(new BorderLayout());
         this.setBackground(new java.awt.Color(98, 5, 5));
@@ -58,6 +53,7 @@ public class TheWindows extends JFrame
         // Denined the parthern of the first frame
         pTop.setLayout(new BorderLayout());
         pBottom.setLayout(new BorderLayout());
+        
         // Add the objects in panels & add the panels in the frame
         myTitle.setIcon(iconTitle);
         myLabel.setIcon(iconStart);
@@ -65,6 +61,7 @@ public class TheWindows extends JFrame
         pTop.add(myTitle, BorderLayout.NORTH);
         pTop.add(myLabel, BorderLayout.CENTER,JLabel.CENTER);
         pBottom.add(buttonPlay, BorderLayout.SOUTH);
+        
         buttonPlay.addActionListener(new ActionListener()
             {
                 /**
@@ -76,7 +73,7 @@ public class TheWindows extends JFrame
                     pTop.removeAll();
                     revalidate();
                     repaint();
-                    // Calling the frame when the player live
+                    // Calling the frame when the player is alive
                     playerLive();
                 }
             }
@@ -86,7 +83,7 @@ public class TheWindows extends JFrame
         add(pTop, BorderLayout.NORTH);
         add(pBottom, BorderLayout.SOUTH);
 
-        // add the visibility in the frame
+        // Add the visibility in the frame
         pTop.setVisible(true);
         pBottom.setVisible(true);
         this.pack();
@@ -102,7 +99,9 @@ public class TheWindows extends JFrame
      * Creation of the DirectionInfo panel that contains the ActionPanel and the Info, will be organized in BorderLayout.
      */
     public void playerLive(){
+    
         this.setSize(new Dimension(1147,779));
+        
         // --- TOP PANEL ---
         pTop = new JPanel();        
         pTop.setLayout(new BorderLayout());
@@ -115,17 +114,16 @@ public class TheWindows extends JFrame
         pBottom.setLayout(new BorderLayout());
         pBottom.setBorder(BorderFactory.createEmptyBorder(5,15,5,15));
 
-        // *** DIRECTION INFO PANEL ***
-        pDirectionInfo = new JPanel();
-        pDirectionInfo.setLayout(new BorderLayout());
-        pDirectionInfo.add(new ActionPanel(this));
-        pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
-        // ****************************
-
         pBottom.add(new Message(this), BorderLayout.WEST);
         pBottom.add(new Inventory(this), BorderLayout.CENTER);        
         pBottom.add(pDirectionInfo, BorderLayout.EAST);
         pBottom.setBackground(new java.awt.Color(98, 5, 5));
+        
+        // --- DIRECTION INFO PANEL ---
+        pDirectionInfo = new JPanel();
+        pDirectionInfo.setLayout(new BorderLayout());
+        pDirectionInfo.add(new ActionPanel(this));
+        pDirectionInfo.add(new Info(this), BorderLayout.SOUTH);
 
         // --- ADD PANEL IN THE FRAME ---
         this.add(new Menu(this));
@@ -134,16 +132,16 @@ public class TheWindows extends JFrame
     }
     
     /**
-     * @return the game
+     * @return Return the game - Used to have an access on the game's objects
      */
     public Game getGame(){
         return myGame;
     }
     
     /**
-     * Method who refresh the Frame
-     * If the player is lived the frame of the game is displaying
-     * Else the frame gameOver is displaying
+     * Method which refresh the Frame
+     * If the player is alive, the frame of the game is display.
+     * However the frame gameOver is display and ends the game.
      */
     public void refresh(){
         if (getGame().getPlayer().getWin()){
@@ -152,7 +150,7 @@ public class TheWindows extends JFrame
     }
     
     /**
-     * Refresh when the player is not dead
+     * That method refresh the frame as many times as needed if the player is still alive.
      */
     public void refreshInLive(){
         // remove all Panels
@@ -186,7 +184,7 @@ public class TheWindows extends JFrame
     }
 
     /**
-     * Frame of the Game over when the player is dead
+     * This method launch the frame gameOver if the player die.
      */
     public void gameOver(){
         this.setSize(new Dimension(390,186));
