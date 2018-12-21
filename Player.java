@@ -7,10 +7,10 @@ import java.util.*;
  * @version v0.3 2018dec
  */
 public class Player extends Character
-{  
-    protected int level; // The level variable includes the level of character.
-    protected Room currentRoom; // Obviously, this variable store the room where 
-    protected boolean win; // This variable is used in the fight method.
+{
+    private int level; // The level variable includes the level of character.
+    private Room currentRoom; // Obviously, this variable store the room where 
+    private boolean win; // This variable is used in the fight method.
     private ArrayList<Item> inventory; // The inventory variable includes the character's item list.
     private String answer; // This variable store the riddle's answer to be compare with the MagicRoom's password.
     /**
