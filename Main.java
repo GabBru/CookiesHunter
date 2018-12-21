@@ -6,10 +6,17 @@
  */
 public class Main
 {
+   static TheWindows myWindow;
+    
     public static void main()
     {
+        launch();
+    }
+    
+    public static final void launch(){
         try{
-            TheWindows myWindows = new TheWindows();
+            //Game myGame = new Game("azertyui");
+            myWindow = new TheWindows();
         } catch (Exception e){
             e.printStackTrace();
         }
