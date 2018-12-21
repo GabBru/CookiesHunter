@@ -15,6 +15,7 @@ public class PlayerTest
     private Player testPlayerCharacter;
     private Room Grenier; 
     private String playerName;
+    private Item cookie;
     
     /**
      * Default constructor for test class PlayerTest
@@ -33,7 +34,8 @@ public class PlayerTest
     @Before
     public void setUp()
     {
-        testPlayerCharacter= new Player("Chuck Norris",Grenier);    
+        testPlayerCharacter= new Player("Chuck Norris",Grenier); 
+        cookie = new Item ("Cookie", "Big cookie for big baby");
     }
     
     /**
@@ -47,6 +49,28 @@ public class PlayerTest
     }
     
     /**
+     * Method testConstructor() : Check the right operation of the constructor, or not.
+     */
+    @Test
+    public void testConstructor()
+    {
+        assertEquals("Chuck Norris", testPlayerCharacter.getName());
+        assertEquals(0, testPlayerCharacter.getLevel());
+        assertEquals(true, testPlayerCharacter.getWin());
+        assertEquals("", testPlayerCharacter.getAnswer());
+    }
+    
+    /**
+     * Method testSetAnswer() : Check if the answer is correctly changed.
+     */
+    @Test
+    public void testSetAnswer()
+    {
+        testPlayerCharacter.setAnswer("Chuck Norris fait pleurer les oignons");
+        assertEquals("Chuck Norris fait pleurer les oignons",testPlayerCharacter.getAnswer());
+    }
+    
+    /**
      * Method testLevelUp() : Check if level up is correctly done and increase of 1 level only.
      */
     @Test
@@ -56,5 +80,38 @@ public class PlayerTest
         assertEquals(1,testPlayerCharacter.getLevel());
         testPlayerCharacter.levelUp();
         assertEquals(2,testPlayerCharacter.getLevel());
+    }
+    
+    /**
+     * Method testRemoveItem() : Check the good process of removing items from the list.
+     */
+    @Test
+    public void testRemoveItem()
+    {
+        testPlayerCharacter.addInventory(cookie);
+        assertEquals(1,testPlayerCharacter.getNumberItemGave("Cookie"));
+        testPlayerCharacter.removeInventory(cookie);
+        assertEquals(true,testPlayerCharacter.returnInventoryPlayer().isEmpty());
+    }
+    
+    /**
+     * Method testAddItem() : Check if an item is correctly add to the inventory
+     */
+    @Test
+    public void testAddItem()
+    {
+        testPlayerCharacter.addInventory(cookie);
+        assertEquals(1,testPlayerCharacter.returnInventoryPlayer().size());
+    }
+    
+    /**
+     * Method testReturnInventory() : Check if the good string is returned when the character's inventory is non empty.
+     * Also check if nothing is returned in case of empty inventory.
+     */
+    @Test
+    public void testReturnInventory()
+    {
+        testPlayerCharacter.addInventory(cookie);
+        assertEquals("<html><FONT size=5>1 Cookie<br></FONT></html>", testPlayerCharacter.returnInventory());
     }
 }
