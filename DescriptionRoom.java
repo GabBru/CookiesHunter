@@ -7,7 +7,7 @@ import java.text.*;
  * The description attribute can contain information about the current room, the characters dialog ...
  *
  * @author Marie Bogusz
- * @version 20/12/18
+ * @version v0.2 2018dec
  */
 public class DescriptionRoom extends JPanel
 {
