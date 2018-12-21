@@ -3,16 +3,16 @@ import java.util.*;
  * Subclass Player inheriting the superclass Character.
  * This class represents the player in the game. 
  *
- * @author Gabriel Brunet @ Amandine Poullot
- * @version v0.1 2018nov
+ * @author Gabriel Brunet & Amandine Poullot & Martin Pettinotti
+ * @version v0.3 2018dec
  */
 public class Player extends Character
 {  
     protected int level; // The level variable includes the level of character.
-    protected Room currentRoom;
-    protected boolean win;
+    protected Room currentRoom; // Obviously, this variable store the room where 
+    protected boolean win; // This variable is used in the fight method.
     private ArrayList<Item> inventory; // The inventory variable includes the character's item list.
-    private String answer;
+    private String answer; // This variable store the riddle's answer to be compare with the MagicRoom's password.
     /**
      * Player class constructors.
      * As one of the subclass of the Character superclass, each attributes of this class has the same restrictions.
@@ -37,35 +37,50 @@ public class Player extends Character
     {
         return level;
     }
-        
-    public boolean getWin(){
+    
+    /**
+     * @return Return the boolean win.
+     */
+    public boolean getWin()
+    {
         return win;
     }
     
-        
-    public void setAnswer(String s){
+    /**
+     * This method allows changing the contains of the string "answer".
+     */
+    public void setAnswer(String s)
+    {
         answer = s;
     }
     
-    public String getAnswer(){
+    /**
+     * @return Return the string containing the answer entered as the riddle's answer.
+     */
+    public String getAnswer()
+    {
         return answer;
     }
     
     /**
-     * Return the current room (Room class) where the character is.
+     * @return Return the description of the current room (Room class) where the character is. Just more faster than using the command getRoom().getDescription().
      */
     public String getRoomDesc()
     {
         return currentRoom.getDescription();
     }
     
-    public Room getRoom(){
+    /** 
+     * @return Return the current Room of the player.
+     */
+    public Room getRoom()
+    {
         return currentRoom;
     }
     
-        /**
+    /**
      * Count the number of item given as parameters in the inventory of the player.
-     * @return Return an integer which represent the occurence of an Item in an inventory.
+     * @return Return an integer which represent the occurence of an Item in the inventory.
      */
     
     public int getNumberItemGave(String nameItem)
@@ -78,7 +93,7 @@ public class Player extends Character
         return(numberItem);
     }
     
-        /**
+    /**
      * Add an item (Item class) in the inventory of the character.
      */
     public void addInventory(Item theItem)
@@ -95,7 +110,7 @@ public class Player extends Character
     }
     
     /**
-     * This is a method which return the contents of the inventory.
+     * This is a method which return the contents of the inventory. HTML tags are added into the string to manage the appearence on screen.
      * @return Return a string listing items in the character's inventory. 
      */
     public String returnInventory()
@@ -115,7 +130,7 @@ public class Player extends Character
     
     /**
      * This is a method which return an inventory.
-     * @return the inventory of the player
+     * @return Return the player's inventory.
      */
     public ArrayList<Item> returnInventoryPlayer()
     {
@@ -125,7 +140,7 @@ public class Player extends Character
     /**
      * Change the room (Room class) where the character is.
     */
-    public void  setCurrentRoom(Room newCurrentRoom)
+    public void setCurrentRoom(Room newCurrentRoom)
     {
         currentRoom = newCurrentRoom;
     }
@@ -137,8 +152,11 @@ public class Player extends Character
     {
         level++;
     }
-
-    public void move(String direction){       
+    
+    /**
+     * This method allows the player to move in other rooms. It first check the nature of the next room where the player try to go, then actions on. 
+     */
+    public void move(String direction){      
         Room nextRoom = currentRoom.getExit(direction);
             if (nextRoom instanceof LockRoom ){
                 LockRoom lr = (LockRoom)nextRoom;
@@ -152,8 +170,7 @@ public class Player extends Character
                         }
                     }
                 } 
-                else { currentRoom=lr;}
-                    
+                else { currentRoom=lr;}    
             } 
             else if (nextRoom instanceof MagicRoom) {               
                 MagicRoom mr = (MagicRoom)nextRoom;
@@ -174,12 +191,12 @@ public class Player extends Character
             else { 
                 currentRoom.isVisited = true;
                 currentRoom=nextRoom; 
-                }
+            }
     }
     
     /**
-     * HasKey method
-     * @return boolean if there is a "Key" in the inventory
+     * HasKey method check the presence of a key into the inventory.
+     * @return Return a boolean if there is a "Key" in the inventory.
      */
     public boolean hasKey(){
         for(Item i : inventory){
@@ -189,20 +206,18 @@ public class Player extends Character
             else {return false;} // there is not a key in the inventory
         }
         return false; // return false if the method not enter in the for loop
-}
+    }
     
     /**
      * This method allows to compare the player's level and the enemy's level and decides the issu of the "fight."
      */
     public void fight(Enemy enemy, int playerLevel){
         if(enemy.getLevel() > playerLevel){
-            win = false; // ici ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§a devrait appeler la mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©thode qui affiche le game over
+            win = false; 
         }
         else{
             enemy.setIsDead();
             levelUp(); 
-            //Donner cookie
-            //changer description piece
         }
     }
 }
