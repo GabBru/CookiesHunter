@@ -10,9 +10,8 @@ import org.junit.Test;
  *
  * Les classes-test sont documentees ici :
  * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basees sur le document Ã…Â  2002 Robert A. Ballance intitule
+ * et sont basees sur le document 2002 Robert A. Ballance intitule
  * "JUnit: Unit Testing Framework".
- *
  */
 public class LockRoomTest
 {
@@ -54,7 +53,7 @@ public class LockRoomTest
         }
         assertEquals(true, result);
         assertEquals(myDescription, okLockRoom.getDescription());
-        assertEquals(false, okLockRoom.getLocked());
+        assertEquals(true, okLockRoom.getLocked());
     }
     
     /**
@@ -64,8 +63,6 @@ public class LockRoomTest
     public void testSetIsLocked()
     {
         okLockRoom = new LockRoom("name",myDescription);
-        okLockRoom.setLocked();
-        assertEquals(true, okLockRoom.getLocked());
         okLockRoom.setLocked();
         assertEquals(false, okLockRoom.getLocked());
     }
