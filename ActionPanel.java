@@ -261,6 +261,11 @@ public class ActionPanel extends JPanel
                                     myGame.getImgCurrentRoom().setGif(null);
                                     cRoom.setDescription("You killed the mother.");
                                 }
+                                if(nameR.equals("Attic")){
+                                    myGame.getImgCurrentRoom().setImage("images/AtticMonster.jpg");
+                                    myGame.getImgCurrentRoom().setGif(null);
+                                    cRoom.setDescription("You killed the Baby.");
+                                }
                             }
                         }
                        
