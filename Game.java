@@ -21,7 +21,7 @@ public class Game
         // initialisation map with different rooms
         Room outside, hall, garage, livingRoom, daughterRoom, pantry, playRoom, kitchen, office, laundryRoom, attic;
         outside = new Room("outside","<html>Welcome to Cookies Hunter! <br> You are a very hungry monster (yes, this blue monster) which likes cookies. In the house in front of you, a magic Cookie is waiting for you... Prepare yourself to enter a dark and psychedelic game. You actualy are in the garden of the house. It is sober and well maintained. You can also feel a lot of magic in the air");
-        hall = new Room("hall","<html>You arrive in the hall with 3 other doors. There is a sign on the door that faces north, the sign says: answer the riddle to enter in my bedroom!");
+        hall = new Room("hall","<html>You arrive in the hall with 3 other doors. There is a sign on the door that faces north, the sign says: answer the riddle to enter in my bedroom : What is my favorite magic animal ?");
         garage = new Room("garage","<html>You arrive in the garage. The father is tinkering with his car. A smell of cookie separates from the smell of the motor and makes you want to attack him ...");
         livingRoom = new Room("livingRoom","<html>You arrive in the living room. The grampa is watching the TV and smells like a cookie. It makes you want to attack him ...");
         daughterRoom = new MagicRoom("daughterRoom","<html>You arrive in a bedroom, it is the bedroom of a little girl. it's very creepy. You can observe the many unicorns","Unicorn");
@@ -30,7 +30,7 @@ public class Game
         kitchen = new Room("kitchen","<html>You enter a spacious kitchen. A woman with an empty stare coming you. She is holding a spoon. Let's see who has the better spoon between you and her !");
         office = new Room("office","<html>You enter an office ... OMG THERE IS A BLACK HOWL IN THE MIDDLE OF THE ROOM !! And now, you can not leave the room because the door is blocked! What will happen if you try to jump into the hole?...");
         laundryRoom = new Room("laundryRoom","<html>You enter in a laundry. A very old and creepy woman is watching you...");
-        attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
+        attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Hours");
         
         //Add of the items
         daughterRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
