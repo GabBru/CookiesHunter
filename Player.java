@@ -174,12 +174,9 @@ public class Player extends Character
             } 
             else if (nextRoom instanceof MagicRoom) {               
                 MagicRoom mr = (MagicRoom)nextRoom;
-                System.out.println("1");
                 if (mr.getIsLocked() == true){
-                    System.out.println(answer);
                     if (mr.checkPass(answer)){
                         mr.setIsLocked();
-                        System.out.println("2");
                         if(mr.getNameRoom() == "hall")
                             currentRoom.setDescription("<html>You arrive in the hall with 3 other doors. The door facing north is opened.");
                         if(mr.getNameRoom() == "laundryRoom")
