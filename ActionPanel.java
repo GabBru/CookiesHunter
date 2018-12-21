@@ -153,7 +153,6 @@ public class ActionPanel extends JPanel
                        cRoom.setDescription("<html>You are in the garden.");
                    }
                    if(nameR.equals("pantry")){
-                       if(cRoom.getItem() != null){
                            int nbCookies = myGame.getPlayer().getNumberItemGave("Cookie");
                            if(nbCookies<3)
                             cRoom.setDescription("<html>Hi, I am the chief cook of this house, but they treat me as a slave... <br>If you bring me 3 cookies, I will give you milk. I am sure you'll find a use for it. But you will need a container to hold it.");
@@ -170,70 +169,58 @@ public class ActionPanel extends JPanel
                                 }
                             }
                         }
-                       }
                        win.refresh();
                        cRoom.setDescription("<html>You are in the pantry.");
                    }
                    if(nameR.equals("daughterRoom")){
-                       if(cRoom.getItem() != null){
+
                           cRoom.setDescription("<html>Well done ! You answered my riddle! To reward you, here is a key that allows you to walk around the house more easily");
                           myGame.getPlayer().addInventory(cRoom.getItem());
                           cRoom.removeItemRoom(cRoom.getItem());
                           win.refresh();
                           cRoom.setDescription("<html>You are in the bedroom. The little girl is looking at you with a bad eye");
-                        }
                    }
                    if(nameR.equals("livingRoom")){
-                       if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
                            cRoom.setDescription("<html>You pick up the denture from the grandfather's mouth, it can still be used ...");
                            win.refresh();
                            cRoom.setDescription("<html>You are in the livingroom.");
-                    }
                    }
                    if(nameR.equals("garage")){
-                       if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
                            cRoom.setDescription("<html>You found a cookie on the father's body.");
                            win.refresh();
                            cRoom.setDescription("<html>You are in the garage");
-                        }
                    }
                    if(nameR.equals("playRoom")){
-                       if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
                            cRoom.setDescription("<html>You found a cookie on the son's body");
                            win.refresh();
                            cRoom.setDescription("<html>You are in the playroom.");
-                        }
+
                    }
                    if(nameR.equals("kitchen")){
-                       if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
                            cRoom.setDescription("<html>You found a cookie on the mother's body");
                            win.refresh();
                            cRoom.setDescription("<html>You are in the kitchen.");
-                        }
                    }
                    if(nameR.equals("office")){
-                       if(cRoom.getItem() != null){
                            myGame.getPlayer().addInventory(cRoom.getItem());
                            cRoom.removeItemRoom(cRoom.getItem());
                            cRoom.setDescription("<html>You find a baby bottle. Weird.");
                            win.refresh();
                            cRoom.setDescription("<html>You are in the office. The door is still locked. The black hole is still there. You have to jump into it.");
-                        }
                    }
                 }
                 if(nameR.equals("laundryRoom")){
                        if(myGame.getPlayer().getNumberItemGave("Denture")==0)                           
                             cRoom.setDescription("<html>Viwout maaaa zentiuuwe ai kwant toholk waywee vell!");
                        else{
-                           //MagicRoom tmpRoom = (MagicRoom)cRoom;
                            cRoom.setDescription("<html>Haha ! Thank you for the denture, but it tastes like the one of my husband !<br>If you want to go in the attic where my little angel sleeps, you must answer my riddle :<br>We are even, we are immortal but also fleeting. We die everday to be reborn on the next. Each and everyone of us hits you,the last one kills you. What are we ?");
                            myGame.getImgCurrentRoom().setGif("gannyScary.gif");                           
                        }
