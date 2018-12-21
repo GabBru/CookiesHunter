@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Classe-test LockRoomTest - for LockRoom class.
  *
- * @author  Antoine PIERSON
+ * @author  Antoine PIERSON & Gabriel Brunet.
  * @version v0.1 2018nov
  *
  * Les classes-test sont documentees ici :
