@@ -177,10 +177,9 @@ public class Player extends Character
                 if (mr.getIsLocked() == true){
                     if (mr.checkPass(answer)){
                         mr.setIsLocked();
-                        if(mr.getNameRoom() == "hall")
+                        if(currentRoom.getNameRoom() == "hall"){
                             currentRoom.setDescription("<html>You arrive in the hall with 3 other doors. The door facing north is opened.");
-                        if(mr.getNameRoom() == "laundryRoom")
-                            currentRoom.setDescription("<html>You arrive in the laundry. You have acces to the attic");
+                        }
                         currentRoom=mr;
                     }
                 } else {currentRoom=mr;}             
