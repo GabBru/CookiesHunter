@@ -422,4 +422,3 @@ public class ActionPanel extends JPanel
         }
     }
 }
-}
