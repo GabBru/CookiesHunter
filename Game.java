@@ -30,7 +30,7 @@ public class Game
         kitchen = new Room("kitchen","<html>You enter a spacious kitchen. A woman with an empty stare coming you. She is holding a spoon. Let's see who has the better spoon between you and her !");
         office = new Room("office","<html>You enter an office ... OMG THERE IS A BLACK HOWL IN THE MIDDLE OF THE ROOM !! And now, you can not leave the room because the door is blocked! What will happen if you try to jump into the hole?...");
         laundryRoom = new Room("laundryRoom","<html>You enter in a laundry. A very old and creepy woman is watching you...");
-        attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Undetermined");
+        attic = new MagicRoom("attic","<html>I am the death ! I am the end of world ! No man can defeat me !!! HAHAHAHAHAHA","Hours");
         
         //Add of the items
         daughterRoom.addItemRoom(new Item("Cookie", "This is a delicious cookie"));
